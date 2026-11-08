@@ -98,9 +98,9 @@ function drawResults() {
   for (const recipe of recipes) grid.append(makeCard(recipe));
 }
 const people = [
-    {name:'Javi', letter:'J', kind:'person'}, {name:'Abuela Loli', letter:'L', kind:'grandma'},
-    {name:'Thermomix', letter:'', kind:'machine'}, {name:'Abuela Tere', letter:'T', kind:'grandma'},
-    {name:'Patri', letter:'P', kind:'person'}
+    {name:'Javi', letter:'J', kind:'person'}, {name:'Patri', letter:'P', kind:'person'},
+    {name:'Abuela Loli', letter:'L', kind:'grandma'}, {name:'Abuela Tere', letter:'T', kind:'grandma'},
+    {name:'Thermomix', letter:'', kind:'machine'}
   ];
 function chefSymbol(person) {
   const files = {'Javi':'javi', 'Abuela Loli':'loli', 'Thermomix':'thermomix', 'Abuela Tere':'tere', 'Patri':'patri'};
