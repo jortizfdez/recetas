@@ -105,6 +105,39 @@
       "pdfPath": "Carnes/9.estofado-de-carne.pdf"
     },
     {
+      "id": "Carnes/filetes-rusos",
+      "category": "Carnes",
+      "title": "Filetes Rusos",
+      "metadata": {
+        "Chef": "Abuela Tere",
+        "Raciones": "~4",
+        "Dificultad": "Fácil",
+        "Tiempo": "~1 h 45 min, incluido 1 h de reposo"
+      },
+      "image": {
+        "path": "Carnes/filetes-rusos-imagen.png",
+        "alt": "Filetes rusos",
+        "logoPath": "Carnes/filetes-rusos-logotipo.png",
+        "optimizedPath": "assets/web/Carnes/filetes-rusos-imagen-dcd82495c68d47067880.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "- 400 g de carne picada de ternera\n- 100 g de papada de cerdo o panceta\n- 1 patata mediana\n- 2 huevos\n- 1 diente de ajo\n- Perejil, pimienta y sal, al gusto\n- Pan rallado, el necesario para dar forma\n- Aceite para freír"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Pide al carnicero que pique la ternera junto con la papada o la panceta.\n2. Cuece la patata en poca agua con sal hasta que esté tierna. Escúrrela y aplástala para hacer un puré espeso. Deja que se enfríe.\n3. Bate los huevos en un bol. Añade el ajo y el perejil picados y la pimienta. Incorpora la carne, sal y el puré frío. Mezcla bien.\n4. Toma porciones con una cuchara y, con ayuda de pan rallado, dales forma de bolas aplastadas.\n5. Deja reposar los filetes 1 hora en la nevera, tapados.\n6. Fríelos en aceite caliente, a fuego medio, hasta que estén dorados y bien cocinados por dentro. Déjalos escurrir sobre papel de cocina."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- El puré debe estar frío antes de mezclarlo con la carne y los huevos.\n- Cocina completamente la carne picada; si dispones de termómetro, comprueba que el centro alcance 71 °C.\n- El rendimiento y el tiempo son orientativos y dependen del tamaño de los filetes y de las raciones."
+        }
+      ],
+      "markdown": "# Filetes Rusos\n\n**Chef:** Abuela Tere  \n**Raciones:** ~4  \n**Dificultad:** Fácil  \n**Tiempo:** ~1 h 45 min, incluido 1 h de reposo\n\n![Filetes rusos](filetes-rusos-imagen.png)\n\n## Ingredientes\n\n- 400 g de carne picada de ternera\n- 100 g de papada de cerdo o panceta\n- 1 patata mediana\n- 2 huevos\n- 1 diente de ajo\n- Perejil, pimienta y sal, al gusto\n- Pan rallado, el necesario para dar forma\n- Aceite para freír\n\n## Elaboración\n\n1. Pide al carnicero que pique la ternera junto con la papada o la panceta.\n2. Cuece la patata en poca agua con sal hasta que esté tierna. Escúrrela y aplástala para hacer un puré espeso. Deja que se enfríe.\n3. Bate los huevos en un bol. Añade el ajo y el perejil picados y la pimienta. Incorpora la carne, sal y el puré frío. Mezcla bien.\n4. Toma porciones con una cuchara y, con ayuda de pan rallado, dales forma de bolas aplastadas.\n5. Deja reposar los filetes 1 hora en la nevera, tapados.\n6. Fríelos en aceite caliente, a fuego medio, hasta que estén dorados y bien cocinados por dentro. Déjalos escurrir sobre papel de cocina.\n\n## Consejos\n\n- El puré debe estar frío antes de mezclarlo con la carne y los huevos.\n- Cocina completamente la carne picada; si dispones de termómetro, comprueba que el centro alcance 71 °C.\n- El rendimiento y el tiempo son orientativos y dependen del tamaño de los filetes y de las raciones.\n",
+      "pdfPath": "Carnes/7.filetes-rusos.pdf"
+    },
+    {
       "id": "Carnes/lomo-cerdo-ciruelas-cebollitas",
       "category": "Carnes",
       "title": "Lomo de cerdo con ciruelas y cebollitas",
@@ -208,6 +241,39 @@
       "pdfPath": "Pastas/5.masa-pasta-fresca.pdf"
     },
     {
+      "id": "Pescados/salmon-marinado",
+      "category": "Pescados",
+      "title": "Salmón marinado",
+      "metadata": {
+        "Chef": "Patri",
+        "Raciones": "4",
+        "Dificultad": "Fácil",
+        "Tiempo": "~30 min de preparación + 24 h de marinado, además de la congelación y descongelación previas."
+      },
+      "image": {
+        "path": "Pescados/salmon-foto.png",
+        "alt": "Salmón marinado con cítricos y eneldo",
+        "logoPath": "Pescados/salmon-logotipo.png",
+        "optimizedPath": "assets/web/Pescados/salmon-foto-33b0c310d9b4028d6076.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "### Salmón marinado\n\n- 600 g de lomo de salmón sin espinas\n- 150 g de sal gruesa\n- 150 g de azúcar\n- 1 cucharada de coñac\n- 2 cucharadas de eneldo picado\n- 1 cucharadita de pimienta roja en grano\n- Piel de 1 limón o 1 naranja, sin la parte blanca\n\n### Vinagreta\n\n- 3 cucharadas de aceite de oliva virgen extra\n- 1 cucharada de vinagre\n- 1 cucharada de eneldo picado\n- Sal y pimienta al gusto\n\n### Acompañamiento\n\n- 240 g de arroz en crudo\n- 2 tomates\n- 1 cebolla pequeña\n- Cebollino al gusto"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Congela el salmón durante al menos 5 días a -20 °C o menos en un congelador de al menos tres estrellas. Descongélalo en la nevera, en un recipiente que recoja los líquidos.\n2. Mezcla la sal, el azúcar, el coñac, el eneldo, la pimienta roja y la piel de cítrico. Extiende parte de la mezcla en un recipiente, coloca el salmón encima y cúbrelo con el resto. Tapa y deja en la nevera 24 horas.\n3. Retira la mezcla, enjuaga brevemente el salmón con agua fría y sécalo con papel de cocina limpio. Córtalo en láminas finas.\n4. Cuece el arroz según las indicaciones del envase. Escúrrelo y, si se sirve frío, enfríalo rápidamente y consérvalo en la nevera hasta el momento de montar el plato.\n5. Corta los tomates y la cebolla en dados pequeños y pica el cebollino.\n6. Mezcla el vinagre, una pizca de sal, pimienta y eneldo. Añade el aceite y bate hasta integrar.\n7. Sirve el arroz con el tomate, la cebolla y el cebollino. Coloca encima el salmón y aliña con la vinagreta."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- El marinado no elimina de forma fiable el anisakis ni otros riesgos microbiológicos. Mantén el pescado siempre refrigerado y usa utensilios limpios.\n- Si tu congelador no alcanza -20 °C, compra pescado ya congelado adecuado para consumo en crudo y consulta al proveedor.\n- Consume el salmón cuanto antes tras el marinado; los 4-5 días indicados en la nota original no constituyen una vida útil validada para esta preparación casera.\n- El coñac no se cocina y puede dejar alcohol residual."
+        }
+      ],
+      "markdown": "# Salmón marinado\n\n![Salmón marinado con cítricos y eneldo](salmon-foto.png)\n\n**Chef:** Patri  \n**Raciones:** 4  \n**Dificultad:** Fácil  \n**Tiempo:** ~30 min de preparación + 24 h de marinado, además de la congelación y descongelación previas.\n\nLas cantidades son orientativas: la receta original no las especifica.\n\n## Ingredientes\n\n### Salmón marinado\n\n- 600 g de lomo de salmón sin espinas\n- 150 g de sal gruesa\n- 150 g de azúcar\n- 1 cucharada de coñac\n- 2 cucharadas de eneldo picado\n- 1 cucharadita de pimienta roja en grano\n- Piel de 1 limón o 1 naranja, sin la parte blanca\n\n### Vinagreta\n\n- 3 cucharadas de aceite de oliva virgen extra\n- 1 cucharada de vinagre\n- 1 cucharada de eneldo picado\n- Sal y pimienta al gusto\n\n### Acompañamiento\n\n- 240 g de arroz en crudo\n- 2 tomates\n- 1 cebolla pequeña\n- Cebollino al gusto\n\n## Elaboración\n\n1. Congela el salmón durante al menos 5 días a -20 °C o menos en un congelador de al menos tres estrellas. Descongélalo en la nevera, en un recipiente que recoja los líquidos.\n2. Mezcla la sal, el azúcar, el coñac, el eneldo, la pimienta roja y la piel de cítrico. Extiende parte de la mezcla en un recipiente, coloca el salmón encima y cúbrelo con el resto. Tapa y deja en la nevera 24 horas.\n3. Retira la mezcla, enjuaga brevemente el salmón con agua fría y sécalo con papel de cocina limpio. Córtalo en láminas finas.\n4. Cuece el arroz según las indicaciones del envase. Escúrrelo y, si se sirve frío, enfríalo rápidamente y consérvalo en la nevera hasta el momento de montar el plato.\n5. Corta los tomates y la cebolla en dados pequeños y pica el cebollino.\n6. Mezcla el vinagre, una pizca de sal, pimienta y eneldo. Añade el aceite y bate hasta integrar.\n7. Sirve el arroz con el tomate, la cebolla y el cebollino. Coloca encima el salmón y aliña con la vinagreta.\n\n## Consejos\n\n- El marinado no elimina de forma fiable el anisakis ni otros riesgos microbiológicos. Mantén el pescado siempre refrigerado y usa utensilios limpios.\n- Si tu congelador no alcanza -20 °C, compra pescado ya congelado adecuado para consumo en crudo y consulta al proveedor.\n- Consume el salmón cuanto antes tras el marinado; los 4-5 días indicados en la nota original no constituyen una vida útil validada para esta preparación casera.\n- El coñac no se cocina y puede dejar alcohol residual.\n",
+      "pdfPath": "Pescados/8.salmon-marinado.pdf"
+    },
+    {
       "id": "Verduras/coliflor-al-horno",
       "category": "Verduras",
       "title": "Coliflor al horno con bacon y queso",
@@ -240,6 +306,39 @@
       ],
       "markdown": "# Coliflor al horno con bacon y queso\n\n**Receta:** 2 · **Chef:** Javi · **Raciones:** 4 o 6 · **Dificultad:** fácil · **Horno:** 30 min\n\n![Coliflor al horno](coliflor-al-horno-foto.png)\n\n## Ingredientes\n\n| Ingrediente | 4 personas | 6 personas |\n|---|---:|---:|\n| Coliflor, limpia | 1 kg | 1,5 kg |\n| Beicon en taquitos | 150 g | 225 g |\n| Queso Grana Padano | 100 g | 150 g |\n| Aceitunas negras sin hueso | 80 g | 120 g |\n| Aceite de oliva | 4 cucharadas | 6 cucharadas |\n| Limón | ½ unidad | ¾ de unidad |\n| Comino | ½ cucharadita | ¾ de cucharadita |\n| Pimentón de la Vera (opcional) | ½ cucharadita | ¾ de cucharadita |\n| Guindilla (opcional) | Al gusto | Al gusto |\n| Sal y pimienta | Al gusto | Al gusto |\n\nLas cantidades son orientativas: la receta original no las especifica, salvo el zumo de medio limón para el aliño.\n\n## Elaboración\n\n1. Precalentar el horno a 220 °C. Cortar la coliflor en trozos de bocado, lavarla y escurrirla bien. Untar una fuente apta para horno con un poco de aceite y repartir la coliflor.\n2. Aliñar con aceite, sal y pimienta. Hornear durante 15 minutos a media altura.\n3. Sacar la fuente y añadir el beicon, el Grana Padano en trozos y el comino. Hornear otros 15 minutos en la parte superior, hasta que la coliflor esté tierna y dorada y el beicon cocinado.\n4. Mientras, mezclar en un bol el aceite restante, las aceitunas negras troceadas y el zumo de limón. Si se desea, añadir guindilla desmenuzada y pimentón de la Vera.\n5. Sacar la fuente del horno y aliñar la coliflor con la mezcla. Servir caliente.\n\n## Consejos\n\n- Repartir la coliflor en una sola capa para favorecer que se dore; usar dos fuentes si hace falta.\n- Ajustar la sal al final: el beicon, el queso y las aceitunas ya aportan sal.\n- Los 30 minutos corresponden al horno; hay que añadir el tiempo de preparación. El tiempo de cocción puede variar según el horno y el tamaño de los trozos.\n",
       "pdfPath": "Verduras/2.coliflor-al-horno.pdf"
+    },
+    {
+      "id": "postres/tarta-de-queso",
+      "category": "postres",
+      "title": "Tarta de Queso",
+      "metadata": {
+        "Chef": "ELA",
+        "Raciones": "~8",
+        "Dificultad": "Fácil",
+        "Tiempo": "~60-75 min, más enfriado"
+      },
+      "image": {
+        "path": "postres/tarta-de-queso-imagen.png",
+        "alt": "Tarta de queso",
+        "logoPath": "postres/tarta-de-queso-logotipo.png",
+        "optimizedPath": "assets/web/postres/tarta-de-queso-imagen-d46cc15ef16dffb7c0b2.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "### Base\n\n- ~30 galletas\n- 200 g de mantequilla\n\n### Relleno\n\n- 250 g de requesón (1 bote)\n- 3 huevos\n- 1 bote pequeño de leche condensada\n- 200 g de nueces"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Precalienta el horno a 180 °C. Tritura las galletas y resérvalas.\n2. Derrite la mantequilla en el microondas en intervalos cortos. Mézclala con las galletas y extiende la mezcla sobre la base del molde, presionando para compactarla.\n3. Bate el requesón, los huevos, la leche condensada y las nueces hasta integrar el relleno. Viértelo sobre la base de galletas.\n4. Hornea a 180 °C hasta que, al pinchar el centro con un cuchillo, la punta salga limpia. Como referencia, comprueba el punto a partir de ~40 minutos.\n5. Deja enfriar la tarta y refrigérala antes de servir."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- El tiempo de cocción es orientativo: comprueba el centro antes de sacar la tarta.\n- Conserva la tarta refrigerada."
+        }
+      ],
+      "markdown": "# Tarta de Queso\n\n**Chef:** ELA  \n**Raciones:** ~8  \n**Dificultad:** Fácil  \n**Tiempo:** ~60-75 min, más enfriado\n\n![Tarta de queso](tarta-de-queso-imagen.png)\n\nLas raciones y el tiempo son orientativos; el tiempo de horno depende del molde y del horno.\n\n## Ingredientes\n\n### Base\n\n- ~30 galletas\n- 200 g de mantequilla\n\n### Relleno\n\n- 250 g de requesón (1 bote)\n- 3 huevos\n- 1 bote pequeño de leche condensada\n- 200 g de nueces\n\n## Elaboración\n\n1. Precalienta el horno a 180 °C. Tritura las galletas y resérvalas.\n2. Derrite la mantequilla en el microondas en intervalos cortos. Mézclala con las galletas y extiende la mezcla sobre la base del molde, presionando para compactarla.\n3. Bate el requesón, los huevos, la leche condensada y las nueces hasta integrar el relleno. Viértelo sobre la base de galletas.\n4. Hornea a 180 °C hasta que, al pinchar el centro con un cuchillo, la punta salga limpia. Como referencia, comprueba el punto a partir de ~40 minutos.\n5. Deja enfriar la tarta y refrigérala antes de servir.\n\n## Consejos\n\n- El tiempo de cocción es orientativo: comprueba el centro antes de sacar la tarta.\n- Conserva la tarta refrigerada.\n",
+      "pdfPath": "postres/9.tarta-de-queso.pdf"
     }
   ]
 }

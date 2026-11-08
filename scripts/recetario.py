@@ -100,11 +100,14 @@ def local_references(path, root):
 def recipe_assets(path, root):
     parse_recipe(path, root)
     pdfs = list(path.parent.glob('*.' + path.stem + '.pdf'))
+    pdfs = [pdf for pdf in pdfs if pdf.name == path.stem + '.pdf'
+            or re.fullmatch(r'\d+\.' + re.escape(path.stem) + r'\.pdf', pdf.name)]
     if len(pdfs) != 1:
         raise RecipeError(f'Se esperaba un PDF asociado a {path.name}; encontrados {len(pdfs)}')
     files = {path.resolve(), pdfs[0].resolve()} | local_references(path, root)
     prefix = path.stem.split('-')[0]
-    logos = list(path.parent.glob(prefix + '-logotipo.png'))
+    exact_logo = path.parent / (path.stem + '-logotipo.png')
+    logos = [exact_logo] if exact_logo.is_file() else list(path.parent.glob(prefix + '-logotipo.png'))
     candidates = list(path.parent.glob(prefix + '-*.md'))
     if logos and len(candidates) > 1:
         raise RecipeError(f'No se puede asociar el logotipo con seguridad a {path.name}')
@@ -130,7 +133,8 @@ def generate(root, manifest, previous_catalog=None):
         relative = path.relative_to(root)
         pdfs = sorted(Path(name) for name in manifest
                       if Path(name).parent == relative.parent
-                      and Path(name).name.endswith('.' + path.stem + '.pdf'))
+                      and (Path(name).name == path.stem + '.pdf'
+                           or re.fullmatch(r'\d+\.' + re.escape(path.stem) + r'\.pdf', Path(name).name)))
         if len(pdfs) != 1:
             raise RecipeError(f'Se esperaba un PDF registrado para {relative}')
         pdf = root / pdfs[0]
@@ -138,7 +142,8 @@ def generate(root, manifest, previous_catalog=None):
             raise RecipeError(f'PDF registrado ausente o modificado: {pdfs[0]}')
         recipe['pdfPath'] = pdfs[0].as_posix()
         prefix = path.stem.split('-')[0]
-        logo = relative.parent / (prefix + '-logotipo.png')
+        exact_logo = relative.parent / (path.stem + '-logotipo.png')
+        logo = exact_logo if exact_logo.as_posix() in manifest else relative.parent / (prefix + '-logotipo.png')
         if logo.as_posix() in manifest and (root / logo).is_file():
             recipe['image']['logoPath'] = logo.as_posix()
         old_recipe = previous.get(recipe['id'], {})

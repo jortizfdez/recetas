@@ -61,6 +61,21 @@ class ImportTests(unittest.TestCase):
         self.assertEqual(recipe['pdfPath'], 'Carnes/3.lomo-cerdo-ciruelas-cebollitas.pdf')
         self.assertEqual(recipe['image']['logoPath'], 'Carnes/lomo-logotipo.png')
 
+    def test_numbered_pdf_and_full_recipe_logo_are_associated(self):
+        category = self.src / 'Postres'
+        category.mkdir()
+        (category / 'tarta-de-queso.md').write_text(
+            '# Tarta de Queso\n\n![Tarta](tarta-de-queso-imagen.png)\n\n'
+            '## Ingredientes\n- 1 queso\n\n## Elaboración\n1. Mezcla y cocina.\n'
+        )
+        (category / 'tarta-de-queso-imagen.png').write_bytes(b'image')
+        (category / 'tarta-de-queso-logotipo.png').write_bytes(b'logo')
+        (category / '9.tarta-de-queso.pdf').write_bytes(b'pdf')
+        r.import_recipes(self.src, self.dest, ['Postres/tarta-de-queso.md'], self.manifest, self.catalog)
+        recipe = json.loads(self.catalog.read_text())['recipes'][0]
+        self.assertEqual(recipe['pdfPath'], 'Postres/9.tarta-de-queso.pdf')
+        self.assertEqual(recipe['image']['logoPath'], 'Postres/tarta-de-queso-logotipo.png')
+
     def test_missing_registered_pdf_blocks_import_without_changing_outputs(self):
         self.run_import()
         pdf = self.dest / 'Arroces/1.arroz-meloso-secreto-iberico-setas.pdf'
