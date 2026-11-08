@@ -12,7 +12,7 @@ const el = (name, className, content) => {
 };
 const pathUrl = (path) => {
   if (typeof path !== 'string' || !path || path.startsWith('/') || path.split('/').some(p => !p || p === '..' || p === '.')) return null;
-  return path.split('/').map(encodeURIComponent).join('/');
+  return path.split('/').map(encodeURIComponent).join('/') + '?v=' + window.recetarioVersion;
 };
 const recipeHash = (id) => '#receta=' + encodeURIComponent(id);
 const getHashId = () => {
@@ -63,7 +63,7 @@ function imageFor(recipe) {
   if (!recipe.image || !recipe.image.path) return null;
   const img = document.createElement('img'); img.loading = 'lazy'; img.decoding = 'async'; img.alt = recipe.image.alt || recipe.title;
   const original = pathUrl(recipe.image.path);
-  const optim = recipe.image.optimizedPath === 'assets/web/Arroces/imagen-arroz-335892bdc68b002eb55e.webp' ? 'assets/arroz-foto.webp' : pathUrl(recipe.image.optimizedPath);
+  const optim = recipe.image.optimizedPath === 'assets/web/Arroces/imagen-arroz-335892bdc68b002eb55e.webp' ? pathUrl('assets/arroz-foto.webp') : pathUrl(recipe.image.optimizedPath);
   if (!original) return null;
   if (optim) { img.src = optim; img.onerror = () => { img.onerror = null; img.src = original; }; } else img.src = original;
   return img;
@@ -76,20 +76,21 @@ function makeCard(recipe) {
   const a = el('a', 'card'); a.href = recipeHash(recipe.id); a.style.setProperty('--accent', colors[recipe.category] || '#1239b4');
   const img = imageFor(recipe);
   if (img) { const photo = el('div', 'card-image'); photo.append(img); a.append(photo); }
-  const copy = el('div', 'card-copy'); copy.append(el('p', 'card-category', recipe.category), el('h2', null, recipe.title));
+  const copy = el('div', 'card-copy');
+  const top = el('div', 'card-top');
+  top.append(el('p', 'card-category', recipe.category));
+  if (recipe.metadata?.Chef) top.append(el('span', 'card-chef', recipe.metadata.Chef));
+  copy.append(top, el('h2', null, recipe.title));
   const bottom = el('div', 'card-bottom');
-  const chef = recipe.metadata?.Chef || '—';
-  bottom.append(el('span', 'card-chef', `CHEF · ${chef}`), el('span', 'card-arrow', 'Ver receta →')); copy.append(bottom);
-  const difficulty = normalize(recipe.metadata?.Dificultad || '');
-  const level = difficulty.includes('facil') ? 1 : difficulty.includes('media') ? 2 : difficulty.includes('alta') || difficulty.includes('dificil') ? 3 : 0;
-  if (level) { const badge = el('span','card-difficulty'); badge.setAttribute('aria-label',`Dificultad ${recipe.metadata.Dificultad}`); badge.append(el('span','difficulty-label',recipe.metadata.Dificultad)); for(let i=0;i<3;i++) badge.append(el('i',i<level?'active':'')); copy.append(badge); }
+  bottom.append(el('span', 'card-time', heroTime(recipe)), el('span', 'card-arrow', 'Ver receta →'));
+  copy.append(bottom);
   a.append(copy); return a;
 }
 function drawResults() {
   const grid = document.querySelector('.grid'); const n = normalize(state.query);
   const recipes = state.recipes.filter(recipe => {
     const ingredientText = (recipe.sections || []).filter(s => normalize(s.heading).startsWith('ingredientes')).map(s => s.markdown).join(' ');
-    return (state.chef === 'Todos' || recipe.metadata?.Chef === state.chef) && (state.category === 'Todas' || recipe.category === state.category) && normalize(recipe.title + ' ' + ingredientText).includes(n);
+    return (state.chef === 'Todos' || recipe.metadata?.Chef === state.chef) && (state.category === 'Todas' || recipe.category === state.category) && normalize(recipe.title + ' ' + ingredientText + ' ' + (recipe.metadata?.Chef || '')).includes(n);
   });
   document.querySelector('.count').textContent = `${recipes.length} ${recipes.length === 1 ? 'receta' : 'recetas'}`;
   grid.replaceChildren();
@@ -99,7 +100,7 @@ function drawResults() {
 function showCatalogue() {
   document.title = 'Recetario Ortiz'; main.replaceChildren();
   const label = el('label', 'search'); const icon = el('span', null, '⌕'); icon.setAttribute('aria-hidden', 'true'); icon.style.fontSize = '24px';
-  const input = document.createElement('input'); input.type = 'search'; input.placeholder = 'Busca una receta o ingrediente'; input.setAttribute('aria-label', 'Buscar por nombre o ingrediente'); input.value = state.query; input.addEventListener('input', () => { state.query = input.value; drawResults(); }); label.append(icon, input); main.append(label);
+  const input = document.createElement('input'); input.type = 'search'; input.placeholder = 'Busca una receta, ingrediente o chef'; input.setAttribute('aria-label', 'Buscar por receta, ingrediente o chef'); input.value = state.query; input.addEventListener('input', () => { state.query = input.value; drawResults(); }); label.append(icon, input); main.append(label);
   const filters = el('nav', 'filters'); filters.setAttribute('aria-label', 'Filtrar por categoría');
   for (const cat of ['Todas', ...new Set(state.recipes.map(r => r.category))]) {
     const button = el('button', null, cat); button.type = 'button'; button.setAttribute('aria-pressed', String(cat === state.category)); button.addEventListener('click', () => { state.category = cat; filters.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === button))); drawResults(); }); filters.append(button);
@@ -117,13 +118,33 @@ function showRecipe(recipe) {
   const difficulty=normalize(metadata.Dificultad||''); const level=difficulty.includes('facil')?1:difficulty.includes('media')?2:difficulty.includes('alta')||difficulty.includes('dificil')?3:0;
   for(const [label,value] of [['RACIONES',metadata.Raciones||'—'],['DIFICULTAD',metadata.Dificultad||'—'],['TIEMPO',time],['CHEF',metadata.Chef||'—']]){const item=el('div','meta-item');item.append(el('dt',null,label));if(label==='DIFICULTAD'&&level){const squares=el('dd','difficulty-squares');squares.setAttribute('aria-label',value);for(let i=0;i<3;i++)squares.append(el('i',i<level?'active':''));item.append(squares)}else item.append(el('dd',null,value));meta.append(item)}
   article.append(meta);
-  const share=el('a','share-pdf','Compartir receta (PDF)');share.href=pathUrl(recipe.pdfPath)||'#';share.setAttribute('download','');share.addEventListener('click',async event=>{if(navigator.canShare&&navigator.share){event.preventDefault();try{const response=await fetch(share.href);const file=new File([await response.blob()],share.href.split('/').pop(),{type:'application/pdf'});if(navigator.canShare({files:[file]}))await navigator.share({files:[file],title:recipe.title});else window.location.href=share.href}catch{window.location.href=share.href}}});article.append(share);
   const body = el('div', 'recipe-body'); const left = el('div', 'recipe-column'); const right = el('div', 'recipe-column');
   for (const section of recipe.sections || []) {
-    const s = el('section', 'recipe-section'); s.append(el('h2', null, section.heading)); renderMarkdown(s, section.markdown);
+    const s = el('section', 'recipe-section'); const sectionName = normalize(section.heading); if (sectionName.startsWith('ingredientes')) s.id = 'ingredientes'; else if (sectionName === 'elaboracion') s.id = 'elaboracion'; else if (sectionName === 'consejos') s.id = 'consejos'; s.append(el('h2', null, section.heading)); renderMarkdown(s, section.markdown);
     (normalize(section.heading).startsWith('ingredientes') ? left : right).append(s);
   }
-  body.append(left, right); article.append(body); main.append(article);
+  body.append(left, right); article.append(body);
+  const nav = el('nav', 'detail-nav'); nav.setAttribute('aria-label', 'Navegación de la receta');
+  for (const [id, label] of [['ingredientes', 'Ingredientes'], ['elaboracion', 'Elaboración'], ['consejos', 'Consejos']]) {
+    const target = body.querySelector('#' + id); if (!target) continue;
+    const button = el('button', 'detail-nav-item', label); button.type = 'button';
+    button.addEventListener('click', () => target.scrollIntoView({behavior: 'smooth', block: 'start'})); nav.append(button);
+  }
+  const pdf = pathUrl(recipe.pdfPath);
+  if (pdf) {
+    const share = el('button', 'detail-share'); share.type = 'button'; share.setAttribute('aria-label', 'Compartir PDF'); share.title = 'Compartir PDF';
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('aria-hidden', 'true');
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path'); path.setAttribute('d', 'M12 16V3m-5 5 5-5 5 5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7'); svg.append(path); share.append(svg);
+    let file; let failed = false;
+    fetch(pdf).then(response => { if (!response.ok) throw new Error('PDF'); return response.blob(); }).then(blob => { file = new File([blob], decodeURIComponent(new URL(pdf, location.href).pathname.split('/').pop()), {type: 'application/pdf'}); }).catch(() => { failed = true; });
+    share.addEventListener('click', async () => {
+      if (!file && !failed) { share.title = 'Preparando PDF'; return; }
+      if (file && navigator.share && navigator.canShare && navigator.canShare({files: [file]})) {
+        try { await navigator.share({files: [file], title: recipe.title}); } catch (error) { if (error.name !== 'AbortError') window.open(pdf, '_blank', 'noopener'); }
+      } else { window.open(pdf, '_blank', 'noopener'); }
+    }); nav.append(share);
+  }
+  article.append(nav); main.append(article);
 }
 function route() {
   const id = getHashId();
@@ -133,6 +154,25 @@ function route() {
   else { main.replaceChildren(); const section = el('section', 'missing'); section.append(el('h1', null, 'No encontramos esta receta.')); const a = el('a', null, 'Volver al recetario'); a.href = '#'; section.append(a); main.append(section); }
 }
 window.addEventListener('hashchange', route);
-fetch('data/catalogo.json').then(response => { if (!response.ok) throw new Error('No se pudo cargar el catálogo'); return response.json(); }).then(data => {
+fetch('data/catalogo.json', { cache: 'no-store' }).then(response => { if (!response.ok) throw new Error('No se pudo cargar el catálogo'); return response.json(); }).then(data => {
   if (!Array.isArray(data.recipes)) throw new Error('Formato de catálogo no válido'); state.recipes = data.recipes; route();
 }).catch(() => { main.replaceChildren(); const error = el('section', 'error'); error.append(el('h1', null, 'No se pueden cargar las recetas'), el('p', null, 'Comprueba tu conexión y vuelve a intentarlo.')); const b = el('button', null, 'Volver a intentar'); b.type = 'button'; b.addEventListener('click', () => location.reload()); error.append(b); main.append(error); });
+
+// Detecta publicaciones también cuando el recetario permanece abierto.
+let publicationSnapshot;
+let checkingPublication = false;
+async function checkPublication() {
+  if (checkingPublication || document.visibilityState === 'hidden') return;
+  checkingPublication = true;
+  try {
+    const responses = await Promise.all(['index.html', 'app.js', 'styles.css', 'data/catalogo.json'].map(path => fetch(path, {cache: 'no-store'})));
+    if (responses.some(response => !response.ok)) return;
+    const snapshot = JSON.stringify(await Promise.all(responses.map(response => response.text())));
+    if (publicationSnapshot !== undefined && publicationSnapshot !== snapshot) location.reload();
+    else publicationSnapshot = snapshot;
+  } catch { /* La siguiente comprobación volverá a intentarlo. */ }
+  finally { checkingPublication = false; }
+}
+checkPublication();
+setInterval(checkPublication, 60000);
+document.addEventListener('visibilitychange', checkPublication);

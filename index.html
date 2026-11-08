@@ -7,8 +7,17 @@
   <meta name="description" content="Las recetas de Recetario Ortiz, para consultar y compartir.">
   <title>Recetario Ortiz</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <script>
+    // Cada carga solicita los recursos de la versión actual a GitHub Pages.
+    window.recetarioVersion = Date.now().toString();
+    const css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = 'styles.css?v=' + window.recetarioVersion;
+    document.head.append(css);
+    const app = document.createElement('script');
+    app.src = 'app.js?v=' + window.recetarioVersion;
+    document.addEventListener('DOMContentLoaded', () => document.body.append(app));
+  </script>
 </head>
 <body>
   <a href="#contenido" class="skip-link">Saltar al contenido</a>

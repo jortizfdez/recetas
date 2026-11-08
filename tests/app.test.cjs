@@ -14,8 +14,8 @@ class MockNode {
 function runtime() {
   const grid = new MockNode('grid'), count = new MockNode('count'), main = new MockNode('main');
   const nodes = { main, '.grid': grid, '.count': count };
-  const document = { querySelector: selector => nodes[selector], createElement: name => new MockNode(name), createTextNode: text => { const n = new MockNode('#text'); n.textContent = text; return n; } };
-  const context = { document, window: { addEventListener() {}, scrollTo() {} }, location: {hash: ''}, fetch: () => new Promise(() => {}), console };
+  const document = { addEventListener() {}, querySelector: selector => nodes[selector], createElement: name => new MockNode(name), createTextNode: text => { const n = new MockNode('#text'); n.textContent = text; return n; } };
+  const context = { document, setInterval() {}, window: { recetarioVersion: 'test', addEventListener() {}, scrollTo() {} }, location: {hash: ''}, fetch: () => new Promise(() => {}), console };
   vm.createContext(context);
   const source = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
   vm.runInContext(source + '\nglobalThis.testing = { renderMarkdown, pathUrl, drawResults, state };', context);
@@ -60,7 +60,7 @@ test('no convierte enlaces javascript en enlaces navegables y limita rutas local
   assert.equal(tags(root).includes('a'), false);
   assert.equal(app.pathUrl('../secret'), null);
   assert.equal(app.pathUrl('/etc/passwd'), null);
-  assert.equal(app.pathUrl('Carnes/foto con espacios.png'), 'Carnes/foto%20con%20espacios.png');
+  assert.equal(app.pathUrl('Carnes/foto con espacios.png'), 'Carnes/foto%20con%20espacios.png?v=test');
 });
 test('representa todas las secciones del catálogo real', () => {
   const catalogue = path.join(__dirname, '..', 'data', 'catalogo.json');
