@@ -15,7 +15,7 @@ class ImageTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
         (self.root / 'Arroces').mkdir()
-        shutil.copy2('/Users/javi/Cocina/Arroces/imagen-arroz.png', self.root / 'Arroces/imagen-arroz.png')
+        shutil.copy2(Path(__file__).resolve().parents[1] / 'Arroces/imagen-arroz.png', self.root / 'Arroces/imagen-arroz.png')
         self.catalog = self.root / 'catalogo.json'
         self.data = {'version': 1, 'recipes': [{'image': {'path': 'Arroces/imagen-arroz.png', 'alt': 'Imagen'}}]}
         self.catalog.write_text(json.dumps(self.data), encoding='utf-8')
@@ -23,6 +23,7 @@ class ImageTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
+    @unittest.skipUnless(shutil.which('cwebp') and shutil.which('sips'), 'Requiere cwebp y sips')
     def test_generates_idempotently_without_changing_original(self):
         source = self.root / 'Arroces/imagen-arroz.png'
         original = source.read_bytes()
@@ -63,12 +64,8 @@ class ImageTests(unittest.TestCase):
 
     def test_encoder_failure_leaves_catalog_unchanged(self):
         original = self.catalog.read_bytes()
-        real = optimizer.subprocess.run
-        def run(args, **kwargs):
-            if args[0] == optimizer.CWEBP:
-                raise OSError('fallo simulado')
-            return real(args, **kwargs)
-        with mock.patch.object(optimizer.subprocess, 'run', side_effect=run):
+        with mock.patch.object(optimizer, 'dimensions', return_value=(100, 100)), \
+             mock.patch.object(optimizer.subprocess, 'run', side_effect=OSError('fallo simulado')):
             with self.assertRaises(OSError):
                 optimizer.optimize(self.root, self.catalog)
         self.assertEqual(original, self.catalog.read_bytes())

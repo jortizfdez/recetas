@@ -16,7 +16,7 @@ class ImportTests(unittest.TestCase):
         self.base = Path(self.temp.name)
         self.src = self.base / 'Cocina'
         self.dest = self.base / 'Web'
-        shutil.copytree('/Users/javi/Cocina/Arroces', self.src / 'Arroces')
+        shutil.copytree(Path(__file__).resolve().parents[1] / 'Arroces', self.src / 'Arroces')
         self.manifest = self.base / 'manifest.json'
         self.catalog = self.base / 'catalog.json'
         self.md = self.src / 'Arroces/arroz-meloso-secreto-iberico-setas.md'
@@ -36,6 +36,43 @@ class ImportTests(unittest.TestCase):
         self.md.write_text(self.md.read_text() + '\nNota adicional.\n')
         self.run_import()
         self.assertEqual((self.dest / 'Arroces' / self.md.name).read_text(), self.md.read_text())
+
+    def test_preserves_pdf_and_custom_logo_when_reimporting(self):
+        self.run_import()
+        custom_logo = self.dest / 'assets' / 'custom.png'
+        custom_logo.parent.mkdir()
+        custom_logo.write_bytes(b'logo')
+        data = json.loads(self.catalog.read_text())
+        data['recipes'][0]['image']['logoPath'] = 'assets/custom.png'
+        data['recipes'][0]['image']['displayPath'] = 'assets/custom.png'
+        data['recipes'][0]['displayTitle'] = 'Título del logotipo'
+        self.catalog.write_text(json.dumps(data))
+        self.run_import()
+        recipe = json.loads(self.catalog.read_text())['recipes'][0]
+        self.assertEqual(recipe['pdfPath'], 'Arroces/1.arroz-meloso-secreto-iberico-setas.pdf')
+        self.assertEqual(recipe['image']['logoPath'], 'assets/custom.png')
+        self.assertEqual(recipe['image']['displayPath'], 'assets/custom.png')
+        self.assertEqual(recipe['displayTitle'], 'Título del logotipo')
+
+    def test_new_recipe_catalog_includes_pdf_and_logo(self):
+        shutil.copytree(Path(__file__).resolve().parents[1] / 'Carnes', self.src / 'Carnes')
+        r.import_recipes(self.src, self.dest, ['Carnes/lomo-cerdo-ciruelas-cebollitas.md'], self.manifest, self.catalog)
+        recipe = json.loads(self.catalog.read_text())['recipes'][0]
+        self.assertEqual(recipe['pdfPath'], 'Carnes/3.lomo-cerdo-ciruelas-cebollitas.pdf')
+        self.assertEqual(recipe['image']['logoPath'], 'Carnes/lomo-logotipo.png')
+
+    def test_missing_registered_pdf_blocks_import_without_changing_outputs(self):
+        self.run_import()
+        pdf = self.dest / 'Arroces/1.arroz-meloso-secreto-iberico-setas.pdf'
+        pdf.unlink()
+        manifest = self.manifest.read_bytes()
+        catalog = self.catalog.read_bytes()
+        shutil.copytree(Path(__file__).resolve().parents[1] / 'Pastas', self.src / 'Pastas')
+        with self.assertRaisesRegex(r.RecipeError, 'PDF registrado'):
+            r.import_recipes(self.src, self.dest, ['Pastas/gnocchi-alla-sorrentina.md'], self.manifest, self.catalog)
+        self.assertEqual(self.manifest.read_bytes(), manifest)
+        self.assertEqual(self.catalog.read_bytes(), catalog)
+        self.assertFalse((self.dest / 'Pastas/gnocchi-alla-sorrentina.md').exists())
 
     def test_conflict_is_detected_before_any_writes(self):
         self.run_import()
@@ -89,7 +126,7 @@ class ImportTests(unittest.TestCase):
         extra.write_text(extra.read_text() + '\nCambio externo\n')
         # Trying to import another selected recipe must not leak that change.
         category = self.src / 'Pastas'
-        shutil.copytree('/Users/javi/Cocina/Pastas', category)
+        shutil.copytree(Path(__file__).resolve().parents[1] / 'Pastas', category)
         previous = self.catalog.read_bytes()
         with self.assertRaisesRegex(r.RecipeError, 'modificada'):
             r.import_recipes(self.src, self.dest, ['Pastas/gnocchi-alla-sorrentina.md'], self.manifest, self.catalog)

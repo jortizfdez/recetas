@@ -44,6 +44,14 @@ test('combina categoría y búsqueda; no busca en consejos', () => {
   assert.equal(results(app, 'arroz', 'Arroces').length, 1);
   assert.equal(results(app, 'cebolla', 'Arroces').length, 0);
 });
+test('usa el título de presentación y conserva la búsqueda por el título original', () => {
+  const app = runtime();
+  app.state.recipes = [{ ...fixture[0], displayTitle: 'Arroz meloso' }];
+  app.state.query = 'ñora';
+  app.drawResults();
+  assert.match(flatten(app.grid), /Arroz meloso/);
+  assert.doesNotMatch(flatten(app.grid), /Arroz con ñora/);
+});
 test('renderiza tablas, párrafos, listas y enlaces sin interpretar HTML', () => {
   const app = runtime(), root = new MockNode('section');
   app.renderMarkdown(root, '| Ingrediente | Cantidad |\n|---|---:|\n| <img src=x onerror=alert(1)> | 2 |\n\nUna aclaración.\n\n1. Primer paso\n2. Segundo paso\n\n- Ver [fuente](https://example.com/receta).');

@@ -5,13 +5,14 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
 from pathlib import Path, PurePosixPath
 
-CWEBP = '/opt/homebrew/bin/cwebp'
-SIPS = '/usr/bin/sips'
+CWEBP = shutil.which('cwebp') or 'cwebp'
+SIPS = shutil.which('sips') or 'sips'
 
 class OptimizationError(Exception):
     pass

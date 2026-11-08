@@ -110,7 +110,7 @@ def recipe_assets(path, root):
         raise RecipeError(f'Un archivo asociado a {path.name} sale de Cocina')
     return files
 
-def generate(root, manifest):
+def generate(root, manifest, previous_catalog=None):
     # Only explicitly imported recipes belong to the published catalog.
     paths = sorted(root / key for key in manifest if key.lower().endswith('.md'))
     for path in paths:
@@ -119,7 +119,41 @@ def generate(root, manifest):
         key = path.relative_to(root).as_posix()
         if digest(path) != manifest[key]:
             raise RecipeError(f'Receta registrada modificada fuera de la importación: {key}')
-    return [parse_recipe(path, root) for path in paths]
+    previous = {recipe['id']: recipe for recipe in (previous_catalog or {}).get('recipes', [])
+                if isinstance(recipe, dict) and isinstance(recipe.get('id'), str)}
+    recipes = []
+    for path in paths:
+        recipe = parse_recipe(path, root)
+        relative = path.relative_to(root)
+        pdfs = sorted(Path(name) for name in manifest
+                      if Path(name).parent == relative.parent
+                      and Path(name).name.endswith('.' + path.stem + '.pdf'))
+        if len(pdfs) != 1:
+            raise RecipeError(f'Se esperaba un PDF registrado para {relative}')
+        pdf = root / pdfs[0]
+        if not inside(pdf.resolve(), root.resolve()) or not pdf.is_file() or digest(pdf) != manifest[pdfs[0].as_posix()]:
+            raise RecipeError(f'PDF registrado ausente o modificado: {pdfs[0]}')
+        recipe['pdfPath'] = pdfs[0].as_posix()
+        prefix = path.stem.split('-')[0]
+        logo = relative.parent / (prefix + '-logotipo.png')
+        if logo.as_posix() in manifest and (root / logo).is_file():
+            recipe['image']['logoPath'] = logo.as_posix()
+        old_recipe = previous.get(recipe['id'], {})
+        display_title = old_recipe.get('displayTitle')
+        if isinstance(display_title, str) and display_title.strip():
+            recipe['displayTitle'] = display_title
+        old_image = old_recipe.get('image', {})
+        if isinstance(old_image, dict):
+            for key in ('logoPath', 'optimizedPath', 'displayPath'):
+                value = old_image.get(key)
+                if not isinstance(value, str) or not value or Path(value).is_absolute():
+                    continue
+                candidate = (root / value).resolve()
+                if inside(candidate, root.resolve()) and candidate.is_file():
+                    if key == 'logoPath' or old_image.get('path') == recipe['image']['path']:
+                        recipe['image'].setdefault(key, value)
+        recipes.append(recipe)
+    return recipes
 
 def write_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -143,6 +177,9 @@ def import_recipes(source, dest, selection, manifest, catalog):
             raise RecipeError('El registro de importaciones no es válido')
     else:
         old = {}
+    previous_catalog = json.loads(catalog.read_text(encoding='utf-8')) if catalog.exists() else {}
+    if not isinstance(previous_catalog, dict) or not isinstance(previous_catalog.get('recipes', []), list):
+        raise RecipeError('El catálogo existente no es válido')
     to_copy = {}
     for path in paths:
         for asset in recipe_assets(path, source):
@@ -181,7 +218,7 @@ def import_recipes(source, dest, selection, manifest, catalog):
             if not target.exists() or digest(target) != digest(asset):
                 shutil.copy2(asset, target)
             old[target.relative_to(dest).as_posix()] = digest(asset)
-        result = generate(dest, old)
+        result = generate(dest, old, previous_catalog)
         write_json(manifest, old)
         write_json(catalog, {'version': 1, 'recipes': result})
     except Exception:

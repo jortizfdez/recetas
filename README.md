@@ -15,9 +15,13 @@ python3 scripts/recetario.py --dest . --manifest data/manifest.json --catalog da
 python3 scripts/optimizar_imagenes.py --project . --catalog data/catalogo.json
 ```
 
-Repetir `--recipe` por cada receta. Ejecutar siempre el optimizador después de importar; requiere `cwebp` y `sips` en el Mac. El importador rechaza conflictos, recursos ausentes y referencias locales que requieran revisión. Una importación no autoriza incorporar otras recetas ni añadir archivos ajenos al commit. La publicación de recetas seleccionadas debe hacerse después de revisar el diff y pasar las pruebas.
+Repetir `--recipe` por cada receta. El origen predeterminado es `/Users/javi/Cocina`; en otro equipo se puede indicar con `--source /ruta/a/recetas`. Ejecutar siempre el optimizador después de importar; necesita `cwebp` y `sips` disponibles en el `PATH` (este último viene con macOS). El importador rechaza conflictos, recursos ausentes y referencias locales que requieran revisión. Una importación no autoriza incorporar otras recetas ni añadir archivos ajenos al commit. La publicación de recetas seleccionadas debe hacerse después de revisar el diff y pasar las pruebas.
+
+Si el nombre del logotipo difiere del título del Markdown, registrar el texto visible en `displayTitle` en el catálogo. El importador conserva ese campo en actualizaciones posteriores. La imagen de presentación opcional `image.displayPath` permite usar una portada alternativa sin introducir excepciones en el código.
 
 ## Comprobaciones
+
+Las pruebas usan las recetas incluidas en el repositorio; la comprobación real del optimizador se omite si faltan `cwebp` o `sips`.
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts -p 'test_*.py'
