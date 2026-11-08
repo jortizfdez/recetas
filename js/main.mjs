@@ -1,4 +1,4 @@
-const { main, state, el, getHashId } = await import('./core.mjs?v=' + window.recetarioVersion);
+const { main, state, el, getHashId, normalize, categoryColor } = await import('./core.mjs?v=' + window.recetarioVersion);
 const { showCatalogue } = await import('./catalogue.mjs?v=' + window.recetarioVersion);
 const { showRecipe } = await import('./recipe.mjs?v=' + window.recetarioVersion);
 
@@ -17,8 +17,21 @@ function setupCategoryMenu() {
   opener.addEventListener('click', () => { dialog.showModal(); dialog.querySelector('.menu-close').focus(); });
   dialog.querySelector('.menu-close').addEventListener('click', close);
   dialog.addEventListener('click', event => { if (event.target === dialog) close(); });
-  for (const category of ['Todas', ...new Set(state.recipes.map(r => r.category))]) {
+  const categoryOrder = ['Carnes', 'Pescados', 'Pastas', 'Arroces', 'Verduras', 'Postres'];
+  const categoryRank = new Map(categoryOrder.map((name, index) => [normalize(name), index]));
+  const categoriesByKey = new Map();
+  for (const value of state.recipes.map(r => r.category)) {
+    const key = normalize(value);
+    if (!key || categoriesByKey.has(key)) continue;
+    categoriesByKey.set(key, categoryOrder.find(name => normalize(name) === key) || value);
+  }
+  const categories = [...categoriesByKey.entries()]
+    .sort(([a], [b]) => (categoryRank.get(a) ?? categoryOrder.length) - (categoryRank.get(b) ?? categoryOrder.length) || a.localeCompare(b, 'es'))
+    .map(([, name]) => name);
+  for (const category of ['Todas', ...categories]) {
     const button = el('button', 'category-menu-item', category === 'Todas' ? 'Todas las recetas' : category);
+    const accent = categoryColor(category);
+    button.style.setProperty('--category-accent', accent);
     button.type = 'button'; button.addEventListener('click', () => {
       state.category = category; close();
       if (getHashId() !== null) location.hash = ''; else showCatalogue();

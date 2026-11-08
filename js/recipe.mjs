@@ -1,4 +1,4 @@
-const { main, colors, normalize, el, pathUrl, recipeTitle } = await import('./core.mjs?v=' + window.recetarioVersion);
+const { main, categoryColor, normalize, el, pathUrl, recipeTitle } = await import('./core.mjs?v=' + window.recetarioVersion);
 const { renderMarkdown } = await import('./markdown.mjs?v=' + window.recetarioVersion);
 const { imageFor, people, chefSymbol } = await import('./catalogue.mjs?v=' + window.recetarioVersion);
 
@@ -122,7 +122,7 @@ function showRecipe(recipe) {
   document.title = `${recipeTitle(recipe)} · Recetario Ortiz`;
   main.replaceChildren();
   const article = el('article', 'detail');
-  article.style.setProperty('--accent', colors[recipe.category] || '#1239b4');
+  article.style.setProperty('--accent', categoryColor(recipe.category));
   const back = el('a', 'back', '← Todas las recetas');
   back.href = '#';
   const meta = createRecipeMetadata(recipe);

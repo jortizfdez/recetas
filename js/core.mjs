@@ -2,8 +2,9 @@
 
 const main = document.querySelector('main');
 const state = { recipes: [], category: 'Todas', chef: 'Todos', query: '' };
-const colors = { Arroces: '#1239b4', Carnes: '#a52e28', Pastas: '#7a5a00', Verduras: '#326d37', Pescados: '#006e6e' };
 const normalize = (text) => String(text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es').trim();
+const colors = { arroces: '#1239b4', carnes: '#a52e28', pastas: '#7a5a00', verduras: '#326d37', pescados: '#006e6e', postres: '#6f42a5' };
+const categoryColor = (category) => colors[normalize(category)] || '#1239b4';
 const el = (name, className, content) => {
   const node = document.createElement(name);
   if (className) node.className = className;
@@ -21,4 +22,4 @@ const getHashId = () => {
   try { return decodeURIComponent(location.hash.slice(8)); } catch { return ''; }
 };
 
-export { main, state, colors, normalize, el, pathUrl, recipeTitle, recipeHash, getHashId };
+export { main, state, colors, categoryColor, normalize, el, pathUrl, recipeTitle, recipeHash, getHashId };

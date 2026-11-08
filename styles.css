@@ -4,6 +4,7 @@
   background: #f8f4eb;
   font-synthesis: none;
   --blue: #1239b4;
+  --orange: #f16725;
   --line: #133ab7
 }
 * {
@@ -22,7 +23,7 @@ button {
   cursor: pointer
 }
 button:focus-visible,a:focus-visible,input:focus-visible {
-  outline: 3px solid #f16725;
+  outline: 3px solid var(--orange);
   outline-offset: 3px
 }
 .skip-link {
@@ -650,7 +651,7 @@ th:not(:first-child),td:not(:first-child) {
   display: block;
   width: 23px;
   height: 2px;
-  background: #1239b4
+  background: var(--orange)
 }
 .category-menu {
   position: fixed;
@@ -682,7 +683,7 @@ th:not(:first-child),td:not(:first-child) {
 .menu-close {
   border: 0;
   background: transparent;
-  color: #1239b4;
+  color: var(--orange);
   font-size: 32px;
   width: 44px;
   height: 44px
@@ -697,13 +698,17 @@ th:not(:first-child),td:not(:first-child) {
   border-bottom: 1px solid #d5d9e9;
   background: transparent;
   text-align: left;
-  color: #1239b4;
+  color: var(--category-accent,var(--blue));
+  border-left: 3px solid var(--category-accent,var(--blue));
   font-size: 16px;
   font-weight: 700;
-  padding: 16px 4px
+  padding: 16px 12px
 }
 .category-menu-item:hover {
-  background: #e9ebf2
+  background: #eee8dc
+}
+.menu-close:hover {
+  background: #fff0e8
 }
 @media(max-width:680px) {
   .brand>a {
@@ -745,7 +750,7 @@ th:not(:first-child),td:not(:first-child) {
   flex: none;
   width: 23px;
   height: 2px;
-  background: #1239b4;
+  background: var(--orange);
   font-size: 0;
   letter-spacing: 0
 }

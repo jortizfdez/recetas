@@ -1,4 +1,4 @@
-const { main, state, colors, normalize, el, pathUrl, recipeTitle, recipeHash } = await import('./core.mjs?v=' + window.recetarioVersion);
+const { main, state, categoryColor, normalize, el, pathUrl, recipeTitle, recipeHash } = await import('./core.mjs?v=' + window.recetarioVersion);
 
 function imageFor(recipe) {
   if (!recipe.image || !recipe.image.path) return null;
@@ -14,7 +14,7 @@ function heroTime(recipe) {
   return k ? `${k === 'Horno' ? 'Horno: ' : ''}${m[k]}` : '';
 }
 function makeCard(recipe) {
-  const a = el('a', 'card'); a.href = recipeHash(recipe.id); a.style.setProperty('--accent', colors[recipe.category] || '#1239b4');
+  const a = el('a', 'card'); a.href = recipeHash(recipe.id); a.style.setProperty('--accent', categoryColor(recipe.category));
   const img = imageFor(recipe);
   if (img) { const photo = el('div', 'card-image'); photo.append(img); a.append(photo); }
   const copy = el('div', 'card-copy');
@@ -29,7 +29,7 @@ function makeCard(recipe) {
 }
 function matchesRecipe(recipe, filters) {
   if (filters.chef !== 'Todos' && recipe.metadata?.Chef !== filters.chef) return false;
-  if (filters.category !== 'Todas' && recipe.category !== filters.category) return false;
+  if (normalize(filters.category) !== normalize('Todas') && normalize(recipe.category) !== normalize(filters.category)) return false;
   const ingredients = (recipe.sections || [])
     .filter(section => normalize(section.heading).startsWith('ingredientes'))
     .map(section => section.markdown)
