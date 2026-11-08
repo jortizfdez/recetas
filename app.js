@@ -63,7 +63,7 @@ function imageFor(recipe) {
   if (!recipe.image || !recipe.image.path) return null;
   const img = document.createElement('img'); img.loading = 'lazy'; img.decoding = 'async'; img.alt = recipe.image.alt || recipe.title;
   const original = pathUrl(recipe.image.path);
-  const optim = recipe.id === 'Arroces/arroz-meloso-secreto-iberico-setas' ? 'assets/arroz-foto.webp' : pathUrl(recipe.image.optimizedPath);
+  const optim = recipe.image.optimizedPath === 'assets/web/Arroces/imagen-arroz-335892bdc68b002eb55e.webp' ? 'assets/arroz-foto.webp' : pathUrl(recipe.image.optimizedPath);
   if (!original) return null;
   if (optim) { img.src = optim; img.onerror = () => { img.onerror = null; img.src = original; }; } else img.src = original;
   return img;
