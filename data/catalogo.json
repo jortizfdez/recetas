@@ -342,6 +342,40 @@
       "pdfPath": "Verduras/2.coliflor-al-horno.pdf"
     },
     {
+      "id": "Verduras/ensalada-de-aguacate",
+      "category": "Verduras",
+      "title": "Ensalada de aguacate",
+      "metadata": {
+        "Receta": "12",
+        "Chef": "Lara",
+        "Raciones": "4",
+        "Dificultad": "fácil",
+        "Tiempo": "~20 min"
+      },
+      "image": {
+        "path": "Verduras/ensalada-de-aguacate-imagen.png",
+        "alt": "Ensalada de aguacate",
+        "logoPath": "Verduras/ensalada-de-aguacate-logotipo.png",
+        "optimizedPath": "assets/web/Verduras/ensalada-de-aguacate-imagen-66b5880cf783c2ad91dd.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | 4 personas |\n|---|---:|\n| Lechuga | 200 g |\n| Tomate | 2 unidades |\n| Cebolla | ½ unidad |\n| Mozzarella | 125 g |\n| Aguacate | 2 unidades |\n| Atún escurrido | 160 g |\n| Aceitunas | 80 g |\n| Nueces | 40 g |\n| Aceite de oliva | 3 cucharadas |\n| Vinagre | 1 cucharada |\n| Sal | Al gusto |\n\nLas cantidades son orientativas; la receta original no las especifica."
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Lavar y escurrir la lechuga y los tomates. Trocear la lechuga y cortar los tomates. Pelar y cortar la cebolla.\n2. Cortar los aguacates por la mitad, retirar el hueso y la piel y trocear la pulpa. Escurrir la mozzarella y el atún; cortar la mozzarella si es necesario.\n3. Reunir en una ensaladera la lechuga, el tomate, la cebolla, el aguacate, la mozzarella, el atún, las aceitunas y las nueces.\n4. Mezclar en un bol el aceite, el vinagre y la sal. Verter el aliño sobre la ensalada, mezclar suavemente y servir."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Añadir el aguacate y el aliño poco antes de servir.\n- Ajustar la sal al final: el atún y las aceitunas pueden aportar sal.\n- Contiene pescado, leche y nueces."
+        }
+      ],
+      "markdown": "# Ensalada de aguacate\n\n**Receta:** 12 · **Chef:** Lara · **Raciones:** 4 · **Dificultad:** fácil · **Tiempo:** ~20 min\n\n![Ensalada de aguacate](ensalada-de-aguacate-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | 4 personas |\n|---|---:|\n| Lechuga | 200 g |\n| Tomate | 2 unidades |\n| Cebolla | ½ unidad |\n| Mozzarella | 125 g |\n| Aguacate | 2 unidades |\n| Atún escurrido | 160 g |\n| Aceitunas | 80 g |\n| Nueces | 40 g |\n| Aceite de oliva | 3 cucharadas |\n| Vinagre | 1 cucharada |\n| Sal | Al gusto |\n\nLas cantidades son orientativas; la receta original no las especifica.\n\n## Elaboración\n\n1. Lavar y escurrir la lechuga y los tomates. Trocear la lechuga y cortar los tomates. Pelar y cortar la cebolla.\n2. Cortar los aguacates por la mitad, retirar el hueso y la piel y trocear la pulpa. Escurrir la mozzarella y el atún; cortar la mozzarella si es necesario.\n3. Reunir en una ensaladera la lechuga, el tomate, la cebolla, el aguacate, la mozzarella, el atún, las aceitunas y las nueces.\n4. Mezclar en un bol el aceite, el vinagre y la sal. Verter el aliño sobre la ensalada, mezclar suavemente y servir.\n\n## Consejos\n\n- Añadir el aguacate y el aliño poco antes de servir.\n- Ajustar la sal al final: el atún y las aceitunas pueden aportar sal.\n- Contiene pescado, leche y nueces.\n",
+      "pdfPath": "Verduras/12.ensalada-de-aguacate.pdf"
+    },
+    {
       "id": "postres/tarta-de-queso",
       "category": "Postres",
       "title": "Tarta de Queso",
