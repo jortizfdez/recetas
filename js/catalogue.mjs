@@ -48,6 +48,7 @@ function drawResults() {
 const people = [
   { name: 'Javi', portrait: 'javi' },
   { name: 'Patri', portrait: 'patri' },
+  { name: 'Lara', portrait: 'lara' },
   { name: 'Abuela Loli', portrait: 'loli' },
   { name: 'Abuela Tere', portrait: 'tere' },
   { name: 'Ela', portrait: 'ela' },

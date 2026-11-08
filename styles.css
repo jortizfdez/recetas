@@ -1016,3 +1016,9 @@ th:not(:first-child),td:not(:first-child) {
   .detail-nav .detail-share { background: transparent; }
   .share-icon { width: 39px; height: 39px; }
 }
+
+@media (max-width: 680px) {
+  .results-title { display: none; }
+  .chef-icons { flex-wrap: wrap; min-width: 0; }
+  .chef-icon { flex: 0 0 39px; }
+}
