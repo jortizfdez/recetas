@@ -175,6 +175,39 @@
       "pdfPath": "Pastas/5.masa-pasta-fresca.pdf"
     },
     {
+      "id": "Pescados/salmon-marinado",
+      "category": "Pescados",
+      "title": "Salmón marinado",
+      "metadata": {
+        "Chef": "Patri",
+        "Raciones": "4",
+        "Dificultad": "Fácil",
+        "Tiempo": "~30 min de preparación + 24 h de marinado, además de la congelación y descongelación previas."
+      },
+      "image": {
+        "path": "Pescados/salmon-foto.png",
+        "alt": "Salmón marinado con cítricos y eneldo",
+        "logoPath": "Pescados/salmon-logotipo.png",
+        "optimizedPath": "assets/web/Pescados/salmon-foto-33b0c310d9b4028d6076.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "### Salmón marinado\n\n- 600 g de lomo de salmón sin espinas\n- 150 g de sal gruesa\n- 150 g de azúcar\n- 1 cucharada de coñac\n- 2 cucharadas de eneldo picado\n- 1 cucharadita de pimienta roja en grano\n- Piel de 1 limón o 1 naranja, sin la parte blanca\n\n### Vinagreta\n\n- 3 cucharadas de aceite de oliva virgen extra\n- 1 cucharada de vinagre\n- 1 cucharada de eneldo picado\n- Sal y pimienta al gusto\n\n### Acompañamiento\n\n- 240 g de arroz en crudo\n- 2 tomates\n- 1 cebolla pequeña\n- Cebollino al gusto"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Congela el salmón durante al menos 5 días a -20 °C o menos en un congelador de al menos tres estrellas. Descongélalo en la nevera, en un recipiente que recoja los líquidos.\n2. Mezcla la sal, el azúcar, el coñac, el eneldo, la pimienta roja y la piel de cítrico. Extiende parte de la mezcla en un recipiente, coloca el salmón encima y cúbrelo con el resto. Tapa y deja en la nevera 24 horas.\n3. Retira la mezcla, enjuaga brevemente el salmón con agua fría y sécalo con papel de cocina limpio. Córtalo en láminas finas.\n4. Cuece el arroz según las indicaciones del envase. Escúrrelo y, si se sirve frío, enfríalo rápidamente y consérvalo en la nevera hasta el momento de montar el plato.\n5. Corta los tomates y la cebolla en dados pequeños y pica el cebollino.\n6. Mezcla el vinagre, una pizca de sal, pimienta y eneldo. Añade el aceite y bate hasta integrar.\n7. Sirve el arroz con el tomate, la cebolla y el cebollino. Coloca encima el salmón y aliña con la vinagreta."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- El marinado no elimina de forma fiable el anisakis ni otros riesgos microbiológicos. Mantén el pescado siempre refrigerado y usa utensilios limpios.\n- Si tu congelador no alcanza -20 °C, compra pescado ya congelado adecuado para consumo en crudo y consulta al proveedor.\n- Consume el salmón cuanto antes tras el marinado; los 4-5 días indicados en la nota original no constituyen una vida útil validada para esta preparación casera.\n- El coñac no se cocina y puede dejar alcohol residual."
+        }
+      ],
+      "markdown": "# Salmón marinado\n\n![Salmón marinado con cítricos y eneldo](salmon-foto.png)\n\n**Chef:** Patri  \n**Raciones:** 4  \n**Dificultad:** Fácil  \n**Tiempo:** ~30 min de preparación + 24 h de marinado, además de la congelación y descongelación previas.\n\nLas cantidades son orientativas: la receta original no las especifica.\n\n## Ingredientes\n\n### Salmón marinado\n\n- 600 g de lomo de salmón sin espinas\n- 150 g de sal gruesa\n- 150 g de azúcar\n- 1 cucharada de coñac\n- 2 cucharadas de eneldo picado\n- 1 cucharadita de pimienta roja en grano\n- Piel de 1 limón o 1 naranja, sin la parte blanca\n\n### Vinagreta\n\n- 3 cucharadas de aceite de oliva virgen extra\n- 1 cucharada de vinagre\n- 1 cucharada de eneldo picado\n- Sal y pimienta al gusto\n\n### Acompañamiento\n\n- 240 g de arroz en crudo\n- 2 tomates\n- 1 cebolla pequeña\n- Cebollino al gusto\n\n## Elaboración\n\n1. Congela el salmón durante al menos 5 días a -20 °C o menos en un congelador de al menos tres estrellas. Descongélalo en la nevera, en un recipiente que recoja los líquidos.\n2. Mezcla la sal, el azúcar, el coñac, el eneldo, la pimienta roja y la piel de cítrico. Extiende parte de la mezcla en un recipiente, coloca el salmón encima y cúbrelo con el resto. Tapa y deja en la nevera 24 horas.\n3. Retira la mezcla, enjuaga brevemente el salmón con agua fría y sécalo con papel de cocina limpio. Córtalo en láminas finas.\n4. Cuece el arroz según las indicaciones del envase. Escúrrelo y, si se sirve frío, enfríalo rápidamente y consérvalo en la nevera hasta el momento de montar el plato.\n5. Corta los tomates y la cebolla en dados pequeños y pica el cebollino.\n6. Mezcla el vinagre, una pizca de sal, pimienta y eneldo. Añade el aceite y bate hasta integrar.\n7. Sirve el arroz con el tomate, la cebolla y el cebollino. Coloca encima el salmón y aliña con la vinagreta.\n\n## Consejos\n\n- El marinado no elimina de forma fiable el anisakis ni otros riesgos microbiológicos. Mantén el pescado siempre refrigerado y usa utensilios limpios.\n- Si tu congelador no alcanza -20 °C, compra pescado ya congelado adecuado para consumo en crudo y consulta al proveedor.\n- Consume el salmón cuanto antes tras el marinado; los 4-5 días indicados en la nota original no constituyen una vida útil validada para esta preparación casera.\n- El coñac no se cocina y puede dejar alcohol residual.\n",
+      "pdfPath": "Pescados/8.salmon-marinado.pdf"
+    },
+    {
       "id": "Verduras/coliflor-al-horno",
       "category": "Verduras",
       "title": "Coliflor al horno con bacon y queso",
