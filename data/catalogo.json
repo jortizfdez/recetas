@@ -15,7 +15,8 @@
       "image": {
         "path": "Arroces/imagen-arroz.png",
         "alt": "Imagen ilustrativa del arroz",
-        "optimizedPath": "assets/web/Arroces/imagen-arroz-335892bdc68b002eb55e.webp"
+        "optimizedPath": "assets/web/Arroces/imagen-arroz-335892bdc68b002eb55e.webp",
+        "logoPath": "assets/arroz-titulo.png"
       },
       "sections": [
         {
@@ -151,7 +152,8 @@
       "image": {
         "path": "Pastas/masa-pasta-imagen-ilustrativa.png",
         "alt": "Imagen ilustrativa generada de pasta fresca",
-        "optimizedPath": "assets/web/Pastas/masa-pasta-imagen-ilustrativa-a5a5d29a05b33788ea28.webp"
+        "optimizedPath": "assets/web/Pastas/masa-pasta-imagen-ilustrativa-a5a5d29a05b33788ea28.webp",
+        "logoPath": "Pastas/masa-pasta-logotipo.png"
       },
       "sections": [
         {

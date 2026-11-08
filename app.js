@@ -1,7 +1,7 @@
 'use strict';
 
 const main = document.querySelector('main');
-const state = { recipes: [], category: 'Todas', query: '' };
+const state = { recipes: [], category: 'Todas', chef: 'Todos', query: '' };
 const colors = { Arroces: '#1239b4', Carnes: '#a52e28', Pastas: '#7a5a00', Verduras: '#326d37' };
 const normalize = (text) => String(text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es').trim();
 const el = (name, className, content) => {
@@ -89,7 +89,7 @@ function drawResults() {
   const grid = document.querySelector('.grid'); const n = normalize(state.query);
   const recipes = state.recipes.filter(recipe => {
     const ingredientText = (recipe.sections || []).filter(s => normalize(s.heading).startsWith('ingredientes')).map(s => s.markdown).join(' ');
-    return (state.category === 'Todas' || recipe.category === state.category) && normalize(recipe.title + ' ' + ingredientText).includes(n);
+    return (state.chef === 'Todos' || recipe.metadata?.Chef === state.chef) && (state.category === 'Todas' || recipe.category === state.category) && normalize(recipe.title + ' ' + ingredientText).includes(n);
   });
   document.querySelector('.count').textContent = `${recipes.length} ${recipes.length === 1 ? 'receta' : 'recetas'}`;
   grid.replaceChildren();
@@ -98,21 +98,20 @@ function drawResults() {
 }
 function showCatalogue() {
   document.title = 'Recetario Ortiz'; main.replaceChildren();
-  const intro = el('section', 'intro'); intro.append(el('p', 'eyebrow', 'Nuestra colección'), el('h1', null, 'Siempre hay algo rico.'), el('p', null, 'Recetas que nos gustan, para volver a ellas una y otra vez.')); main.append(intro);
   const label = el('label', 'search'); const icon = el('span', null, '⌕'); icon.setAttribute('aria-hidden', 'true'); icon.style.fontSize = '24px';
   const input = document.createElement('input'); input.type = 'search'; input.placeholder = 'Busca una receta o ingrediente'; input.setAttribute('aria-label', 'Buscar por nombre o ingrediente'); input.value = state.query; input.addEventListener('input', () => { state.query = input.value; drawResults(); }); label.append(icon, input); main.append(label);
   const filters = el('nav', 'filters'); filters.setAttribute('aria-label', 'Filtrar por categoría');
   for (const cat of ['Todas', ...new Set(state.recipes.map(r => r.category))]) {
     const button = el('button', null, cat); button.type = 'button'; button.setAttribute('aria-pressed', String(cat === state.category)); button.addEventListener('click', () => { state.category = cat; filters.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === button))); drawResults(); }); filters.append(button);
   }
-  main.append(filters); const results = el('div', 'results'); const count = el('span', 'count'); count.setAttribute('aria-live', 'polite'); results.append(el('span', null, 'Nuestras recetas'), count); main.append(results, el('div', 'grid')); drawResults();
+  main.append(filters); const chefs=el('nav','filters chef-filters'); chefs.setAttribute('aria-label','Filtrar por chef'); for(const chef of ['Todos', ...new Set(state.recipes.map(r=>r.metadata?.Chef).filter(Boolean))]) { const b=el('button',null,chef==='Todos'?'Todos los chefs':chef); b.type='button'; b.setAttribute('aria-pressed',String(chef===state.chef)); b.addEventListener('click',()=>{state.chef=chef;chefs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));drawResults()}); chefs.append(b); } main.append(chefs); const results = el('div', 'results'); const count = el('span', 'count'); count.setAttribute('aria-live', 'polite'); results.append(el('span', null, 'Nuestras recetas'), count); main.append(results, el('div', 'grid')); drawResults();
 }
 function showRecipe(recipe) {
   document.title = `${recipe.title} · Recetario Ortiz`; main.replaceChildren();
   const article = el('article', 'detail'); article.style.setProperty('--accent', colors[recipe.category] || '#1239b4');
   const back = el('a', 'back', '← Todas las recetas'); back.href = '#'; article.append(back);
   const head = el('div', 'detail-head'); const copy = el('div', 'detail-copy'); copy.append(el('p', 'detail-category', recipe.category), el('h1', null, recipe.title));
-  const logoPath = recipe.image?.logoPath && pathUrl(recipe.image.logoPath); if(logoPath){const logo=el('img','recipe-logo');logo.src=logoPath;logo.alt='';copy.append(logo)} head.append(copy);
+  const logoPath = recipe.image?.logoPath && pathUrl(recipe.image.logoPath); if(logoPath){const logo=el('img','recipe-logo');logo.src=logoPath;logo.alt='';copy.querySelector('h1').classList.add('visually-hidden');copy.append(logo)} head.append(copy);
   const img = imageFor(recipe); if (img) { img.loading = 'eager'; const figure = el('figure', 'detail-image'); figure.append(img); head.append(figure); } article.append(head);
   const meta = el('dl', 'metadata'); const metadata=recipe.metadata||{}; const time=metadata.Tiempo||metadata['Tiempo total']||metadata['Tiempo activo']||metadata.Horno||'—';
   const difficulty=normalize(metadata.Dificultad||''); const level=difficulty.includes('facil')?1:difficulty.includes('media')?2:difficulty.includes('alta')||difficulty.includes('dificil')?3:0;
