@@ -97,8 +97,10 @@ function addPdfSharing(recipe, meta, nav) {
   const pdf = pathUrl(recipe.pdfPath);
   if (pdf) {
     const share = el('button', 'detail-share'); share.type = 'button'; share.setAttribute('aria-label', 'Compartir PDF'); share.title = 'Compartir PDF';
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('aria-hidden', 'true');
-    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path'); path.setAttribute('d', 'M12 16V3m-5 5 5-5 5 5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7'); svg.append(path); share.append(svg);
+    const icon = el('img', 'share-icon');
+    icon.src = pathUrl('assets/share.webp');
+    icon.alt = '';
+    share.append(icon);
     let file; let failed = false;
     fetch(pdf).then(response => { if (!response.ok) throw new Error('PDF'); return response.blob(); }).then(blob => { file = new File([blob], decodeURIComponent(new URL(pdf, location.href).pathname.split('/').pop()), {type: 'application/pdf'}); }).catch(() => { failed = true; });
     const sharePdf = async () => {
@@ -109,7 +111,7 @@ function addPdfSharing(recipe, meta, nav) {
     };
     share.addEventListener('click', sharePdf);
     const desktopItem = el('div', 'meta-item meta-share');
-    desktopItem.append(el('dt', null, 'COMPARTIR'));
+    desktopItem.append(el('dt', 'visually-hidden', 'Compartir'));
     const desktopValue = el('dd'); const desktopShare = share.cloneNode(true);
     desktopShare.addEventListener('click', sharePdf); desktopValue.append(desktopShare); desktopItem.append(desktopValue); meta.append(desktopItem);
     nav.append(share);

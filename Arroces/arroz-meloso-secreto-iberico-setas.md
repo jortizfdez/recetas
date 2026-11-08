@@ -2,7 +2,7 @@
 
 **Chef:** Javi · **Raciones:** 4 o 6 · **Tiempo:** ~60 min · **Dificultad:** media · **Acabado:** meloso, con el sofrito triturado
 
-![Imagen ilustrativa del arroz](imagen-arroz.png)
+![Arroz meloso de secreto ibérico y setas con ñora y pimentón de la Vera](imagen-arroz.png)
 
 ## Ingredientes
 

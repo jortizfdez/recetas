@@ -2,7 +2,7 @@
 
 **Receta:** 3 · **Chef:** Abuela Loli · **Raciones:** 4 o 6 · **Dificultad:** fácil · **Tiempo:** ~80 min
 
-![Imagen ilustrativa generada de lomo con ciruelas y cebollitas](lomo-imagen-ilustrativa.png)
+![Lomo de cerdo con ciruelas y cebollitas](lomo-imagen-ilustrativa.png)
 
 ## Ingredientes
 
@@ -30,4 +30,4 @@ Las cantidades y los tiempos son orientativos: no aparecen en la receta manuscri
 ## Consejos
 
 - Las cantidades, el vino y el tiempo pueden ajustarse al gusto y al tamaño de la pieza. El vino dulce da una salsa más dulce; el blanco, una menos dulce.
-- El mínimo de 63 °C y 3 minutos de reposo corresponde a piezas enteras de cerdo. Fuente: [FoodSafety.gov](https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures).
+- El mínimo de 63 °C y 3 minutos de reposo corresponde a piezas enteras de cerdo.

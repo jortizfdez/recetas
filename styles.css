@@ -974,3 +974,40 @@ th:not(:first-child),td:not(:first-child) {
   background: #fff4e8;
   padding: 0
 }
+
+/* Alinear las etiquetas y los valores de la ficha con independencia del contenido. */
+.meta-item {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  text-align: center;
+}
+.meta-item dd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+}
+.meta-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.meta-share .detail-share,
+.detail-nav .detail-share {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.share-icon {
+  display: block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (max-width: 680px) {
+  .meta-share { display: none; }
+  .detail-nav .detail-share { background: transparent; }
+  .share-icon { width: 39px; height: 39px; }
+}

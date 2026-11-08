@@ -2,7 +2,7 @@
 
 **Receta:** 6 · **Chef:** Javi · **Raciones:** 4–6 · **Dificultad:** fácil · **Tiempo total:** ~40 min
 
-![Imagen ilustrativa generada de albóndigas en salsa de almendras](albondigas-imagen-ilustrativa.png)
+![Albóndigas en salsa de almendras](albondigas-imagen-ilustrativa.png)
 
 ## Ingredientes para la salsa
 
@@ -32,5 +32,4 @@ Cantidades originales de salsa para 4–6 raciones.
 
 - Necesitas tener las albóndigas crudas ya formadas antes de empezar; sus ingredientes y preparación no están incluidos en esta ficha. Hazlas pequeñas para que quepan en el cestillo.
 - El colorante es opcional. Si la salsa queda demasiado espesa, añade un poco de agua y ajusta la textura.
-- La dificultad es fácil por sus pasos sencillos. El tiempo total de ~40 minutos es una estimación para la salsa y la cocción, con las albóndigas ya preparadas; la fuente indica 30 minutos de cocción.
-- Fuente: [La Juani de Ana Sevilla: Albóndigas en salsa de almendras](https://www.juanideanasevilla.com/thermomix/2010/10/albondiguillas-en-salsa-de-almendras). Imagen del plato generada e ilustrativa.
+- La dificultad es fácil por sus pasos sencillos. El tiempo total de ~40 minutos es una estimación para la salsa y la cocción, con las albóndigas ya preparadas.

@@ -2,7 +2,7 @@
 
 **Receta:** 4 · **Chef:** Javi · **Raciones:** 3–4 · **Dificultad:** fácil · **Tiempo:** ~35 min
 
-![Imagen ilustrativa generada de gnocchi alla sorrentina](gnocchi-imagen-ilustrativa.png)
+![Gnocchi alla sorrentina](gnocchi-imagen-ilustrativa.png)
 
 ## Ingredientes
 

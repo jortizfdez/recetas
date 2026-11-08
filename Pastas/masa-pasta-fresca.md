@@ -2,7 +2,7 @@
 
 **Receta:** 5 · **Chef:** Thermomix · **Raciones:** ~6 · **Dificultad:** media · **Tiempo activo:** ~30 min · **Reposo:** 15 min–3 h
 
-![Imagen ilustrativa generada de pasta fresca](masa-pasta-imagen-ilustrativa.png)
+![Masa de pasta fresca](masa-pasta-imagen-ilustrativa.png)
 
 ## Ingredientes
 
