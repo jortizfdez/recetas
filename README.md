@@ -24,4 +24,4 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts -p 'test_*.py'
 node --test tests/app.test.cjs
 ```
 
-GitHub Pages publica la rama `main`. La web usa rutas relativas para funcionar en `/Recetario/`.
+GitHub Pages publica la rama `main`. La web usa rutas relativas para funcionar en `/recetas/`.
