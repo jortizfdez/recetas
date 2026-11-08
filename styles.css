@@ -30,3 +30,4 @@
 
 .chef-icon img{width:32px;height:32px;border-radius:50%;object-fit:cover;display:block}.meta-chef img{width:26px;height:26px;border-radius:50%;object-fit:cover;flex:none}.metadata:has(.meta-share){grid-template-columns:repeat(4,minmax(0,1fr)) 86px}.meta-share{display:block}.meta-share .detail-share{border:0;background:transparent;color:var(--accent);padding:0;min-width:32px;min-height:28px;display:flex;align-items:center}.meta-share .detail-share svg{width:20px;height:20px}.detail-nav{display:none}@media(max-width:680px){.metadata:has(.meta-share){grid-template-columns:repeat(4,minmax(0,1fr))}.meta-share{display:none}.detail-nav{display:flex}.meta-chef img{width:20px;height:20px}}
 .chef-icon{width:46px;height:46px;padding:2px}.chef-icon img{width:42px;height:42px}@media(max-width:680px){.chef-icon{width:39px;height:39px;padding:1px}.chef-icon img{width:37px;height:37px}}
+.chef-icon[aria-pressed=true]{border:3px solid #e85c16;background:#fff4e8;padding:0}
