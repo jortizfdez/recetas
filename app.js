@@ -77,7 +77,13 @@ function makeCard(recipe) {
   const img = imageFor(recipe);
   if (img) { const photo = el('div', 'card-image'); photo.append(img); a.append(photo); }
   const copy = el('div', 'card-copy'); copy.append(el('p', 'card-category', recipe.category), el('h2', null, recipe.title));
-  const bottom = el('div', 'card-bottom'); bottom.append(el('span', null, heroTime(recipe)), el('span', 'card-arrow', 'Ver receta →')); copy.append(bottom); a.append(copy); return a;
+  const bottom = el('div', 'card-bottom');
+  const chef = recipe.metadata?.Chef || '—';
+  bottom.append(el('span', 'card-chef', `CHEF · ${chef}`), el('span', 'card-arrow', 'Ver receta →')); copy.append(bottom);
+  const difficulty = normalize(recipe.metadata?.Dificultad || '');
+  const level = difficulty.includes('facil') ? 1 : difficulty.includes('media') ? 2 : difficulty.includes('alta') || difficulty.includes('dificil') ? 3 : 0;
+  if (level) { const badge = el('span','card-difficulty'); badge.setAttribute('aria-label',`Dificultad ${recipe.metadata.Dificultad}`); badge.append(el('span','difficulty-label',recipe.metadata.Dificultad)); for(let i=0;i<3;i++) badge.append(el('i',i<level?'active':'')); copy.append(badge); }
+  a.append(copy); return a;
 }
 function drawResults() {
   const grid = document.querySelector('.grid'); const n = normalize(state.query);
@@ -105,9 +111,14 @@ function showRecipe(recipe) {
   document.title = `${recipe.title} · Recetario Ortiz`; main.replaceChildren();
   const article = el('article', 'detail'); article.style.setProperty('--accent', colors[recipe.category] || '#1239b4');
   const back = el('a', 'back', '← Todas las recetas'); back.href = '#'; article.append(back);
-  const head = el('div', 'detail-head'); const copy = el('div', 'detail-copy'); copy.append(el('p', 'detail-category', recipe.category), el('h1', null, recipe.title)); head.append(copy);
-  const img = imageFor(recipe); if (img) { img.loading = 'eager'; const figure = el('figure', 'detail-image'); figure.append(img); if (/ilustrativ|generad/i.test(img.alt)) figure.append(el('figcaption', null, img.alt)); head.append(figure); } article.append(head);
-  const meta = el('dl', 'metadata'); for (const [key, value] of Object.entries(recipe.metadata || {})) { const item = el('div', 'meta-item'); item.append(el('dt', null, key), el('dd', null, value)); meta.append(item); } article.append(meta);
+  const head = el('div', 'detail-head'); const copy = el('div', 'detail-copy'); copy.append(el('p', 'detail-category', recipe.category), el('h1', null, recipe.title));
+  const logoPath = recipe.image?.logoPath && pathUrl(recipe.image.logoPath); if(logoPath){const logo=el('img','recipe-logo');logo.src=logoPath;logo.alt='';copy.append(logo)} head.append(copy);
+  const img = imageFor(recipe); if (img) { img.loading = 'eager'; const figure = el('figure', 'detail-image'); figure.append(img); head.append(figure); } article.append(head);
+  const meta = el('dl', 'metadata'); const metadata=recipe.metadata||{}; const time=metadata.Tiempo||metadata['Tiempo total']||metadata['Tiempo activo']||metadata.Horno||'—';
+  const difficulty=normalize(metadata.Dificultad||''); const level=difficulty.includes('facil')?1:difficulty.includes('media')?2:difficulty.includes('alta')||difficulty.includes('dificil')?3:0;
+  for(const [label,value] of [['RACIONES',metadata.Raciones||'—'],['DIFICULTAD',metadata.Dificultad||'—'],['TIEMPO',time],['CHEF',metadata.Chef||'—']]){const item=el('div','meta-item');item.append(el('dt',null,label));if(label==='DIFICULTAD'&&level){const squares=el('dd','difficulty-squares');squares.setAttribute('aria-label',value);for(let i=0;i<3;i++)squares.append(el('i',i<level?'active':''));item.append(squares)}else item.append(el('dd',null,value));meta.append(item)}
+  article.append(meta);
+  const share=el('a','share-pdf','Compartir receta (PDF)');share.href=pathUrl(recipe.pdfPath)||'#';share.setAttribute('download','');share.addEventListener('click',async event=>{if(navigator.canShare&&navigator.share){event.preventDefault();try{const response=await fetch(share.href);const file=new File([await response.blob()],share.href.split('/').pop(),{type:'application/pdf'});if(navigator.canShare({files:[file]}))await navigator.share({files:[file],title:recipe.title});else window.location.href=share.href}catch{window.location.href=share.href}}});article.append(share);
   const body = el('div', 'recipe-body'); const left = el('div', 'recipe-column'); const right = el('div', 'recipe-column');
   for (const section of recipe.sections || []) {
     const s = el('section', 'recipe-section'); s.append(el('h2', null, section.heading)); renderMarkdown(s, section.markdown);
