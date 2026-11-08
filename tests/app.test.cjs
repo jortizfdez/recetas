@@ -6,10 +6,13 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 class MockNode {
-  constructor(tag = '') { this.tag = tag; this.children = []; this.attributes = {}; this.style = { setProperty() {} }; this.textContent = ''; }
+  constructor(tag = '') { this.tag = tag; this.children = []; this.attributes = {}; this.style = { setProperty() {} }; this.textContent = ''; this.handlers = {}; this.classes = new Set(); this.classList = { add: name => this.classes.add(name), remove: name => this.classes.delete(name) }; }
   append(...nodes) { this.children.push(...nodes); }
   replaceChildren(...nodes) { this.children = nodes; }
   setAttribute(name, value) { this.attributes[name] = value; }
+  addEventListener(name, handler) { this.handlers[name] = handler; }
+  querySelector(tag) { return this.children.find(child => child.tag === tag); }
+  remove() { this.removed = true; }
 }
 function runtime() {
   const grid = new MockNode('grid'), count = new MockNode('count'), main = new MockNode('main');
@@ -17,8 +20,9 @@ function runtime() {
   const document = { addEventListener() {}, querySelector: selector => nodes[selector], createElement: name => new MockNode(name), createTextNode: text => { const n = new MockNode('#text'); n.textContent = text; return n; } };
   const context = { document, setInterval() {}, window: { recetarioVersion: 'test', addEventListener() {}, scrollTo() {} }, location: {hash: ''}, fetch: () => new Promise(() => {}), console };
   vm.createContext(context);
-  const source = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
-  vm.runInContext(source + '\nglobalThis.testing = { renderMarkdown, pathUrl, drawResults, state };', context);
+  const files = ['js/core.mjs', 'js/markdown.mjs', 'js/catalogue.mjs', 'js/recipe.mjs'];
+  const source = files.map(file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8').replace(/^const \{.*\} = await import\(.*\);\n/gm, '').replace(/^export .*;\n/gm, '')).join('\n');
+  vm.runInContext(source + '\nglobalThis.testing = { renderMarkdown, pathUrl, drawResults, createRecipeHeader, state };', context);
   return { ...context.testing, grid, count };
 }
 const flatten = node => node.textContent + node.children.map(flatten).join('');
@@ -70,6 +74,19 @@ test('no convierte enlaces javascript en enlaces navegables y limita rutas local
   assert.equal(app.pathUrl('/etc/passwd'), null);
   assert.equal(app.pathUrl('Carnes/foto con espacios.png'), 'Carnes/foto%20con%20espacios.png?v=test');
 });
+test('muestra el título si falla la carga del logotipo', () => {
+  const app = runtime();
+  const header = app.createRecipeHeader({
+    title: 'Arroz', category: 'Arroces', image: { logoPath: 'Arroces/logo.png' }
+  });
+  const copy = header.children[0];
+  const title = copy.children.find(node => node.tag === 'h1');
+  const logo = copy.children.find(node => node.tag === 'img');
+  assert.ok(title.classes.has('visually-hidden'));
+  logo.handlers.error();
+  assert.equal(title.classes.has('visually-hidden'), false);
+  assert.equal(logo.removed, true);
+});
 test('representa todas las secciones del catálogo real', () => {
   const catalogue = path.join(__dirname, '..', 'data', 'catalogo.json');
   assert.ok(fs.existsSync(catalogue), "Falta data/catalogo.json");
@@ -78,5 +95,20 @@ test('representa todas las secciones del catálogo real', () => {
   for (const recipe of data.recipes) for (const section of recipe.sections) {
     const root = new MockNode('section'); app.renderMarkdown(root, section.markdown);
     assert.ok(flatten(root).trim(), `${recipe.title}: ${section.heading}`);
+  }
+});
+
+test('los módulos ES resuelven sus dependencias reales', async () => {
+  const previousDocument = global.document;
+  const previousWindow = global.window;
+  global.document = { querySelector: () => new MockNode('main'), createElement: name => new MockNode(name) };
+  global.window = { recetarioVersion: 'test' };
+  try {
+    const { createRecipeHeader } = await import('../js/recipe.mjs');
+    const header = createRecipeHeader({ title: 'Arroz', category: 'Arroces', image: {} });
+    assert.equal(header.children[0].children[1].textContent, 'Arroz');
+  } finally {
+    global.document = previousDocument;
+    global.window = previousWindow;
   }
 });

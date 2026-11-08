@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Import and index Recetario Ortiz Markdown files, without third-party packages."""
 import argparse
+import base64
 import hashlib
 import json
+import os
 import re
 import shutil
 import sys
+import tempfile
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -159,8 +162,59 @@ def write_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
+def recovery_path(dest):
+    return dest / '.recetario-recovery.json'
+
+def save_recovery(dest, backups):
+    journal = recovery_path(dest)
+    if journal.exists():
+        raise RecipeError(f'Hay una importación interrumpida; revisa y recupera {journal}')
+    dest.mkdir(parents=True, exist_ok=True)
+    records = [{'path': str(path.resolve()), 'data': base64.b64encode(data).decode('ascii') if data is not None else None}
+               for path, data in backups.items()]
+    fd, temporary = tempfile.mkstemp(prefix='.recetario-recovery-', dir=dest)
+    try:
+        with os.fdopen(fd, 'w', encoding='utf-8') as file:
+            json.dump(records, file)
+            file.flush()
+            os.fsync(file.fileno())
+        # The journal must be complete before the first destination is modified.
+        os.link(temporary, journal)
+    finally:
+        Path(temporary).unlink(missing_ok=True)
+    return journal
+
+def recover_import(dest, manifest, catalog):
+    dest = dest.resolve()
+    journal = recovery_path(dest)
+    if not journal.is_file():
+        raise RecipeError('No hay ninguna recuperación pendiente')
+    records = json.loads(journal.read_text(encoding='utf-8'))
+    if not isinstance(records, list):
+        raise RecipeError('Registro de recuperación inválido')
+    allowed_outputs = {manifest.resolve(), catalog.resolve()}
+    decoded = []
+    for record in records:
+        if (not isinstance(record, dict) or not isinstance(record.get('path'), str)
+                or 'data' not in record or not (record['data'] is None or isinstance(record['data'], str))):
+            raise RecipeError('Registro de recuperación inválido')
+        target = Path(record['path'])
+        if not target.is_absolute() or target.resolve() != target or target == journal or not (inside(target, dest) or target in allowed_outputs):
+            raise RecipeError('Ruta no permitida en el registro de recuperación')
+        data = record['data']
+        decoded.append((target, None if data is None else base64.b64decode(data, validate=True)))
+    for target, data in decoded:
+        if data is None:
+            target.unlink(missing_ok=True)
+        else:
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(data)
+    journal.unlink()
+
 def import_recipes(source, dest, selection, manifest, catalog):
     source, dest = source.resolve(), dest.resolve()
+    if recovery_path(dest).exists():
+        raise RecipeError('Hay una importación interrumpida; usa --recover después de revisar los cambios')
     if inside(source, dest) or inside(dest, source):
         raise RecipeError('Origen y destino no pueden solaparse')
     if any(inside(p.resolve(), source) for p in (manifest, catalog)):
@@ -211,7 +265,10 @@ def import_recipes(source, dest, selection, manifest, catalog):
     if len(set(outputs)) != 2 or any(p in targets for p in outputs):
         raise RecipeError('Las salidas se solapan entre sí o con archivos de receta')
     impacted = list(targets) + outputs
+    if recovery_path(dest) in impacted:
+        raise RecipeError('La ruta de recuperación se solapa con una salida')
     backups = {p: (p.read_bytes() if p.exists() else None) for p in impacted}
+    journal = save_recovery(dest, backups)
     try:
         for target, asset in sorted(targets.items()):
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -231,7 +288,9 @@ def import_recipes(source, dest, selection, manifest, catalog):
             else:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes(data)
+        journal.unlink()
         raise
+    journal.unlink()
     return len(paths), len(result)
 
 def main():
@@ -241,10 +300,15 @@ def main():
     parser.add_argument('--manifest', type=Path, required=True)
     parser.add_argument('--catalog', type=Path, required=True)
     group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument('--recover', action='store_true', help='Restaurar los archivos de una importación interrumpida')
     group.add_argument('--all', action='store_true', help='Importar todas las recetas')
     group.add_argument('--recipe', action='append', help='Ruta relativa a Cocina; se puede repetir')
     args = parser.parse_args()
     try:
+        if args.recover:
+            recover_import(args.dest, args.manifest, args.catalog)
+            print('Archivos restaurados.')
+            return 0
         n, total = import_recipes(args.source, args.dest, ['--all'] if args.all else args.recipe, args.manifest, args.catalog)
     except (OSError, ValueError, RecipeError) as exc:
         print('Error:', exc, file=sys.stderr)

@@ -9,3 +9,7 @@ __pycache__/
 *.key
 *.p12
 *.pfx
+
+# Copia local para recuperar una importación interrumpida
+.recetario-recovery.json
+.recetario-recovery-*

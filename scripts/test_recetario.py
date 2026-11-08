@@ -74,6 +74,40 @@ class ImportTests(unittest.TestCase):
         self.assertEqual(self.catalog.read_bytes(), catalog)
         self.assertFalse((self.dest / 'Pastas/gnocchi-alla-sorrentina.md').exists())
 
+    def test_interrupted_import_retains_backup_and_can_be_recovered(self):
+        self.run_import()
+        out = self.dest / 'Arroces' / self.md.name
+        original = out.read_bytes()
+        old_manifest = self.manifest.read_bytes()
+        old_catalog = self.catalog.read_bytes()
+        self.md.write_text(self.md.read_text() + '\nNueva versión.\n')
+        real_copy = r.shutil.copy2
+        def interrupted(src, dst):
+            real_copy(src, dst)
+            raise KeyboardInterrupt()
+        with mock.patch.object(r.shutil, 'copy2', side_effect=interrupted):
+            with self.assertRaises(KeyboardInterrupt):
+                self.run_import()
+        self.assertTrue(r.recovery_path(self.dest).is_file())
+        with self.assertRaisesRegex(r.RecipeError, 'interrumpida'):
+            self.run_import()
+        r.recover_import(self.dest, self.manifest, self.catalog)
+        self.assertEqual(out.read_bytes(), original)
+        self.assertEqual(self.manifest.read_bytes(), old_manifest)
+        self.assertEqual(self.catalog.read_bytes(), old_catalog)
+        self.assertFalse(r.recovery_path(self.dest).exists())
+
+    def test_incomplete_recovery_record_never_deletes_files(self):
+        self.dest.mkdir()
+        existing = self.dest / 'archivo.txt'
+        existing.write_text('conservar')
+        journal = r.recovery_path(self.dest)
+        journal.write_text(json.dumps([{'path': str(existing.resolve())}]))
+        with self.assertRaisesRegex(r.RecipeError, 'inválido'):
+            r.recover_import(self.dest, self.manifest, self.catalog)
+        self.assertEqual(existing.read_text(), 'conservar')
+        self.assertTrue(journal.exists())
+
     def test_conflict_is_detected_before_any_writes(self):
         self.run_import()
         out = self.dest / 'Arroces' / self.md.name
