@@ -101,11 +101,18 @@ function showCatalogue() {
   document.title = 'Recetario Ortiz'; main.replaceChildren();
   const label = el('label', 'search'); const icon = el('span', null, '⌕'); icon.setAttribute('aria-hidden', 'true'); icon.style.fontSize = '24px';
   const input = document.createElement('input'); input.type = 'search'; input.placeholder = 'Busca una receta, ingrediente o chef'; input.setAttribute('aria-label', 'Buscar por receta, ingrediente o chef'); input.value = state.query; input.addEventListener('input', () => { state.query = input.value; drawResults(); }); label.append(icon, input); main.append(label);
-  const filters = el('nav', 'filters'); filters.setAttribute('aria-label', 'Filtrar por categoría');
-  for (const cat of ['Todas', ...new Set(state.recipes.map(r => r.category))]) {
-    const button = el('button', null, cat); button.type = 'button'; button.setAttribute('aria-pressed', String(cat === state.category)); button.addEventListener('click', () => { state.category = cat; filters.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === button))); drawResults(); }); filters.append(button);
+  const chefs=el('nav','filters chef-filters'); chefs.setAttribute('aria-label','Filtrar por chef'); for(const chef of ['Todos', ...new Set(state.recipes.map(r=>r.metadata?.Chef).filter(Boolean))]) { const b=el('button',null,chef==='Todos'?'Todos los chefs':chef); b.type='button'; b.setAttribute('aria-pressed',String(chef===state.chef)); b.addEventListener('click',()=>{state.chef=chef;chefs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));drawResults()}); chefs.append(b); } main.append(chefs);
+  const compactFilters = el('div', 'compact-filters');
+  for (const [label, values, field, allLabel] of [
+    ['Chef', ['Todos', ...new Set(state.recipes.map(r => r.metadata?.Chef).filter(Boolean))], 'chef', 'Todos los chefs']
+  ]) {
+    const wrapper = el('label', 'compact-filter'); wrapper.append(el('span', 'compact-filter-label', label));
+    const select = el('select'); select.setAttribute('aria-label', label);
+    for (const value of values) { const option = el('option', null, value === values[0] ? allLabel : value); option.value = value; select.append(option); }
+    select.value = state[field]; select.addEventListener('change', () => { state[field] = select.value; drawResults(); });
+    wrapper.append(select); compactFilters.append(wrapper);
   }
-  main.append(filters); const chefs=el('nav','filters chef-filters'); chefs.setAttribute('aria-label','Filtrar por chef'); for(const chef of ['Todos', ...new Set(state.recipes.map(r=>r.metadata?.Chef).filter(Boolean))]) { const b=el('button',null,chef==='Todos'?'Todos los chefs':chef); b.type='button'; b.setAttribute('aria-pressed',String(chef===state.chef)); b.addEventListener('click',()=>{state.chef=chef;chefs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));drawResults()}); chefs.append(b); } main.append(chefs); const results = el('div', 'results'); const count = el('span', 'count'); count.setAttribute('aria-live', 'polite'); results.append(el('span', null, 'Nuestras recetas'), count); main.append(results, el('div', 'grid')); drawResults();
+  main.append(compactFilters); const results = el('div', 'results'); const count = el('span', 'count'); count.setAttribute('aria-live', 'polite'); results.append(el('span', null, state.category === 'Todas' ? 'Nuestras recetas' : state.category), count); main.append(results, el('div', 'grid')); drawResults();
 }
 function showRecipe(recipe) {
   document.title = `${recipe.title} · Recetario Ortiz`; main.replaceChildren();
@@ -153,9 +160,25 @@ function route() {
   if (recipe) { showRecipe(recipe); window.scrollTo(0, 0); }
   else { main.replaceChildren(); const section = el('section', 'missing'); section.append(el('h1', null, 'No encontramos esta receta.')); const a = el('a', null, 'Volver al recetario'); a.href = '#'; section.append(a); main.append(section); }
 }
+function setupCategoryMenu() {
+  const dialog = document.querySelector('#category-menu');
+  const opener = document.querySelector('.menu-toggle');
+  const list = dialog.querySelector('nav');
+  const close = () => dialog.close();
+  opener.addEventListener('click', () => { dialog.showModal(); dialog.querySelector('.menu-close').focus(); });
+  dialog.querySelector('.menu-close').addEventListener('click', close);
+  dialog.addEventListener('click', event => { if (event.target === dialog) close(); });
+  for (const category of ['Todas', ...new Set(state.recipes.map(r => r.category))]) {
+    const button = el('button', 'category-menu-item', category === 'Todas' ? 'Todas las recetas' : category);
+    button.type = 'button'; button.addEventListener('click', () => {
+      state.category = category; close();
+      if (getHashId() !== null) location.hash = ''; else showCatalogue();
+    }); list.append(button);
+  }
+}
 window.addEventListener('hashchange', route);
 fetch('data/catalogo.json', { cache: 'no-store' }).then(response => { if (!response.ok) throw new Error('No se pudo cargar el catálogo'); return response.json(); }).then(data => {
-  if (!Array.isArray(data.recipes)) throw new Error('Formato de catálogo no válido'); state.recipes = data.recipes; route();
+  if (!Array.isArray(data.recipes)) throw new Error('Formato de catálogo no válido'); state.recipes = data.recipes; setupCategoryMenu(); route();
 }).catch(() => { main.replaceChildren(); const error = el('section', 'error'); error.append(el('h1', null, 'No se pueden cargar las recetas'), el('p', null, 'Comprueba tu conexión y vuelve a intentarlo.')); const b = el('button', null, 'Volver a intentar'); b.type = 'button'; b.addEventListener('click', () => location.reload()); error.append(b); main.append(error); });
 
 // Detecta publicaciones también cuando el recetario permanece abierto.

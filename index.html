@@ -22,7 +22,8 @@
 <body>
   <a href="#contenido" class="skip-link">Saltar al contenido</a>
   <div class="shell">
-    <header class="brand"><a href="#" aria-label="Recetario Ortiz, inicio"><img src="assets/logo.png" alt="Recetario Ortiz" width="324" height="38"></a><span>Recetas para compartir</span></header>
+    <header class="brand"><button class="menu-toggle" type="button" aria-label="Abrir categorías" aria-haspopup="dialog" aria-controls="category-menu"><span></span><span></span><span></span></button><a href="#" aria-label="Recetario Ortiz, inicio"><img src="assets/logo.png" alt="Recetario Ortiz" width="324" height="38"></a><span>Recetas para compartir</span></header>
+    <dialog id="category-menu" class="category-menu" aria-labelledby="category-menu-title"><div class="category-menu-head"><h2 id="category-menu-title">Categorías</h2><button type="button" class="menu-close" aria-label="Cerrar menú">×</button></div><nav aria-label="Categorías de recetas"></nav></dialog>
     <main id="contenido" tabindex="-1"><p class="loading" role="status">Cargando recetas…</p></main>
   </div>
 </body>
