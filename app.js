@@ -103,12 +103,8 @@ const people = [
     {name:'Patri', letter:'P', kind:'person'}
   ];
 function chefSymbol(person) {
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); svg.setAttribute('viewBox','0 0 32 32'); svg.setAttribute('aria-hidden','true');
-    const shape = document.createElementNS('http://www.w3.org/2000/svg','path');
-    shape.setAttribute('d', person.kind === 'machine' ? 'M8 8h16l-2 12H10L8 8Zm3-3h10M10 20l-2 7h16l-2-7M13 24h6' : person.kind === 'grandma' ? 'M11 11a5 5 0 1 1 10 0 5 5 0 0 1-10 0ZM10 9C8 5 12 2 16 3c4-1 8 2 6 6M6 28c0-6 4-10 10-10s10 4 10 10' : 'M11 10a5 5 0 1 1 10 0 5 5 0 0 1-10 0ZM6 28c0-6 4-10 10-10s10 4 10 10M11 20l1 7h8l1-7');
-    shape.setAttribute('fill','none'); shape.setAttribute('stroke','currentColor'); shape.setAttribute('stroke-width','1.5'); shape.setAttribute('stroke-linecap','round'); shape.setAttribute('stroke-linejoin','round'); svg.append(shape);
-    if (person.letter) { const text = document.createElementNS('http://www.w3.org/2000/svg','text'); text.setAttribute('x','16');text.setAttribute('y','27');text.setAttribute('text-anchor','middle');text.setAttribute('font-size','7');text.setAttribute('font-weight','bold');text.setAttribute('fill','currentColor');text.textContent=person.letter;svg.append(text); }
-    return svg;
+  const files = {'Javi':'javi', 'Abuela Loli':'loli', 'Thermomix':'thermomix', 'Abuela Tere':'tere', 'Patri':'patri'};
+  const image = el('img', 'chef-portrait'); image.src = pathUrl(`assets/chefs/${files[person.name]}.webp`); image.alt = ''; image.decoding = 'async'; return image;
 }
 function showCatalogue() {
   document.title = 'Recetario Ortiz'; main.replaceChildren();
@@ -162,7 +158,12 @@ function showRecipe(recipe) {
       if (file && navigator.share && navigator.canShare && navigator.canShare({files: [file]})) {
         try { await navigator.share({files: [file], title: recipe.title}); } catch (error) { if (error.name !== 'AbortError') window.open(pdf, '_blank', 'noopener'); }
       } else { window.open(pdf, '_blank', 'noopener'); }
-    }); nav.append(share);
+    });
+    const desktopItem = el('div', 'meta-item meta-share');
+    desktopItem.append(el('dt', null, 'COMPARTIR'));
+    const desktopValue = el('dd'); const desktopShare = share.cloneNode(true);
+    desktopShare.addEventListener('click', () => share.click()); desktopValue.append(desktopShare); desktopItem.append(desktopValue); meta.append(desktopItem);
+    nav.append(share);
   }
   article.append(nav); main.append(article);
 }
