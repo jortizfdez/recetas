@@ -50,7 +50,7 @@ const people = [
   { name: 'Patri', portrait: 'patri' },
   { name: 'Abuela Loli', portrait: 'loli' },
   { name: 'Abuela Tere', portrait: 'tere' },
-  { name: 'Bisabuela Ela', portrait: 'ela' },
+  { name: 'Ela', portrait: 'ela' },
   { name: 'Thermomix', portrait: 'thermomix' }
 ];
 function chefSymbol(person) {

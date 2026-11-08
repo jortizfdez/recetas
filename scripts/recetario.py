@@ -71,7 +71,7 @@ def parse_recipe(path, root):
         raise RecipeError(f'No se identifica el primer paso: {relative}')
     # Keep complete source and every section intact; presentation never has to discard
     # paragraphs, links, unusual quantities or additional section types.
-    return {'id': relative.with_suffix('').as_posix(), 'category': relative.parts[0],
+    return {'id': relative.with_suffix('').as_posix(), 'category': relative.parts[0].capitalize(),
             'title': title, 'metadata': metadata,
             'image': {'path': image_file.relative_to(root).as_posix(), 'alt': alt},
             'sections': sections, 'markdown': raw}

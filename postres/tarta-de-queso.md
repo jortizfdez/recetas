@@ -1,6 +1,6 @@
 # Tarta de Queso
 
-**Chef:** ELA  
+**Chef:** Ela  
 **Raciones:** ~8  
 **Dificultad:** Fácil  
 **Tiempo:** ~60-75 min, más enfriado

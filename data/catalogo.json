@@ -172,6 +172,40 @@
       "pdfPath": "Carnes/3.lomo-cerdo-ciruelas-cebollitas.pdf"
     },
     {
+      "id": "Pastas/espaguetis-a-la-marinera",
+      "category": "Pastas",
+      "title": "Espaguetis a la marinera",
+      "metadata": {
+        "Receta": "10",
+        "Chef": "Javi",
+        "Raciones": "4",
+        "Dificultad": "media",
+        "Tiempo": "~45 min"
+      },
+      "image": {
+        "path": "Pastas/espaguetis-marinera-imagen.png",
+        "alt": "Espaguetis con salsa de tomate, gambas y perejil",
+        "logoPath": "Pastas/espaguetis-a-la-marinera-logotipo.png",
+        "optimizedPath": "assets/web/Pastas/espaguetis-marinera-imagen-60018646039a40cbb64b.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | 4 raciones |\n|---|---:|\n| Espaguetis | 500 g |\n| Mejillones | 500 g |\n| Langostinos o gambas | 200 g |\n| Tomates pelados en su jugo | 400 g (2 latas) |\n| Cebolla | 1 |\n| Ajo | 4 dientes |\n| Guindillas | 2 |\n| Aceite de oliva | 100 ml |\n| Vino blanco | 200 ml |\n| Perejil | Al gusto |\n| Orégano | Al gusto |\n| Sal y pimienta | Al gusto |"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Limpiar los mejillones, retirar las barbas y desechar los que estén rotos o abiertos y no se cierren al tocarlos. Reservarlos escurridos.\n2. Picar la cebolla y los ajos. Calentar el aceite en una sartén amplia o cazuela y dorarlos a fuego medio, sin que se quemen.\n3. Añadir los mejillones y el vino blanco. Llevar a ebullición y, cuando empiece a hervir, incorporar el perejil picado, los tomates con su jugo, las guindillas picadas, el orégano y un poco de sal y pimienta.\n4. Cocinar a fuego vivo, removiendo de vez en cuando, hasta que los mejillones se abran y la salsa reduzca. Desechar los mejillones que permanezcan cerrados tras la cocción.\n5. Incorporar los langostinos o gambas y cocinar solo unos minutos, hasta que estén rosados y hechos.\n6. Cocer los espaguetis en agua con sal siguiendo el tiempo indicado en el paquete. Escurrirlos, mezclarlos con la salsa y servir con perejil picado."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Prueba la salsa antes de añadir más sal: el marisco y la reducción pueden intensificar su sabor.\n- Los ~45 minutos son orientativos; incluyen la limpieza del marisco, la cocción de la salsa y la pasta."
+        }
+      ],
+      "markdown": "# Espaguetis a la marinera\n\n**Receta:** 10 · **Chef:** Javi · **Raciones:** 4 · **Dificultad:** media · **Tiempo:** ~45 min\n\n![Espaguetis con salsa de tomate, gambas y perejil](espaguetis-marinera-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | 4 raciones |\n|---|---:|\n| Espaguetis | 500 g |\n| Mejillones | 500 g |\n| Langostinos o gambas | 200 g |\n| Tomates pelados en su jugo | 400 g (2 latas) |\n| Cebolla | 1 |\n| Ajo | 4 dientes |\n| Guindillas | 2 |\n| Aceite de oliva | 100 ml |\n| Vino blanco | 200 ml |\n| Perejil | Al gusto |\n| Orégano | Al gusto |\n| Sal y pimienta | Al gusto |\n\n## Elaboración\n\n1. Limpiar los mejillones, retirar las barbas y desechar los que estén rotos o abiertos y no se cierren al tocarlos. Reservarlos escurridos.\n2. Picar la cebolla y los ajos. Calentar el aceite en una sartén amplia o cazuela y dorarlos a fuego medio, sin que se quemen.\n3. Añadir los mejillones y el vino blanco. Llevar a ebullición y, cuando empiece a hervir, incorporar el perejil picado, los tomates con su jugo, las guindillas picadas, el orégano y un poco de sal y pimienta.\n4. Cocinar a fuego vivo, removiendo de vez en cuando, hasta que los mejillones se abran y la salsa reduzca. Desechar los mejillones que permanezcan cerrados tras la cocción.\n5. Incorporar los langostinos o gambas y cocinar solo unos minutos, hasta que estén rosados y hechos.\n6. Cocer los espaguetis en agua con sal siguiendo el tiempo indicado en el paquete. Escurrirlos, mezclarlos con la salsa y servir con perejil picado.\n\n## Consejos\n\n- Prueba la salsa antes de añadir más sal: el marisco y la reducción pueden intensificar su sabor.\n- Los ~45 minutos son orientativos; incluyen la limpieza del marisco, la cocción de la salsa y la pasta.\n",
+      "pdfPath": "Pastas/10.espaguetis-a-la-marinera.pdf"
+    },
+    {
       "id": "Pastas/gnocchi-alla-sorrentina",
       "category": "Pastas",
       "title": "Gnocchi alla sorrentina",
@@ -309,10 +343,10 @@
     },
     {
       "id": "postres/tarta-de-queso",
-      "category": "postres",
+      "category": "Postres",
       "title": "Tarta de Queso",
       "metadata": {
-        "Chef": "ELA",
+        "Chef": "Ela",
         "Raciones": "~8",
         "Dificultad": "Fácil",
         "Tiempo": "~60-75 min, más enfriado"
@@ -337,7 +371,7 @@
           "markdown": "- El tiempo de cocción es orientativo: comprueba el centro antes de sacar la tarta.\n- Conserva la tarta refrigerada."
         }
       ],
-      "markdown": "# Tarta de Queso\n\n**Chef:** ELA  \n**Raciones:** ~8  \n**Dificultad:** Fácil  \n**Tiempo:** ~60-75 min, más enfriado\n\n![Tarta de queso](tarta-de-queso-imagen.png)\n\nLas raciones y el tiempo son orientativos; el tiempo de horno depende del molde y del horno.\n\n## Ingredientes\n\n### Base\n\n- ~30 galletas\n- 200 g de mantequilla\n\n### Relleno\n\n- 250 g de requesón (1 bote)\n- 3 huevos\n- 1 bote pequeño de leche condensada\n- 200 g de nueces\n\n## Elaboración\n\n1. Precalienta el horno a 180 °C. Tritura las galletas y resérvalas.\n2. Derrite la mantequilla en el microondas en intervalos cortos. Mézclala con las galletas y extiende la mezcla sobre la base del molde, presionando para compactarla.\n3. Bate el requesón, los huevos, la leche condensada y las nueces hasta integrar el relleno. Viértelo sobre la base de galletas.\n4. Hornea a 180 °C hasta que, al pinchar el centro con un cuchillo, la punta salga limpia. Como referencia, comprueba el punto a partir de ~40 minutos.\n5. Deja enfriar la tarta y refrigérala antes de servir.\n\n## Consejos\n\n- El tiempo de cocción es orientativo: comprueba el centro antes de sacar la tarta.\n- Conserva la tarta refrigerada.\n",
+      "markdown": "# Tarta de Queso\n\n**Chef:** Ela  \n**Raciones:** ~8  \n**Dificultad:** Fácil  \n**Tiempo:** ~60-75 min, más enfriado\n\n![Tarta de queso](tarta-de-queso-imagen.png)\n\nLas raciones y el tiempo son orientativos; el tiempo de horno depende del molde y del horno.\n\n## Ingredientes\n\n### Base\n\n- ~30 galletas\n- 200 g de mantequilla\n\n### Relleno\n\n- 250 g de requesón (1 bote)\n- 3 huevos\n- 1 bote pequeño de leche condensada\n- 200 g de nueces\n\n## Elaboración\n\n1. Precalienta el horno a 180 °C. Tritura las galletas y resérvalas.\n2. Derrite la mantequilla en el microondas en intervalos cortos. Mézclala con las galletas y extiende la mezcla sobre la base del molde, presionando para compactarla.\n3. Bate el requesón, los huevos, la leche condensada y las nueces hasta integrar el relleno. Viértelo sobre la base de galletas.\n4. Hornea a 180 °C hasta que, al pinchar el centro con un cuchillo, la punta salga limpia. Como referencia, comprueba el punto a partir de ~40 minutos.\n5. Deja enfriar la tarta y refrigérala antes de servir.\n\n## Consejos\n\n- El tiempo de cocción es orientativo: comprueba el centro antes de sacar la tarta.\n- Conserva la tarta refrigerada.\n",
       "pdfPath": "postres/9.tarta-de-queso.pdf"
     }
   ]
