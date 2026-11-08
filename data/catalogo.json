@@ -72,6 +72,39 @@
       "pdfPath": "Carnes/6.albondigas-salsa-almendras.pdf"
     },
     {
+      "id": "Carnes/estofado-de-carne",
+      "category": "Carnes",
+      "title": "Estofado de Carne",
+      "metadata": {
+        "Chef": "Abuela Loli",
+        "Raciones": "~4",
+        "Dificultad": "Fácil",
+        "Tiempo": "~45 min"
+      },
+      "image": {
+        "path": "Carnes/estofado-de-carne-imagen.png",
+        "alt": "Estofado de Carne",
+        "logoPath": "Carnes/estofado-de-carne-logotipo.png",
+        "optimizedPath": "assets/web/Carnes/estofado-de-carne-imagen-bab9be08cf27db5c1b1c.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "- 500 g de carne magra de ternera o cerdo, en dados\n- ~2 patatas medianas\n- ~2 zanahorias\n- ~2 alcachofas\n- ~1 cebolla\n- ~2 dientes de ajo\n- 1/2 vaso de vino blanco\n- Romero, laurel y clavo, al gusto\n- Colorante alimentario, al gusto\n- Aceite de oliva y sal, al gusto\n- Agua, la necesaria para cubrir"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Pela y pica la cebolla y los ajos. Pela y trocea las zanahorias y las patatas; limpia y trocea las alcachofas.\n2. En la olla exprés, prepara un refrito con aceite, cebolla, ajos y zanahoria hasta que las verduras estén pochadas.\n3. Añade la carne y rehógala. Incorpora las alcachofas, las patatas, el romero, el laurel y el clavo; sazona.\n4. Vierte medio vaso de vino blanco y añade el colorante. Agrega agua hasta cubrir los ingredientes, respetando el límite de llenado de la olla.\n5. Cierra la olla y cocina 10 minutos desde que alcance la presión, según la receta original. Deja que pierda presión siguiendo las instrucciones de la olla antes de abrirla.\n6. Comprueba que la carne esté tierna y las patatas hechas. Si necesitan más tiempo, continúa la cocción hasta que estén listas; rectifica de sal."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las cantidades indicadas con ~ y el rendimiento son orientativos: no figuran en la receta original.\n- El tiempo de cocción puede variar según la carne y la olla; los 10 minutos proceden del manuscrito."
+        }
+      ],
+      "markdown": "# Estofado de Carne\n\n**Chef:** Abuela Loli  \n**Raciones:** ~4  \n**Dificultad:** Fácil  \n**Tiempo:** ~45 min\n\n![Estofado de Carne](estofado-de-carne-imagen.png)\n\n## Ingredientes\n\n- 500 g de carne magra de ternera o cerdo, en dados\n- ~2 patatas medianas\n- ~2 zanahorias\n- ~2 alcachofas\n- ~1 cebolla\n- ~2 dientes de ajo\n- 1/2 vaso de vino blanco\n- Romero, laurel y clavo, al gusto\n- Colorante alimentario, al gusto\n- Aceite de oliva y sal, al gusto\n- Agua, la necesaria para cubrir\n\n## Elaboración\n\n1. Pela y pica la cebolla y los ajos. Pela y trocea las zanahorias y las patatas; limpia y trocea las alcachofas.\n2. En la olla exprés, prepara un refrito con aceite, cebolla, ajos y zanahoria hasta que las verduras estén pochadas.\n3. Añade la carne y rehógala. Incorpora las alcachofas, las patatas, el romero, el laurel y el clavo; sazona.\n4. Vierte medio vaso de vino blanco y añade el colorante. Agrega agua hasta cubrir los ingredientes, respetando el límite de llenado de la olla.\n5. Cierra la olla y cocina 10 minutos desde que alcance la presión, según la receta original. Deja que pierda presión siguiendo las instrucciones de la olla antes de abrirla.\n6. Comprueba que la carne esté tierna y las patatas hechas. Si necesitan más tiempo, continúa la cocción hasta que estén listas; rectifica de sal.\n\n## Consejos\n\n- Las cantidades indicadas con ~ y el rendimiento son orientativos: no figuran en la receta original.\n- El tiempo de cocción puede variar según la carne y la olla; los 10 minutos proceden del manuscrito.\n",
+      "pdfPath": "Carnes/9.estofado-de-carne.pdf"
+    },
+    {
       "id": "Carnes/lomo-cerdo-ciruelas-cebollitas",
       "category": "Carnes",
       "title": "Lomo de cerdo con ciruelas y cebollitas",
