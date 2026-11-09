@@ -705,7 +705,8 @@ th:not(:first-child),td:not(:first-child) {
   padding: 16px 12px
 }
 .category-menu-item:hover {
-  background: #eee8dc
+  background: #eee8dc;
+  background: color-mix(in srgb, var(--category-accent, var(--blue)) 14%, transparent)
 }
 .menu-close:hover {
   background: #fff0e8
