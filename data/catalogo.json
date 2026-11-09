@@ -375,6 +375,40 @@
       "pdfPath": "Carnes/31.pastela-marroqui.pdf"
     },
     {
+      "id": "Carnes/pollo-a-la-moruna",
+      "category": "Carnes",
+      "title": "Pollo a la moruna",
+      "metadata": {
+        "Receta": "35",
+        "Chef": "Abuela Loli",
+        "Raciones": "4",
+        "Dificultad": "fácil",
+        "Tiempo": "~70 min"
+      },
+      "image": {
+        "path": "Carnes/pollo-a-la-moruna-imagen.png",
+        "alt": "Pollo a la moruna",
+        "logoPath": "Carnes/pollo-a-la-moruna-logotipo.png",
+        "optimizedPath": "assets/web/Carnes/pollo-a-la-moruna-imagen-09b23ee23601ca509723.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | 4 raciones |\n|---|---:|\n| Pollo troceado | 1 kg |\n| Cebolla | 1 grande |\n| Tomates pelados | 2 unidades |\n| Especias morunas | 1–2 cucharaditas |\n| Ciruelas pasas | 80 g |\n| Pasas de Corinto | 40 g |\n| Aceitunas negras | 80 g |\n| Almendras fritas | 50 g |\n| Canela o miel | Al gusto |\n| Aceite de oliva | Para freír |"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Pela y pica la cebolla. Pela y trocea los tomates. Si las ciruelas tienen hueso, retíralo.\n2. Calienta aceite en una cazuela y fríe los trozos de pollo hasta que estén dorados por todos sus lados.\n3. Añade la cebolla, el tomate y las especias morunas. Cocina a fuego lento, removiendo de vez en cuando; si se queda sin líquido, añade un poco de agua.\n4. Cuando el pollo esté tierno y bien cocinado, incorpora las pasas y las ciruelas. Añade canela o miel al gusto y deja cocer unos minutos más.\n5. Al final, añade las almendras fritas y las aceitunas negras. Mezcla suavemente y sirve caliente."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las cantidades y los tiempos son orientativos.\n- Comprueba que el pollo esté bien cocinado antes de servir.\n- Contiene almendras; revisa los ingredientes de la mezcla de especias."
+        }
+      ],
+      "markdown": "# Pollo a la moruna\n\n**Receta:** 35 · **Chef:** Abuela Loli · **Raciones:** 4 · **Dificultad:** fácil · **Tiempo:** ~70 min\n\n![Pollo a la moruna](pollo-a-la-moruna-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | 4 raciones |\n|---|---:|\n| Pollo troceado | 1 kg |\n| Cebolla | 1 grande |\n| Tomates pelados | 2 unidades |\n| Especias morunas | 1–2 cucharaditas |\n| Ciruelas pasas | 80 g |\n| Pasas de Corinto | 40 g |\n| Aceitunas negras | 80 g |\n| Almendras fritas | 50 g |\n| Canela o miel | Al gusto |\n| Aceite de oliva | Para freír |\n\n## Elaboración\n\n1. Pela y pica la cebolla. Pela y trocea los tomates. Si las ciruelas tienen hueso, retíralo.\n2. Calienta aceite en una cazuela y fríe los trozos de pollo hasta que estén dorados por todos sus lados.\n3. Añade la cebolla, el tomate y las especias morunas. Cocina a fuego lento, removiendo de vez en cuando; si se queda sin líquido, añade un poco de agua.\n4. Cuando el pollo esté tierno y bien cocinado, incorpora las pasas y las ciruelas. Añade canela o miel al gusto y deja cocer unos minutos más.\n5. Al final, añade las almendras fritas y las aceitunas negras. Mezcla suavemente y sirve caliente.\n\n## Consejos\n\n- Las cantidades y los tiempos son orientativos.\n- Comprueba que el pollo esté bien cocinado antes de servir.\n- Contiene almendras; revisa los ingredientes de la mezcla de especias.\n",
+      "pdfPath": "Carnes/35.pollo-a-la-moruna.pdf"
+    },
+    {
       "id": "Legumbres/fabada",
       "category": "Legumbres",
       "title": "Fabada",
@@ -918,6 +952,40 @@
       "pdfPath": "Postres/25.yogur-de-limon.pdf"
     },
     {
+      "id": "Sopas/sopa-de-esparragos",
+      "category": "Sopas",
+      "title": "Sopa de espárragos",
+      "metadata": {
+        "Receta": "36",
+        "Chef": "Abuela Loli",
+        "Raciones": "6",
+        "Dificultad": "media",
+        "Tiempo": "~60 min"
+      },
+      "image": {
+        "path": "Sopas/sopa-de-esparragos-imagen.png",
+        "alt": "Sopa de espárragos",
+        "logoPath": "Sopas/sopa-de-esparragos-logotipo.png",
+        "optimizedPath": "assets/web/Sopas/sopa-de-esparragos-imagen-8591993ac3da52c638e5.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "Para 6 personas; cantidades orientativas.\n\n- Espárragos: ~600 g\n- Gambas peladas: ~300 g\n- Huevos: ~3\n- Cebolleta: ~1\n- Pimiento rojo: ~1\n- Zanahoria: ~1\n- Tomates: ~2\n- Ajo: ~2 dientes\n- Agua: ~2 l\n- Laurel: ~1 hoja\n- Tomillo, comino y orégano: al gusto\n- Azafrán (opcional): ~1 pizca\n- Pan: ~100 g\n- Aceite de oliva: el necesario\n- Sal: al gusto"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Si los espárragos son frescos, límpialos, trocéalos y cuécelos previamente en agua hasta que estén tiernos; conserva el agua de cocción. Si son congelados, no necesitan esta cocción previa.\n2. Trocea la cebolleta, el pimiento rojo, la zanahoria, los tomates y los ajos. Sofríelos en aceite hasta que estén tiernos y tritura el refrito.\n3. Añade el refrito triturado a la cazuela con el agua y los espárragos. Incorpora sal, laurel, tomillo, comino, orégano y, si lo deseas, azafrán. Añade las gambas peladas.\n4. Cuece el conjunto aproximadamente 20 minutos, hasta que los espárragos estén tiernos y las gambas bien cocinadas. Ajusta la sal.\n5. Mientras, cuece los huevos, enfríalos, pélalos y pícalos. Corta el pan en dados y fríelo en aceite hasta dorarlo; escúrrelo.\n6. Sirve la sopa con el huevo duro picado y el pan frito."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las cantidades y el tiempo total son orientativos.\n- Si usas espárragos congelados, añádelos directamente a la cazuela sin cocción previa.\n- Contiene crustáceos, huevo y gluten."
+        }
+      ],
+      "markdown": "# Sopa de espárragos\n\n**Receta:** 36 · **Chef:** Abuela Loli · **Raciones:** 6 · **Dificultad:** media · **Tiempo:** ~60 min\n\n![Sopa de espárragos](sopa-de-esparragos-imagen.png)\n\n## Ingredientes\n\nPara 6 personas; cantidades orientativas.\n\n- Espárragos: ~600 g\n- Gambas peladas: ~300 g\n- Huevos: ~3\n- Cebolleta: ~1\n- Pimiento rojo: ~1\n- Zanahoria: ~1\n- Tomates: ~2\n- Ajo: ~2 dientes\n- Agua: ~2 l\n- Laurel: ~1 hoja\n- Tomillo, comino y orégano: al gusto\n- Azafrán (opcional): ~1 pizca\n- Pan: ~100 g\n- Aceite de oliva: el necesario\n- Sal: al gusto\n\n## Elaboración\n\n1. Si los espárragos son frescos, límpialos, trocéalos y cuécelos previamente en agua hasta que estén tiernos; conserva el agua de cocción. Si son congelados, no necesitan esta cocción previa.\n2. Trocea la cebolleta, el pimiento rojo, la zanahoria, los tomates y los ajos. Sofríelos en aceite hasta que estén tiernos y tritura el refrito.\n3. Añade el refrito triturado a la cazuela con el agua y los espárragos. Incorpora sal, laurel, tomillo, comino, orégano y, si lo deseas, azafrán. Añade las gambas peladas.\n4. Cuece el conjunto aproximadamente 20 minutos, hasta que los espárragos estén tiernos y las gambas bien cocinadas. Ajusta la sal.\n5. Mientras, cuece los huevos, enfríalos, pélalos y pícalos. Corta el pan en dados y fríelo en aceite hasta dorarlo; escúrrelo.\n6. Sirve la sopa con el huevo duro picado y el pan frito.\n\n## Consejos\n\n- Las cantidades y el tiempo total son orientativos.\n- Si usas espárragos congelados, añádelos directamente a la cazuela sin cocción previa.\n- Contiene crustáceos, huevo y gluten.\n",
+      "pdfPath": "Sopas/36.sopa-de-esparragos.pdf"
+    },
+    {
       "id": "Sopas/sopa-de-picadillo",
       "category": "Sopas",
       "title": "Sopa de picadillo",
@@ -1085,6 +1153,40 @@
       ],
       "markdown": "# Espinacas con garbanzos\n\n**Chef:** Abuelo Juanmi  \n**Raciones:** ~4, según el tamaño del tarro y la bolsa  \n**Dificultad:** Fácil  \n**Tiempo:** ~30 min\n\n![Espinacas con garbanzos](espinacas-con-garbanzos-imagen.png)\n\n## Ingredientes\n\n- 1 tarro de garbanzos cocidos\n- 1 bolsa de espinacas frescas\n- 3 o 4 rebanadas de pan\n- Ajo, al gusto\n- 1 pastilla de Avecrem\n- Agua, un poco\n- Aceite de oliva, al gusto\n- Pimentón dulce, al gusto\n- Sal, al gusto\n\n## Elaboración\n\n1. Lava las espinacas si es necesario, rehógalas en una sartén con un poco de aceite y resérvalas.\n2. Fríe el pan y los ajos juntos en aceite. Pásalos a un recipiente con un poco de agua y la pastilla de Avecrem; tritura con la batidora hasta obtener una salsa.\n3. Escurre los garbanzos cocidos. Mezcla en una sartén las espinacas, los garbanzos y la salsa triturada.\n4. Añade pimentón dulce y sal. Deja cocinar un rato a fuego suave, removiendo, y sirve caliente.\n\n## Consejos\n\n- El número de raciones depende del tamaño del tarro y de la bolsa; los ~30 minutos son orientativos.\n- Prueba antes de añadir sal, ya que la pastilla de caldo y los garbanzos pueden contenerla.\n- Añade un poco de agua si la mezcla queda demasiado espesa.\n",
       "pdfPath": "Verduras/17.espinacas-con-garbanzos.pdf"
+    },
+    {
+      "id": "Verduras/pastel-de-cebolla",
+      "category": "Verduras",
+      "title": "Pastel de cebolla",
+      "metadata": {
+        "Chef": "Abuela Loli",
+        "Categoría": "Verduras",
+        "Raciones": "~4-6",
+        "Dificultad": "Fácil",
+        "Tiempo": "~50-60 min, más el reposo."
+      },
+      "image": {
+        "path": "Verduras/pastel-de-cebolla-imagen.png",
+        "alt": "Pastel de cebolla",
+        "logoPath": "Verduras/pastel-de-cebolla-logotipo.png",
+        "optimizedPath": "assets/web/Verduras/pastel-de-cebolla-imagen-140161af1d2ca2d77f89.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | Cantidad |\n|---|---:|\n| Masa de hojaldre | 1 lámina |\n| Cebolla frita de lata | ~200 g |\n| o cebolla fresca | ~2 uds. |\n| Beicon en taquitos | ~150 g |\n| Huevos | 3 uds. |\n| Nata para cocinar | 200 ml |\n| Aceite de oliva | si fríes la cebolla |"
+        },
+        {
+          "heading": "Preparación",
+          "markdown": "1. Precalienta el horno a 180 °C. Si utilizas cebolla fresca, pélala, córtala y fríela a fuego medio con un poco de aceite hasta que esté tierna y dorada. Si utilizas cebolla frita de lata, escúrrela si tiene exceso de aceite.\n2. Forra un molde con la lámina de hojaldre, cubriendo la base y los laterales.\n3. Bate los tres huevos en un bol. Añade la nata, la cebolla y el beicon en taquitos, y mezcla bien.\n4. Vierte la mezcla sobre el hojaldre y hornea a 180 °C durante ~30-40 minutos, hasta que el relleno esté cuajado, el beicon bien cocinado y el hojaldre dorado.\n5. Deja reposar unos minutos antes de cortar y servir."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las cantidades de cebolla y beicon y el tiempo de horneado son orientativos; pueden variar según el molde y el horno.\n- Comprueba que el centro del relleno esté cuajado antes de sacar el pastel."
+        }
+      ],
+      "markdown": "# Pastel de cebolla\n\n**Chef:** Abuela Loli  \n**Categoría:** Verduras  \n**Raciones:** ~4-6  \n**Dificultad:** Fácil  \n**Tiempo:** ~50-60 min, más el reposo.\n\n![Pastel de cebolla](pastel-de-cebolla-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | Cantidad |\n|---|---:|\n| Masa de hojaldre | 1 lámina |\n| Cebolla frita de lata | ~200 g |\n| o cebolla fresca | ~2 uds. |\n| Beicon en taquitos | ~150 g |\n| Huevos | 3 uds. |\n| Nata para cocinar | 200 ml |\n| Aceite de oliva | si fríes la cebolla |\n\n## Preparación\n\n1. Precalienta el horno a 180 °C. Si utilizas cebolla fresca, pélala, córtala y fríela a fuego medio con un poco de aceite hasta que esté tierna y dorada. Si utilizas cebolla frita de lata, escúrrela si tiene exceso de aceite.\n2. Forra un molde con la lámina de hojaldre, cubriendo la base y los laterales.\n3. Bate los tres huevos en un bol. Añade la nata, la cebolla y el beicon en taquitos, y mezcla bien.\n4. Vierte la mezcla sobre el hojaldre y hornea a 180 °C durante ~30-40 minutos, hasta que el relleno esté cuajado, el beicon bien cocinado y el hojaldre dorado.\n5. Deja reposar unos minutos antes de cortar y servir.\n\n## Consejos\n\n- Las cantidades de cebolla y beicon y el tiempo de horneado son orientativos; pueden variar según el molde y el horno.\n- Comprueba que el centro del relleno esté cuajado antes de sacar el pastel.\n",
+      "pdfPath": "Verduras/34.pastel-de-cebolla.pdf"
     },
     {
       "id": "Verduras/sopa-de-calabaza",
