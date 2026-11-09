@@ -26,7 +26,7 @@ function setupCategoryMenu() {
     categoriesByKey.set(key, categoryOrder.find(name => normalize(name) === key) || value);
   }
   const categories = [...categoriesByKey.entries()]
-    .sort(([a], [b]) => (categoryRank.get(a) ?? categoryOrder.length) - (categoryRank.get(b) ?? categoryOrder.length) || a.localeCompare(b, 'es'))
+    .sort(([a], [b]) => (a === 'postres') - (b === 'postres') || (categoryRank.get(a) ?? categoryOrder.length) - (categoryRank.get(b) ?? categoryOrder.length) || a.localeCompare(b, 'es'))
     .map(([, name]) => name);
   for (const category of ['Todas', ...categories]) {
     const button = el('button', 'category-menu-item', category === 'Todas' ? 'Todas las recetas' : category);
