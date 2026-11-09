@@ -341,6 +341,40 @@
       "pdfPath": "Carnes/21.pastel-de-carne-y-berenjena-gratinado.pdf"
     },
     {
+      "id": "Legumbres/fabada",
+      "category": "Legumbres",
+      "title": "Fabada",
+      "metadata": {
+        "Chef": "Abuela Loli",
+        "Categoría": "Legumbres",
+        "Raciones": "~5",
+        "Dificultad": "Fácil",
+        "Tiempo": "~2-3 h de cocción, más 1 día de remojo y ~15 min de preparación."
+      },
+      "image": {
+        "path": "Legumbres/fabada-imagen.png",
+        "alt": "Fabada",
+        "logoPath": "Legumbres/fabada-logotipo.png",
+        "optimizedPath": "assets/web/Legumbres/fabada-imagen-c937a64b19dc20da1e96.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | Cantidad |\n|---|---:|\n| Habichuelas secas | 500 g |\n| Cebolla | 1 ud. |\n| Zanahoria | al gusto |\n| Ajo | al gusto |\n| Chorizo | ~150 g |\n| Pimentón dulce | al gusto |\n| Comino y pimienta | al gusto |\n| Azafrán y sal | al gusto |\n| Agua | para cubrir |\n| Aceite de oliva | para freír el ajo |"
+        },
+        {
+          "heading": "Preparación",
+          "markdown": "1. Remoja las habichuelas en abundante agua durante 1 día, en la nevera. Escúrrelas antes de cocinarlas.\n2. Pela y corta la zanahoria en rodajas. Fríe el ajo en un poco de aceite.\n3. Pon en una olla las habichuelas, la cebolla, la zanahoria y el ajo frito. Cubre con agua y añade pimienta, comino, azafrán, pimentón dulce y sal al gusto.\n4. Lleva a ebullición y cocina suavemente en olla normal hasta que las habichuelas estén tiernas, ~2-3 horas. Añade agua si se necesita para mantenerlas cubiertas.\n5. Incorpora el chorizo al final de la cocción y deja que se caliente bien; si es fresco, cocínalo completamente antes de servir. Ajusta el tiempo según el tipo y tamaño."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- La cantidad de chorizo, las raciones y el tiempo de cocción son orientativos. El tiempo varía según las habichuelas.\n- Comprueba que las habichuelas estén bien cocidas y tiernas antes de servir."
+        }
+      ],
+      "markdown": "# Fabada\n\n**Chef:** Abuela Loli  \n**Categoría:** Legumbres  \n**Raciones:** ~5  \n**Dificultad:** Fácil  \n**Tiempo:** ~2-3 h de cocción, más 1 día de remojo y ~15 min de preparación.\n\n![Fabada](fabada-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | Cantidad |\n|---|---:|\n| Habichuelas secas | 500 g |\n| Cebolla | 1 ud. |\n| Zanahoria | al gusto |\n| Ajo | al gusto |\n| Chorizo | ~150 g |\n| Pimentón dulce | al gusto |\n| Comino y pimienta | al gusto |\n| Azafrán y sal | al gusto |\n| Agua | para cubrir |\n| Aceite de oliva | para freír el ajo |\n\n## Preparación\n\n1. Remoja las habichuelas en abundante agua durante 1 día, en la nevera. Escúrrelas antes de cocinarlas.\n2. Pela y corta la zanahoria en rodajas. Fríe el ajo en un poco de aceite.\n3. Pon en una olla las habichuelas, la cebolla, la zanahoria y el ajo frito. Cubre con agua y añade pimienta, comino, azafrán, pimentón dulce y sal al gusto.\n4. Lleva a ebullición y cocina suavemente en olla normal hasta que las habichuelas estén tiernas, ~2-3 horas. Añade agua si se necesita para mantenerlas cubiertas.\n5. Incorpora el chorizo al final de la cocción y deja que se caliente bien; si es fresco, cocínalo completamente antes de servir. Ajusta el tiempo según el tipo y tamaño.\n\n## Consejos\n\n- La cantidad de chorizo, las raciones y el tiempo de cocción son orientativos. El tiempo varía según las habichuelas.\n- Comprueba que las habichuelas estén bien cocidas y tiernas antes de servir.\n",
+      "pdfPath": "Legumbres/26.fabada.pdf"
+    },
+    {
       "id": "Pastas/espaguetis-a-la-marinera",
       "category": "Pastas",
       "title": "Espaguetis a la marinera",
@@ -646,6 +680,40 @@
       "displayTitle": "Tarta de cerveza Guinness"
     },
     {
+      "id": "Postres/tarta-de-manzana",
+      "category": "Postres",
+      "title": "Tarta de Manzana",
+      "metadata": {
+        "Receta": "27",
+        "Chef": "Ela",
+        "Raciones": "~8",
+        "Dificultad": "media",
+        "Tiempo": "~90 min"
+      },
+      "image": {
+        "path": "Postres/tarta-de-manzana-imagen.png",
+        "alt": "Tarta de Manzana",
+        "logoPath": "Postres/tarta-de-manzana-logotipo.png",
+        "optimizedPath": "assets/web/Postres/tarta-de-manzana-imagen-b17c51ea5d2380a85bf3.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | ~8 raciones |\n|---|---:|\n| Harina de trigo | 250–300 g |\n| Mantequilla derretida | 150 g |\n| Huevo | 1 |\n| Levadura | ½ sobre |\n| Agua para la masa | 1 chupito |\n| Azúcar para la masa | 3–4 cucharadas |\n| Manzanas | ~5 unidades |\n| Agua para el relleno | Un poco |\n| Ron | 1 vaso |\n| Azúcar para el relleno y acabado | Al gusto |\n| Canela | Al gusto |\n| Mermelada | Para pintar |"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Mezcla la harina con la mantequilla derretida. Incorpora el huevo, la levadura, el agua y el azúcar de la masa; trabaja hasta obtener una masa manejable. Añade la harina poco a poco, pues la cantidad es orientativa.\n2. Extiende la masa en un molde de unos 22 cm, cubriendo la base y los laterales. Reserva mientras preparas el relleno. Precalienta el horno a 180 °C.\n3. Pela y trocea la mayor parte de las manzanas; reserva una o dos para la superficie. Cocina la manzana troceada con un poco de agua a fuego lento hasta que se ablande.\n4. Añade el ron y azúcar al gusto. Cocina removiendo hasta que la mezcla se dore y espese. Reparte el relleno sobre la masa.\n5. Corta las manzanas reservadas en rodajas finas y colócalas sobre el relleno. Espolvorea azúcar y canela.\n6. Hornea a 180 °C durante ~35–45 minutos, hasta que la masa esté cocida y dorada. Vigila el final de la cocción: el tiempo depende del horno y del grosor de la masa.\n7. Diluye ligeramente la mermelada con agua y pinta la superficie de la tarta. Deja templar antes de desmoldar y servir."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las cantidades de harina y manzana, las raciones y el horneado son orientativos.\n- La receta original indica un vaso de ron, sin precisar su tamaño; el alcohol puede no evaporarse por completo.\n- Contiene gluten, huevo y leche."
+        }
+      ],
+      "markdown": "# Tarta de Manzana\n\n**Receta:** 27 · **Chef:** Ela · **Raciones:** ~8 · **Dificultad:** media · **Tiempo:** ~90 min\n\n![Tarta de Manzana](tarta-de-manzana-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | ~8 raciones |\n|---|---:|\n| Harina de trigo | 250–300 g |\n| Mantequilla derretida | 150 g |\n| Huevo | 1 |\n| Levadura | ½ sobre |\n| Agua para la masa | 1 chupito |\n| Azúcar para la masa | 3–4 cucharadas |\n| Manzanas | ~5 unidades |\n| Agua para el relleno | Un poco |\n| Ron | 1 vaso |\n| Azúcar para el relleno y acabado | Al gusto |\n| Canela | Al gusto |\n| Mermelada | Para pintar |\n\n## Elaboración\n\n1. Mezcla la harina con la mantequilla derretida. Incorpora el huevo, la levadura, el agua y el azúcar de la masa; trabaja hasta obtener una masa manejable. Añade la harina poco a poco, pues la cantidad es orientativa.\n2. Extiende la masa en un molde de unos 22 cm, cubriendo la base y los laterales. Reserva mientras preparas el relleno. Precalienta el horno a 180 °C.\n3. Pela y trocea la mayor parte de las manzanas; reserva una o dos para la superficie. Cocina la manzana troceada con un poco de agua a fuego lento hasta que se ablande.\n4. Añade el ron y azúcar al gusto. Cocina removiendo hasta que la mezcla se dore y espese. Reparte el relleno sobre la masa.\n5. Corta las manzanas reservadas en rodajas finas y colócalas sobre el relleno. Espolvorea azúcar y canela.\n6. Hornea a 180 °C durante ~35–45 minutos, hasta que la masa esté cocida y dorada. Vigila el final de la cocción: el tiempo depende del horno y del grosor de la masa.\n7. Diluye ligeramente la mermelada con agua y pinta la superficie de la tarta. Deja templar antes de desmoldar y servir.\n\n## Consejos\n\n- Las cantidades de harina y manzana, las raciones y el horneado son orientativos.\n- La receta original indica un vaso de ron, sin precisar su tamaño; el alcohol puede no evaporarse por completo.\n- Contiene gluten, huevo y leche.\n",
+      "pdfPath": "Postres/27.tarta-de-manzana.pdf"
+    },
+    {
       "id": "Postres/tarta-de-queso-al-horno",
       "category": "Postres",
       "title": "Tarta de queso al horno",
@@ -712,6 +780,40 @@
       ],
       "markdown": "# Tarta de Queso\n\n**Chef:** Ela  \n**Raciones:** ~8  \n**Dificultad:** Fácil  \n**Tiempo:** ~60-75 min, más enfriado\n\n![Tarta de queso](tarta-de-queso-imagen.png)\n\nLas raciones y el tiempo son orientativos; el tiempo de horno depende del molde y del horno.\n\n## Ingredientes\n\n### Base\n\n- ~30 galletas\n- 200 g de mantequilla\n\n### Relleno\n\n- 250 g de requesón (1 bote)\n- 3 huevos\n- 1 bote pequeño de leche condensada\n- 200 g de nueces\n\n## Elaboración\n\n1. Precalienta el horno a 180 °C. Tritura las galletas y resérvalas.\n2. Derrite la mantequilla en el microondas en intervalos cortos. Mézclala con las galletas y extiende la mezcla sobre la base del molde, presionando para compactarla.\n3. Bate el requesón, los huevos, la leche condensada y las nueces hasta integrar el relleno. Viértelo sobre la base de galletas.\n4. Hornea a 180 °C hasta que, al pinchar el centro con un cuchillo, la punta salga limpia. Como referencia, comprueba el punto a partir de ~40 minutos.\n5. Deja enfriar la tarta y refrigérala antes de servir.\n\n## Consejos\n\n- El tiempo de cocción es orientativo: comprueba el centro antes de sacar la tarta.\n- Conserva la tarta refrigerada.\n",
       "pdfPath": "Postres/9.tarta-de-queso.pdf"
+    },
+    {
+      "id": "Postres/yogur-de-limon",
+      "category": "Postres",
+      "title": "Yogur de limón",
+      "metadata": {
+        "Receta": "25",
+        "Chef": "Patri",
+        "Raciones": "~4-6",
+        "Dificultad": "media",
+        "Tiempo": "~10 min, más refrigeración"
+      },
+      "image": {
+        "path": "Postres/yogur-de-limon-imagen.png",
+        "alt": "Yogur de limón",
+        "logoPath": "Postres/yogur-de-limon-logotipo.png",
+        "optimizedPath": "assets/web/Postres/yogur-de-limon-imagen-e50b3e2ff01ade82614c.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "Las raciones dependen del tamaño de los tarritos.\n\n- Yogures griegos sin azúcar: 2\n- Leche condensada: 1 lata pequeña\n- Nata líquida para montar: 200 ml\n- Limón: 1, su zumo\n- Virutas de chocolate: al gusto"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Exprime el limón y retira las semillas del zumo.\n2. Mezcla en un bol los yogures, la leche condensada, la nata líquida sin montar y el zumo de limón hasta obtener una crema homogénea.\n3. Reparte la mezcla en tarritos y guárdalos en la nevera hasta que esté fría.\n4. Decora con virutas de chocolate antes de servir."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las raciones y el tiempo de preparación son orientativos.\n- Conserva los tarritos tapados y refrigerados.\n- Contiene leche; comprueba los alérgenos de las virutas de chocolate."
+        }
+      ],
+      "markdown": "# Yogur de limón\n\n**Receta:** 25 · **Chef:** Patri · **Raciones:** ~4-6 · **Dificultad:** media · **Tiempo:** ~10 min, más refrigeración\n\n![Yogur de limón](yogur-de-limon-imagen.png)\n\n## Ingredientes\n\nLas raciones dependen del tamaño de los tarritos.\n\n- Yogures griegos sin azúcar: 2\n- Leche condensada: 1 lata pequeña\n- Nata líquida para montar: 200 ml\n- Limón: 1, su zumo\n- Virutas de chocolate: al gusto\n\n## Elaboración\n\n1. Exprime el limón y retira las semillas del zumo.\n2. Mezcla en un bol los yogures, la leche condensada, la nata líquida sin montar y el zumo de limón hasta obtener una crema homogénea.\n3. Reparte la mezcla en tarritos y guárdalos en la nevera hasta que esté fría.\n4. Decora con virutas de chocolate antes de servir.\n\n## Consejos\n\n- Las raciones y el tiempo de preparación son orientativos.\n- Conserva los tarritos tapados y refrigerados.\n- Contiene leche; comprueba los alérgenos de las virutas de chocolate.\n",
+      "pdfPath": "Postres/25.yogur-de-limon.pdf"
     },
     {
       "id": "Verduras/coliflor-al-horno",

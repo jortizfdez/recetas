@@ -39,7 +39,9 @@ function matchesRecipe(recipe, filters) {
 }
 function drawResults() {
   const grid = document.querySelector('.grid');
-  const recipes = state.recipes.filter(recipe => matchesRecipe(recipe, state));
+  const recipeNumber = recipe => Number(recipe.pdfPath?.match(/(?:^|\/)(\d+)\.[^/]+\.pdf$/i)?.[1] || 0);
+  const recipes = state.recipes.filter(recipe => matchesRecipe(recipe, state))
+    .sort((a, b) => recipeNumber(b) - recipeNumber(a));
   document.querySelector('.count').textContent = `${recipes.length} ${recipes.length === 1 ? 'receta' : 'recetas'}`;
   grid.replaceChildren();
   if (!recipes.length) grid.append(el('p', 'empty', 'No encontramos recetas. Prueba con otro nombre o ingrediente.'));

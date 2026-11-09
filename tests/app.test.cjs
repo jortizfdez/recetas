@@ -48,6 +48,19 @@ test('combina categoría y búsqueda; no busca en consejos', () => {
   assert.equal(results(app, 'arroz', 'Arroces').length, 1);
   assert.equal(results(app, 'cebolla', 'Arroces').length, 0);
 });
+test('ordena por número descendente y mantiene el orden en los filtros', () => {
+  const app = runtime();
+  app.state.recipes = [
+    { ...fixture[0], title: 'Primera', pdfPath: 'Arroces/2.primera.pdf' },
+    { ...fixture[0], title: 'Última', pdfPath: 'Arroces/24.ultima.pdf' },
+    { ...fixture[1], title: 'Intermedia', pdfPath: 'Carnes/9.intermedia.pdf' },
+    { ...fixture[0], title: 'Sin número' },
+  ];
+  app.drawResults();
+  assert.deepEqual(app.grid.children.map(flatten), ['ArrocesÚltimaVer receta →', 'CarnesIntermediaVer receta →', 'ArrocesPrimeraVer receta →', 'ArrocesSin númeroVer receta →']);
+  app.state.category = 'Arroces'; app.drawResults();
+  assert.deepEqual(app.grid.children.map(flatten), ['ArrocesÚltimaVer receta →', 'ArrocesPrimeraVer receta →', 'ArrocesSin númeroVer receta →']);
+});
 test('usa el título de presentación y conserva la búsqueda por el título original', () => {
   const app = runtime();
   app.state.recipes = [{ ...fixture[0], displayTitle: 'Arroz meloso' }];
