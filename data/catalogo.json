@@ -2,6 +2,39 @@
   "version": 1,
   "recipes": [
     {
+      "id": "Arroces/arroz-marinero",
+      "category": "Arroces",
+      "title": "Arroz Marinero",
+      "metadata": {
+        "Chef": "Javi",
+        "Raciones": "4",
+        "Dificultad": "Media",
+        "Tiempo": "~60 min"
+      },
+      "image": {
+        "path": "Arroces/arroz-marinero-imagen.png",
+        "alt": "Arroz Marinero",
+        "logoPath": "Arroces/arroz-marinero-logotipo.png",
+        "optimizedPath": "assets/web/Arroces/arroz-marinero-imagen-bab698cd744c513fd7ef.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "### Para el caldo\n\n- 500 g de cabezas, colas o espinas de pescado\n- 1 puerro\n- Unas ramas de perejil\n- 1,5 l de agua\n- Sal, al gusto\n\n### Para el arroz\n\n- 320 g de arroz redondo\n- ~1 l de caldo de pescado caliente; reserva el resto por si hace falta\n- 1 pimiento rojo\n- 2 dientes de ajo\n- 200 g de almejas o 400 g de mejillones\n- 200 g de gambas\n- 4 langostinos\n- 2-3 cucharadas de aceite de oliva\n- Sal, al gusto"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Limpia y trocea el puerro. Ponlo en una olla con el perejil, los restos de pescado, el agua y una pizca de sal. Cuece suavemente ~20 minutos y retira la espuma si aparece. Cuela el caldo y mantenlo caliente.\n2. Limpia las almejas o los mejillones. Si usas almejas, déjalas en agua fría con sal para que suelten la arena y enjuágalas. Si usas mejillones, limpia las conchas y retira las barbas.\n3. Pela y trocea el pimiento rojo. Pica los ajos y rehógalos con el pimiento en una sartén amplia con aceite.\n4. Añade el arroz y el caldo caliente. Cuece durante 15-18 minutos, según la receta original y el tipo de arroz; ajusta el caldo si es necesario.\n5. Mientras se hace el arroz, cocina en otra sartén las almejas o los mejillones con las gambas y los langostinos, hasta que los moluscos se abran y los crustáceos estén bien hechos y opacos. Desecha los moluscos que no se abran tras la cocción.\n6. Deja reposar el arroz ~5 minutos. Coloca por encima el marisco cocinado y sirve."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- La cantidad de caldo y los tiempos estimados dependen del arroz y de la sartén. Comprueba el punto y añade caldo caliente si es necesario.\n- Prueba antes de ajustar la sal, especialmente después de reducir el caldo."
+        }
+      ],
+      "markdown": "# Arroz Marinero\n\n**Chef:** Javi  \n**Raciones:** 4  \n**Dificultad:** Media  \n**Tiempo:** ~60 min\n\n![Arroz Marinero](arroz-marinero-imagen.png)\n\nLas cantidades son una propuesta orientativa para cuatro raciones; la receta original no las especifica.\n\n## Ingredientes\n\n### Para el caldo\n\n- 500 g de cabezas, colas o espinas de pescado\n- 1 puerro\n- Unas ramas de perejil\n- 1,5 l de agua\n- Sal, al gusto\n\n### Para el arroz\n\n- 320 g de arroz redondo\n- ~1 l de caldo de pescado caliente; reserva el resto por si hace falta\n- 1 pimiento rojo\n- 2 dientes de ajo\n- 200 g de almejas o 400 g de mejillones\n- 200 g de gambas\n- 4 langostinos\n- 2-3 cucharadas de aceite de oliva\n- Sal, al gusto\n\n## Elaboración\n\n1. Limpia y trocea el puerro. Ponlo en una olla con el perejil, los restos de pescado, el agua y una pizca de sal. Cuece suavemente ~20 minutos y retira la espuma si aparece. Cuela el caldo y mantenlo caliente.\n2. Limpia las almejas o los mejillones. Si usas almejas, déjalas en agua fría con sal para que suelten la arena y enjuágalas. Si usas mejillones, limpia las conchas y retira las barbas.\n3. Pela y trocea el pimiento rojo. Pica los ajos y rehógalos con el pimiento en una sartén amplia con aceite.\n4. Añade el arroz y el caldo caliente. Cuece durante 15-18 minutos, según la receta original y el tipo de arroz; ajusta el caldo si es necesario.\n5. Mientras se hace el arroz, cocina en otra sartén las almejas o los mejillones con las gambas y los langostinos, hasta que los moluscos se abran y los crustáceos estén bien hechos y opacos. Desecha los moluscos que no se abran tras la cocción.\n6. Deja reposar el arroz ~5 minutos. Coloca por encima el marisco cocinado y sirve.\n\n## Consejos\n\n- La cantidad de caldo y los tiempos estimados dependen del arroz y de la sartén. Comprueba el punto y añade caldo caliente si es necesario.\n- Prueba antes de ajustar la sal, especialmente después de reducir el caldo.\n",
+      "pdfPath": "Arroces/24.arroz-marinero.pdf"
+    },
+    {
       "id": "Arroces/arroz-meloso-secreto-iberico-setas",
       "category": "Arroces",
       "title": "Arroz meloso de secreto ibérico y setas con ñora y pimentón de la Vera",
@@ -36,6 +69,40 @@
       "markdown": "# Arroz meloso de secreto ibérico y setas con ñora y pimentón de la Vera\n\n**Chef:** Javi · **Raciones:** 4 o 6 · **Tiempo:** ~60 min · **Dificultad:** media · **Acabado:** meloso, con el sofrito triturado\n\n![Arroz meloso de secreto ibérico y setas con ñora y pimentón de la Vera](imagen-arroz.png)\n\n## Ingredientes\n\n| Ingrediente | 4 personas | 6 personas |\n|---|---:|---:|\n| Arroz redondo sénia o bomba | 320 g | 480 g |\n| Secreto ibérico | 400 g | 600 g |\n| Setas de cardo | 300 g | 450 g |\n| Cebolla | 100 g | 150 g |\n| Pimiento rojo, limpio | 80 g | 120 g |\n| Pimiento verde, limpio | 80 g | 120 g |\n| Ajo | 2 dientes | 3 dientes |\n| Tomate maduro rallado | 120 g | 180 g |\n| Ñora seca | 1 unidad | 1½ unidades |\n| Concentrado de tomate | 1 cucharadita | 1½ cucharaditas |\n| Carne de pimiento choricero | ½ cucharadita | ¾ cucharadita |\n| Pimentón dulce de la Vera | ½ cucharadita | ¾ cucharadita |\n| Caldo suave de carne o pollo | 1,2 l aprox. | 1,8 l aprox. |\n| Aceite de oliva virgen extra | 2–3 cucharadas | 3–4 cucharadas |\n| Sal y pimienta | Al gusto | Al gusto |\n\nLas cantidades de verduras son orientativas y se entienden limpias. Se puede sustituir hasta un tercio de las setas de cardo por shiitake.\n\n## Elaboración\n\n1. Abrir la ñora, retirar el pedúnculo y las semillas y sumergirla en agua caliente unos 30 minutos. Raspar y reservar la pulpa.\n2. Cortar el secreto en dados o tiras de bocado y las setas en trozos medianos. Trocear la cebolla y ambos pimientos; picar el ajo. Mantener el caldo caliente.\n3. Salpimentar ligeramente el secreto y dorar en una cazuela ancha con parte del aceite, a fuego medio-alto. Retirar y eliminar el exceso de grasa si fuera necesario.\n4. Dorar las setas en la misma cazuela durante 4–5 minutos y reservar junto con la carne.\n5. Cocinar la cebolla y los pimientos con un poco de aceite durante 10–12 minutos a fuego medio, hasta que estén tiernos. Añadir el ajo y cocinar un minuto. Incorporar la pulpa de ñora y la carne de pimiento choricero. Añadir un poco de caldo caliente y triturar hasta obtener una crema fina, sin grumos. Pasar por un colador si se desea y devolver a la cazuela.\n6. Incorporar el tomate rallado fino y el concentrado a la crema de verduras. Cocinar a fuego medio 5–8 minutos, removiendo, hasta que el tomate pierda parte del agua. Apartar brevemente del fuego, añadir el pimentón y remover sin dejar que se queme.\n7. Añadir el arroz y remover un minuto. Incorporar el secreto y las setas. Verter inicialmente unos 1,1 litros de caldo caliente para 4 personas o 1,65 litros para 6, reservando el resto para ajustar. Cocinar a fuego medio 16–20 minutos, o el tiempo indicado para la variedad, removiendo suavemente de vez en cuando.\n8. Comprobar el punto del arroz y de sal. Añadir caldo caliente si es necesario para mantener la textura melosa. Reposar 2 minutos y servir de inmediato.\n\n## Consejos\n\n- El caldo es orientativo: depende del arroz, la cazuela y la evaporación. Conviene tener un poco más caliente por si hace falta.\n- Apartar la cazuela del fuego antes de añadir el pimentón: si se quema, amarga.\n- Apagar cuando el arroz esté algo más jugoso de lo deseado: seguirá absorbiendo líquido durante el reposo.\n- Para que los niños encuentren menos trozos, cortar las setas pequeñas o triturar una parte con el sofrito.\n",
       "pdfPath": "Arroces/1.arroz-meloso-secreto-iberico-setas.pdf",
       "displayTitle": "Arroz meloso con secreto ibérico y setas"
+    },
+    {
+      "id": "Carnes/albondigas-caseras",
+      "category": "Carnes",
+      "title": "Albóndigas caseras",
+      "metadata": {
+        "Receta": "20",
+        "Chef": "Abuela Loli",
+        "Raciones": "~4",
+        "Dificultad": "media",
+        "Tiempo": "~40 min"
+      },
+      "image": {
+        "path": "Carnes/albondigas-caseras-imagen.png",
+        "alt": "Albóndigas caseras",
+        "logoPath": "Carnes/albondigas-caseras-logotipo.png",
+        "optimizedPath": "assets/web/Carnes/albondigas-caseras-imagen-c2111471a329f4fe33b7.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "Para ~4 personas; cantidades orientativas salvo la carne, los huevos y el ajo.\n\n- Carne picada de ternera y cerdo: 500 g\n- Huevos: 2\n- Cebolla: ~1/2 unidad\n- Ajo: 1 diente\n- Perejil: ~1 cucharada\n- Leche: ~50 ml\n- Pan rallado: el necesario\n- Harina: para rebozar\n- Sal y pimienta: al gusto\n- Aceite de oliva: para freír"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Pica muy fina la cebolla, el diente de ajo y el perejil.\n2. Bate los huevos en un bol. Añade la carne picada, la cebolla, el ajo, el perejil, sal, pimienta y un chorrito de leche. Mezcla bien.\n3. Añade pan rallado poco a poco y mezcla hasta obtener una masa lo bastante consistente para formar las albóndigas.\n4. Forma bolitas con la mezcla y pásalas por harina, sacudiendo el exceso.\n5. Fríe las albóndigas en aceite caliente, por tandas, girándolas para que se doren y queden bien cocinadas por dentro. Retíralas y deja escurrir el exceso de aceite."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las raciones y las cantidades de cebolla, perejil y leche son orientativas.\n- Comprueba que el centro alcance 71 °C con un termómetro de cocina.\n- Contiene huevo, leche y gluten."
+        }
+      ],
+      "markdown": "# Albóndigas caseras\n\n**Receta:** 20 · **Chef:** Abuela Loli · **Raciones:** ~4 · **Dificultad:** media · **Tiempo:** ~40 min\n\n![Albóndigas caseras](albondigas-caseras-imagen.png)\n\n## Ingredientes\n\nPara ~4 personas; cantidades orientativas salvo la carne, los huevos y el ajo.\n\n- Carne picada de ternera y cerdo: 500 g\n- Huevos: 2\n- Cebolla: ~1/2 unidad\n- Ajo: 1 diente\n- Perejil: ~1 cucharada\n- Leche: ~50 ml\n- Pan rallado: el necesario\n- Harina: para rebozar\n- Sal y pimienta: al gusto\n- Aceite de oliva: para freír\n\n## Elaboración\n\n1. Pica muy fina la cebolla, el diente de ajo y el perejil.\n2. Bate los huevos en un bol. Añade la carne picada, la cebolla, el ajo, el perejil, sal, pimienta y un chorrito de leche. Mezcla bien.\n3. Añade pan rallado poco a poco y mezcla hasta obtener una masa lo bastante consistente para formar las albóndigas.\n4. Forma bolitas con la mezcla y pásalas por harina, sacudiendo el exceso.\n5. Fríe las albóndigas en aceite caliente, por tandas, girándolas para que se doren y queden bien cocinadas por dentro. Retíralas y deja escurrir el exceso de aceite.\n\n## Consejos\n\n- Las raciones y las cantidades de cebolla, perejil y leche son orientativas.\n- Comprueba que el centro alcance 71 °C con un termómetro de cocina.\n- Contiene huevo, leche y gluten.\n",
+      "pdfPath": "Carnes/20.albondigas-caseras.pdf"
     },
     {
       "id": "Carnes/albondigas-salsa-almendras",
@@ -204,6 +271,74 @@
       ],
       "markdown": "# Lomo de cerdo con ciruelas y cebollitas\n\n**Receta:** 3 · **Chef:** Abuela Loli · **Raciones:** 4 o 6 · **Dificultad:** fácil · **Tiempo:** ~80 min\n\n![Lomo de cerdo con ciruelas y cebollitas](lomo-imagen-ilustrativa.png)\n\n## Ingredientes\n\n| Ingrediente | 4 personas | 6 personas |\n|---|---:|---:|\n| Lomo de cerdo en una pieza | 800 g | 1,2 kg |\n| Cebollitas francesas | 300 g | 450 g |\n| Ciruelas pasas sin hueso | 150 g | 225 g |\n| Vino dulce o blanco | 150 ml | 225 ml |\n| Laurel | 1 hoja | 2 hojas |\n| Aceite de oliva | 2 cucharadas | 3 cucharadas |\n| Agua | Hasta media altura del lomo | Hasta media altura del lomo |\n| Sal y pimienta | Al gusto | Al gusto |\n\nLas cantidades y los tiempos son orientativos: no aparecen en la receta manuscrita. Se proponen ciruelas pasas sin hueso.\n\n## Elaboración\n\n1. Pelar las cebollitas. Secar el lomo y salpimentarlo. Calentar el aceite en una cazuela y sellar la pieza por todos sus lados hasta que se dore.\n2. Añadir las cebollitas y el laurel. Verter agua hasta media altura del lomo, sin cubrirlo del todo, y llevar a ebullición suave.\n3. Tapar y cocinar a fuego bajo ~40–60 minutos, dando la vuelta al lomo a mitad de cocción. Vigilar el líquido y añadir un poco de agua si fuera necesario. El tiempo depende del grosor de la pieza.\n4. Cuando la carne esté tierna, añadir las ciruelas y el vino dulce o blanco. Cocinar destapado ~10 minutos para reducir un poco la salsa. Comprobar el punto de sal.\n5. Comprobar con un termómetro que el centro del lomo haya alcanzado al menos 63 °C. Retirar la carne y dejarla reposar al menos 3 minutos antes de cortarla. Servir con las cebollitas, las ciruelas y la salsa; retirar el laurel.\n\n## Consejos\n\n- Las cantidades, el vino y el tiempo pueden ajustarse al gusto y al tamaño de la pieza. El vino dulce da una salsa más dulce; el blanco, una menos dulce.\n- El mínimo de 63 °C y 3 minutos de reposo corresponde a piezas enteras de cerdo.\n",
       "pdfPath": "Carnes/3.lomo-cerdo-ciruelas-cebollitas.pdf"
+    },
+    {
+      "id": "Carnes/magro-con-tomate",
+      "category": "Carnes",
+      "title": "Magro con tomate",
+      "metadata": {
+        "Chef": "Patri",
+        "Categoría": "Carnes",
+        "Raciones": "~3",
+        "Dificultad": "Fácil",
+        "Tiempo": "~75-90 min."
+      },
+      "image": {
+        "path": "Carnes/magro-con-tomate-imagen.png",
+        "alt": "Magro con tomate",
+        "logoPath": "Carnes/magro-con-tomate-logotipo.png",
+        "optimizedPath": "assets/web/Carnes/magro-con-tomate-imagen-1079435ca34c1adec14f.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | Cantidad |\n|---|---:|\n| Magro de cerdo en trozos | 500 g |\n| Pimiento rojo | 1/2 ud. |\n| Pimiento verde | 1/2 ud. |\n| Cebolla | 1 ud. |\n| Ajo | 2 dientes |\n| Vino blanco | 1/2 vaso |\n| Tomate triturado | 1 lata pequeña |\n| Pimentón | al gusto |\n| Romero, tomillo y laurel | al gusto |\n| Aceite de oliva y sal | al gusto |"
+        },
+        {
+          "heading": "Preparación",
+          "markdown": "1. Corta la cebolla, los pimientos y los ajos en trocitos.\n2. Pon aceite en una cazuela, añade la carne con sal y dórala a fuego medio durante 15 minutos.\n3. Cuando la carne esté dorada, incorpora la verdura y cocina a fuego lento o medio hasta que esté tierna y la cebolla transparente.\n4. Añade el pimentón, el tomillo, el romero y el laurel. Remueve brevemente para evitar que se queme el pimentón.\n5. Vierte el vino blanco y deja cocer durante 15-20 minutos.\n6. Cuando aún quede un poco de caldo, añade el tomate triturado y cocina 20 minutos a fuego medio. Comprueba que la carne esté tierna y cocínala algo más si lo necesita. Rectifica de sal al gusto."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las raciones y el tiempo total son orientativos. La duración puede variar según el tamaño y el corte de la carne.\n- La receta lleva vino: la cocción no garantiza la eliminación completa del alcohol."
+        }
+      ],
+      "markdown": "# Magro con tomate\n\n**Chef:** Patri  \n**Categoría:** Carnes  \n**Raciones:** ~3  \n**Dificultad:** Fácil  \n**Tiempo:** ~75-90 min.\n\n![Magro con tomate](magro-con-tomate-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | Cantidad |\n|---|---:|\n| Magro de cerdo en trozos | 500 g |\n| Pimiento rojo | 1/2 ud. |\n| Pimiento verde | 1/2 ud. |\n| Cebolla | 1 ud. |\n| Ajo | 2 dientes |\n| Vino blanco | 1/2 vaso |\n| Tomate triturado | 1 lata pequeña |\n| Pimentón | al gusto |\n| Romero, tomillo y laurel | al gusto |\n| Aceite de oliva y sal | al gusto |\n\n## Preparación\n\n1. Corta la cebolla, los pimientos y los ajos en trocitos.\n2. Pon aceite en una cazuela, añade la carne con sal y dórala a fuego medio durante 15 minutos.\n3. Cuando la carne esté dorada, incorpora la verdura y cocina a fuego lento o medio hasta que esté tierna y la cebolla transparente.\n4. Añade el pimentón, el tomillo, el romero y el laurel. Remueve brevemente para evitar que se queme el pimentón.\n5. Vierte el vino blanco y deja cocer durante 15-20 minutos.\n6. Cuando aún quede un poco de caldo, añade el tomate triturado y cocina 20 minutos a fuego medio. Comprueba que la carne esté tierna y cocínala algo más si lo necesita. Rectifica de sal al gusto.\n\n## Consejos\n\n- Las raciones y el tiempo total son orientativos. La duración puede variar según el tamaño y el corte de la carne.\n- La receta lleva vino: la cocción no garantiza la eliminación completa del alcohol.\n",
+      "pdfPath": "Carnes/23.magro-con-tomate.pdf"
+    },
+    {
+      "id": "Carnes/pastel-de-carne-y-berenjena-gratinado",
+      "category": "Carnes",
+      "title": "Pastel de carne y berenjena gratinado",
+      "metadata": {
+        "Chef": "Patri",
+        "Categoría": "Carnes",
+        "Raciones": "3",
+        "Dificultad": "Fácil",
+        "Tiempo": "~45-60 min, incluido el gratinado."
+      },
+      "image": {
+        "path": "Carnes/pastel-de-carne-y-berenjena-gratinado-imagen.png",
+        "alt": "Pastel de carne y berenjena gratinado",
+        "logoPath": "Carnes/pastel-de-carne-y-berenjena-gratinado-logotipo.png",
+        "optimizedPath": "assets/web/Carnes/pastel-de-carne-y-berenjena-gratinado-imagen-9e79899de6ee9ed0995a.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | Cantidad |\n|---|---:|\n| Carne picada de pavo o pollo | 500 g |\n| Tomate triturado | ~400 g |\n| Berenjena | 1/2 ud. |\n| Cebolla | al gusto |\n| Queso rallado para fundir | al gusto |\n| Comino, orégano y sal | al gusto |\n| Aceite de oliva | el necesario |"
+        },
+        {
+          "heading": "Preparación",
+          "markdown": "1. Pica la cebolla y rehógala con un poco de aceite a fuego medio hasta que esté pochada, ~8-10 minutos.\n2. Añade la carne picada, desmenúzala y rehógala hasta que esté bien cocinada, ~7-10 minutos. Sazona y añade comino y orégano al gusto.\n3. Incorpora el tomate triturado y cocina a fuego lento ~10-15 minutos, removiendo de vez en cuando.\n4. Mientras tanto, corta la berenjena en rodajas y cocínalas a la plancha con un poco de aceite hasta que estén tiernas, ~3-4 minutos por cada lado.\n5. En una fuente apta para horno, coloca una capa de berenjena, extiende encima la mezcla de carne y tomate y cubre con otra capa de berenjena. Espolvorea queso rallado al gusto.\n6. Gratina en el horno precalentado a 200 °C durante ~10-15 minutos, hasta que el queso se funda y se dore. Sirve caliente."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- La cantidad de tomate es orientativa: ~400 g corresponden a la lata pequeña indicada.\n- Los tiempos son orientativos y pueden variar según el grosor de las rodajas y el horno. Cocina completamente la carne antes de montar el pastel."
+        }
+      ],
+      "markdown": "# Pastel de carne y berenjena gratinado\n\n**Chef:** Patri  \n**Categoría:** Carnes  \n**Raciones:** 3  \n**Dificultad:** Fácil  \n**Tiempo:** ~45-60 min, incluido el gratinado.\n\n![Pastel de carne y berenjena gratinado](pastel-de-carne-y-berenjena-gratinado-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | Cantidad |\n|---|---:|\n| Carne picada de pavo o pollo | 500 g |\n| Tomate triturado | ~400 g |\n| Berenjena | 1/2 ud. |\n| Cebolla | al gusto |\n| Queso rallado para fundir | al gusto |\n| Comino, orégano y sal | al gusto |\n| Aceite de oliva | el necesario |\n\n## Preparación\n\n1. Pica la cebolla y rehógala con un poco de aceite a fuego medio hasta que esté pochada, ~8-10 minutos.\n2. Añade la carne picada, desmenúzala y rehógala hasta que esté bien cocinada, ~7-10 minutos. Sazona y añade comino y orégano al gusto.\n3. Incorpora el tomate triturado y cocina a fuego lento ~10-15 minutos, removiendo de vez en cuando.\n4. Mientras tanto, corta la berenjena en rodajas y cocínalas a la plancha con un poco de aceite hasta que estén tiernas, ~3-4 minutos por cada lado.\n5. En una fuente apta para horno, coloca una capa de berenjena, extiende encima la mezcla de carne y tomate y cubre con otra capa de berenjena. Espolvorea queso rallado al gusto.\n6. Gratina en el horno precalentado a 200 °C durante ~10-15 minutos, hasta que el queso se funda y se dore. Sirve caliente.\n\n## Consejos\n\n- La cantidad de tomate es orientativa: ~400 g corresponden a la lata pequeña indicada.\n- Los tiempos son orientativos y pueden variar según el grosor de las rodajas y el horno. Cocina completamente la carne antes de montar el pastel.\n",
+      "pdfPath": "Carnes/21.pastel-de-carne-y-berenjena-gratinado.pdf"
     },
     {
       "id": "Pastas/espaguetis-a-la-marinera",
@@ -409,6 +544,39 @@
       "pdfPath": "Pescados/8.salmon-marinado.pdf"
     },
     {
+      "id": "Postres/bizcocho-de-chocolate",
+      "category": "Postres",
+      "title": "Bizcocho de chocolate",
+      "metadata": {
+        "Chef": "Patri",
+        "Raciones": "~8",
+        "Dificultad": "Fácil",
+        "Tiempo": "~10 min de preparación + 60 min de horno"
+      },
+      "image": {
+        "path": "Postres/bizcocho-de-chocolate-imagen.png",
+        "alt": "Bizcocho de chocolate",
+        "logoPath": "Postres/bizcocho-de-chocolate-logotipo.png",
+        "optimizedPath": "assets/web/Postres/bizcocho-de-chocolate-imagen-3b9166a01d54494992a3.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "Usa un vaso de 250 ml para todas las medidas. Las cantidades en mililitros indican volumen, también en los ingredientes secos.\n\n- 4 huevos\n- 1 vaso y medio de azúcar (375 ml de volumen)\n- ½ vaso de aceite de girasol (125 ml)\n- ½ vaso de leche (125 ml)\n- 1 vaso de Nesquik (250 ml de volumen)\n- 1 vaso y medio de harina (375 ml de volumen)\n- 1 sobre de levadura química de repostería"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Precalienta el horno a 180 °C y prepara un molde apto para horno, engrasándolo ligeramente o forrándolo con papel de hornear.\n2. Mezcla todos los ingredientes con la batidora hasta obtener una masa homogénea. Vierte la mezcla en el molde.\n3. Hornea a 180 °C durante 1 hora, como indica la receta original. Comprueba el punto pinchando el centro con un palillo: debe salir sin masa cruda. Si necesita más tiempo, continúa la cocción y vuelve a comprobar.\n4. Deja templar antes de desmoldar y enfriar sobre una rejilla."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las raciones y el tiempo de preparación son orientativos. El tiempo de horno puede variar según el molde y el horno; vigila el bizcocho y comprueba el punto.\n- Un vaso de 250 ml mide volumen; no equivale necesariamente a 250 g de ingredientes secos."
+        }
+      ],
+      "markdown": "# Bizcocho de chocolate\n\n**Chef:** Patri  \n**Raciones:** ~8  \n**Dificultad:** Fácil  \n**Tiempo:** ~10 min de preparación + 60 min de horno\n\n![Bizcocho de chocolate](bizcocho-de-chocolate-imagen.png)\n\n## Ingredientes\n\nUsa un vaso de 250 ml para todas las medidas. Las cantidades en mililitros indican volumen, también en los ingredientes secos.\n\n- 4 huevos\n- 1 vaso y medio de azúcar (375 ml de volumen)\n- ½ vaso de aceite de girasol (125 ml)\n- ½ vaso de leche (125 ml)\n- 1 vaso de Nesquik (250 ml de volumen)\n- 1 vaso y medio de harina (375 ml de volumen)\n- 1 sobre de levadura química de repostería\n\n## Elaboración\n\n1. Precalienta el horno a 180 °C y prepara un molde apto para horno, engrasándolo ligeramente o forrándolo con papel de hornear.\n2. Mezcla todos los ingredientes con la batidora hasta obtener una masa homogénea. Vierte la mezcla en el molde.\n3. Hornea a 180 °C durante 1 hora, como indica la receta original. Comprueba el punto pinchando el centro con un palillo: debe salir sin masa cruda. Si necesita más tiempo, continúa la cocción y vuelve a comprobar.\n4. Deja templar antes de desmoldar y enfriar sobre una rejilla.\n\n## Consejos\n\n- Las raciones y el tiempo de preparación son orientativos. El tiempo de horno puede variar según el molde y el horno; vigila el bizcocho y comprueba el punto.\n- Un vaso de 250 ml mide volumen; no equivale necesariamente a 250 g de ingredientes secos.\n",
+      "pdfPath": "Postres/19.bizcocho-de-chocolate.pdf"
+    },
+    {
       "id": "Postres/brownie-de-chocolate-y-nueces",
       "category": "Postres",
       "title": "Brownie de chocolate y nueces",
@@ -476,6 +644,41 @@
       "markdown": "# Tarta de cerveza Guiness\n\n**Receta:** 15 · **Chef:** Patri · **Raciones:** ~10-12 · **Dificultad:** media · **Tiempo:** ~80 min, más enfriado\n\nMolde de 24 cm. Las raciones y el tiempo total son orientativos.\n\n![Tarta de cerveza Guiness](tarta-de-cerveza-guiness-imagen.png)\n\n## Ingredientes\n\n### Bizcocho\n\n- Cerveza Guinness: 250 ml\n- Mantequilla: 250 g\n- Cacao en polvo: 75 g\n- Bicarbonato: 2,5 cucharaditas\n- Huevos: 2\n- Azúcar: 400 g\n- Harina: 250 g\n- Azúcar avainillado: 1 cucharadita\n- Nata líquida, 35 % MG: 140 ml\n\n### Frosting\n\n- Queso de untar: 300 g\n- Nata líquida, 35 % MG: 360 ml\n- Azúcar glas: 150 g\n\n## Elaboración\n\n1. Calienta la cerveza en un cazo. Cuando esté caliente, aparta del fuego, añade la mantequilla, remueve hasta que se funda y reserva.\n2. En un bol grande, mezcla el cacao, el azúcar, la harina, el azúcar avainillado y el bicarbonato.\n3. En otro bol, bate los huevos con los 140 ml de nata. Añade la mezcla de cerveza y mantequilla y remueve.\n4. Incorpora los líquidos a los ingredientes secos y mezcla. Vierte en un molde de 24 cm y hornea en horno precalentado a 180 °C durante 50 minutos.\n5. Saca el bizcocho del horno y deja que se enfríe por completo.\n6. Para el frosting, mezcla el queso de untar con el azúcar glas. Monta por separado los 360 ml de nata e incorpóralos a la mezcla de queso. Decora el bizcocho al gusto.\n\n## Consejos\n\n- Comprueba la cocción con una brocheta; el tiempo puede variar según el horno.\n- Conserva la tarta refrigerada por el frosting de queso y nata.\n- Contiene gluten, leche y huevo. La cerveza aporta alcohol.\n",
       "pdfPath": "Postres/15.tarta-de-cerveza-guiness.pdf",
       "displayTitle": "Tarta de cerveza Guinness"
+    },
+    {
+      "id": "Postres/tarta-de-queso-al-horno",
+      "category": "Postres",
+      "title": "Tarta de queso al horno",
+      "metadata": {
+        "Receta": "22",
+        "Chef": "Patri",
+        "Raciones": "~8",
+        "Dificultad": "media",
+        "Tiempo": "~65 min, más enfriado y refrigeración"
+      },
+      "image": {
+        "path": "Postres/tarta-de-queso-al-horno-imagen.png",
+        "alt": "Tarta de queso al horno",
+        "logoPath": "Postres/tarta-de-queso-al-horno-logotipo.png",
+        "optimizedPath": "assets/web/Postres/tarta-de-queso-al-horno-imagen-40e4c7d5a23f57725c72.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "Para ~8 raciones; cantidad de canela, vino y mermelada al gusto.\n\n- Galletas María: 1 tubo\n- Mantequilla: 80 g + para el molde\n- Canela molida: al gusto\n- Vino blanco: un chorrito\n- Huevos: 3\n- Queso batido: 500 g\n- Leche condensada: 400 g\n- Mermelada: para cubrir"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Precalienta el horno a 180 °C con calor arriba y abajo. Tritura las galletas y ponlas en un bol.\n2. Añade los 80 g de mantequilla derretida, la canela molida y un chorrito de vino blanco. Mezcla para formar la base.\n3. Engrasa el molde con mantequilla. Extiende la mezcla de galletas con las manos y presiónala para formar la base.\n4. Mezcla en una jarra los 3 huevos, el queso batido y la leche condensada. Vierte la mezcla sobre la base de galletas.\n5. Hornea a 180 °C durante 45 minutos. Al terminar, abre la puerta del horno y deja enfriar la tarta dentro.\n6. Cuando esté a temperatura ambiente, métela en la nevera. Cubre la tarta con mermelada para servir."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las raciones y el tiempo total son orientativos; los 45 minutos de horno proceden de la receta.\n- Conserva la tarta refrigerada.\n- Contiene leche, huevo y gluten; el vino puede contener sulfitos."
+        }
+      ],
+      "markdown": "# Tarta de queso al horno\n\n**Receta:** 22 · **Chef:** Patri · **Raciones:** ~8 · **Dificultad:** media · **Tiempo:** ~65 min, más enfriado y refrigeración\n\n![Tarta de queso al horno](tarta-de-queso-al-horno-imagen.png)\n\n## Ingredientes\n\nPara ~8 raciones; cantidad de canela, vino y mermelada al gusto.\n\n- Galletas María: 1 tubo\n- Mantequilla: 80 g + para el molde\n- Canela molida: al gusto\n- Vino blanco: un chorrito\n- Huevos: 3\n- Queso batido: 500 g\n- Leche condensada: 400 g\n- Mermelada: para cubrir\n\n## Elaboración\n\n1. Precalienta el horno a 180 °C con calor arriba y abajo. Tritura las galletas y ponlas en un bol.\n2. Añade los 80 g de mantequilla derretida, la canela molida y un chorrito de vino blanco. Mezcla para formar la base.\n3. Engrasa el molde con mantequilla. Extiende la mezcla de galletas con las manos y presiónala para formar la base.\n4. Mezcla en una jarra los 3 huevos, el queso batido y la leche condensada. Vierte la mezcla sobre la base de galletas.\n5. Hornea a 180 °C durante 45 minutos. Al terminar, abre la puerta del horno y deja enfriar la tarta dentro.\n6. Cuando esté a temperatura ambiente, métela en la nevera. Cubre la tarta con mermelada para servir.\n\n## Consejos\n\n- Las raciones y el tiempo total son orientativos; los 45 minutos de horno proceden de la receta.\n- Conserva la tarta refrigerada.\n- Contiene leche, huevo y gluten; el vino puede contener sulfitos.\n",
+      "pdfPath": "Postres/22.tarta-de-queso-al-horno.pdf",
+      "displayTitle": "Tarta de Queso al horno"
     },
     {
       "id": "Postres/tarta-de-queso",
