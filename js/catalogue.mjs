@@ -49,6 +49,7 @@ const people = [
   { name: 'Javi', portrait: 'javi' },
   { name: 'Patri', portrait: 'patri' },
   { name: 'Lara', portrait: 'lara' },
+  { name: 'Abuelo Juanmi', portrait: 'juanmi' },
   { name: 'Abuela Loli', portrait: 'loli' },
   { name: 'Abuela Tere', portrait: 'tere' },
   { name: 'Ela', portrait: 'ela' },

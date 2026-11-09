@@ -65,7 +65,7 @@ function createRecipeBody(recipe) {
   for (const section of recipe.sections || []) {
     const node = el('section', 'recipe-section');
     const name = normalize(section.heading);
-    const id = name.startsWith('ingredientes') ? 'ingredientes' :
+    const id = name.startsWith('ingredientes') ? 'ingredientes' : name === 'preparacion' ? 'elaboracion' :
       ['elaboracion', 'consejos'].includes(name) ? name : null;
     if (id && !assignedIds.has(id)) {
       node.id = id;

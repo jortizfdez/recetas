@@ -65,9 +65,10 @@ def parse_recipe(path, root):
             raise RecipeError(f'Sección vacía «{heading}»: {relative}')
         sections.append({'heading': heading, 'markdown': content})
     lower = [h.lower() for _, h in headings]
-    if not any(h.startswith('ingredientes') for h in lower) or 'elaboración' not in lower:
+    steps = next((x for x in sections if x['heading'].lower() in ('elaboración', 'preparación')), None)
+    if not any(h.startswith('ingredientes') for h in lower) or not steps:
         raise RecipeError(f'Faltan ingredientes o elaboración: {relative}')
-    if not re.search(r'^\s*1\.\s+\S', next(x['markdown'] for x in sections if x['heading'].lower() == 'elaboración'), re.M):
+    if not re.search(r'^\s*1\.\s+\S', steps['markdown'], re.M):
         raise RecipeError(f'No se identifica el primer paso: {relative}')
     # Keep complete source and every section intact; presentation never has to discard
     # paragraphs, links, unusual quantities or additional section types.
@@ -109,7 +110,7 @@ def recipe_assets(path, root):
     exact_logo = path.parent / (path.stem + '-logotipo.png')
     logos = [exact_logo] if exact_logo.is_file() else list(path.parent.glob(prefix + '-logotipo.png'))
     candidates = list(path.parent.glob(prefix + '-*.md'))
-    if logos and len(candidates) > 1:
+    if logos and not exact_logo.is_file() and len(candidates) > 1:
         raise RecipeError(f'No se puede asociar el logotipo con seguridad a {path.name}')
     files.update(x.resolve() for x in logos)
     if any(not inside(x, root.resolve()) for x in files):
@@ -239,10 +240,14 @@ def import_recipes(source, dest, selection, manifest, catalog):
     previous_catalog = json.loads(catalog.read_text(encoding='utf-8')) if catalog.exists() else {}
     if not isinstance(previous_catalog, dict) or not isinstance(previous_catalog.get('recipes', []), list):
         raise RecipeError('El catálogo existente no es válido')
+    categories = {Path(key).parts[0].casefold(): Path(key).parts[0] for key in old}
+    def destination_relative(path):
+        relative = path.relative_to(source)
+        return (Path(categories.get(relative.parts[0].casefold(), relative.parts[0].capitalize())) / relative.name).as_posix()
     to_copy = {}
     for path in paths:
         for asset in recipe_assets(path, source):
-            rel = asset.relative_to(source).as_posix()
+            rel = destination_relative(asset)
             if rel in to_copy and digest(to_copy[rel]) != digest(asset):
                 raise RecipeError(f'Colisión entre archivos: {rel}')
             to_copy[rel] = asset
@@ -256,7 +261,7 @@ def import_recipes(source, dest, selection, manifest, catalog):
             if old.get(rel) != digest(target):
                 raise RecipeError(f'Archivo de destino modificado o no registrado: {rel}; revisar antes de actualizar')
         targets[target] = asset
-    replacements = {p.relative_to(source).as_posix(): p for p in paths}
+    replacements = {destination_relative(p): p for p in paths}
     for rel, recorded_hash in old.items():
         if not rel.lower().endswith('.md') or rel in replacements:
             continue

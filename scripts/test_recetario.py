@@ -71,10 +71,17 @@ class ImportTests(unittest.TestCase):
         (category / 'tarta-de-queso-imagen.png').write_bytes(b'image')
         (category / 'tarta-de-queso-logotipo.png').write_bytes(b'logo')
         (category / '9.tarta-de-queso.pdf').write_bytes(b'pdf')
+        (category / 'tarta-de-cerveza.md').write_text('# Otra tarta\n')
         r.import_recipes(self.src, self.dest, ['Postres/tarta-de-queso.md'], self.manifest, self.catalog)
         recipe = json.loads(self.catalog.read_text())['recipes'][0]
         self.assertEqual(recipe['pdfPath'], 'Postres/9.tarta-de-queso.pdf')
         self.assertEqual(recipe['image']['logoPath'], 'Postres/tarta-de-queso-logotipo.png')
+
+    def test_preparacion_is_accepted_as_steps(self):
+        self.md.write_text(self.md.read_text().replace('## Elaboración', '## Preparación'))
+        self.run_import()
+        recipe = json.loads(self.catalog.read_text())['recipes'][0]
+        self.assertTrue(any(s['heading'] == 'Preparación' for s in recipe['sections']))
 
     def test_missing_registered_pdf_blocks_import_without_changing_outputs(self):
         self.run_import()
