@@ -3,7 +3,7 @@
 const main = document.querySelector('main');
 const state = { recipes: [], category: 'Todas', chef: 'Todos', query: '' };
 const normalize = (text) => String(text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es').trim();
-const colors = { arroces: '#1239b4', carnes: '#a52e28', pastas: '#7a5a00', verduras: '#326d37', pescados: '#006e6e', postres: '#6f42a5' };
+const colors = { arroces: '#1239b4', carnes: '#a52e28', pastas: '#7a5a00', verduras: '#326d37', pescados: '#006e6e', postres: '#6f42a5', legumbres: '#46535b' };
 const categoryColor = (category) => colors[normalize(category)] || '#1239b4';
 const el = (name, className, content) => {
   const node = document.createElement(name);
