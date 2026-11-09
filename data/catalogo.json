@@ -578,6 +578,40 @@
       "pdfPath": "Pescados/8.salmon-marinado.pdf"
     },
     {
+      "id": "Pescados/tortillita-de-gambas",
+      "category": "Pescados",
+      "title": "Tortillita de gambas",
+      "metadata": {
+        "Chef": "Abuela Loli",
+        "Categoría": "Pescados",
+        "Raciones": "~4 de aperitivo",
+        "Dificultad": "Fácil",
+        "Tiempo": "~30 min."
+      },
+      "image": {
+        "path": "Pescados/tortillita-de-gambas-imagen.png",
+        "alt": "Tortillita de gambas",
+        "logoPath": "Pescados/tortillita-de-gambas-logotipo.png",
+        "optimizedPath": "assets/web/Pescados/tortillita-de-gambas-imagen-17fbaf923508523d1856.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | Cantidad |\n|---|---:|\n| Gambas peladas crudas | ~250 g |\n| Harina de trigo | ~150 g |\n| Huevo | 1 ud. |\n| Agua templada | 1 vaso (~200 ml) |\n| Ajo | ~1 diente |\n| Levadura química | ~1 cdta. |\n| Perejil fresco | al gusto |\n| Azafrán | unas hebras |\n| Sal | una pizca |\n| Aceite de oliva | para freír |"
+        },
+        {
+          "heading": "Preparación",
+          "markdown": "1. Pica el ajo y el perejil. Si las gambas son grandes, córtalas en trozos pequeños.\n2. Bate el huevo en un bol y añade el agua templada, el ajo, el perejil, las gambas, una pizca de sal y el azafrán. Mezcla bien.\n3. Mezcla la levadura química con la harina e incorpórala poco a poco a la masa, removiendo hasta obtener una mezcla homogénea, fluida pero con cuerpo. Ajusta la harina si es necesario.\n4. Calienta abundante aceite en una sartén. Vierte pequeñas porciones de masa, extendiéndolas para formar tortillitas, y fríelas por tandas hasta que se doren por ambos lados y las gambas estén completamente cocinadas.\n5. Retira las tortillitas y déjalas escurrir sobre papel de cocina. Sirve calientes."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las cantidades indicadas con ~ y las raciones son orientativas. Ajusta la harina para conseguir la textura de la masa.\n- También puedes prepararlas con bacalao en lugar de gambas; si está salado, desálalo antes y ajusta la sal."
+        }
+      ],
+      "markdown": "# Tortillita de gambas\n\n**Chef:** Abuela Loli  \n**Categoría:** Pescados  \n**Raciones:** ~4 de aperitivo  \n**Dificultad:** Fácil  \n**Tiempo:** ~30 min.\n\n![Tortillita de gambas](tortillita-de-gambas-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | Cantidad |\n|---|---:|\n| Gambas peladas crudas | ~250 g |\n| Harina de trigo | ~150 g |\n| Huevo | 1 ud. |\n| Agua templada | 1 vaso (~200 ml) |\n| Ajo | ~1 diente |\n| Levadura química | ~1 cdta. |\n| Perejil fresco | al gusto |\n| Azafrán | unas hebras |\n| Sal | una pizca |\n| Aceite de oliva | para freír |\n\n## Preparación\n\n1. Pica el ajo y el perejil. Si las gambas son grandes, córtalas en trozos pequeños.\n2. Bate el huevo en un bol y añade el agua templada, el ajo, el perejil, las gambas, una pizca de sal y el azafrán. Mezcla bien.\n3. Mezcla la levadura química con la harina e incorpórala poco a poco a la masa, removiendo hasta obtener una mezcla homogénea, fluida pero con cuerpo. Ajusta la harina si es necesario.\n4. Calienta abundante aceite en una sartén. Vierte pequeñas porciones de masa, extendiéndolas para formar tortillitas, y fríelas por tandas hasta que se doren por ambos lados y las gambas estén completamente cocinadas.\n5. Retira las tortillitas y déjalas escurrir sobre papel de cocina. Sirve calientes.\n\n## Consejos\n\n- Las cantidades indicadas con ~ y las raciones son orientativas. Ajusta la harina para conseguir la textura de la masa.\n- También puedes prepararlas con bacalao en lugar de gambas; si está salado, desálalo antes y ajusta la sal.\n",
+      "pdfPath": "Pescados/30.tortillita-de-gambas.pdf"
+    },
+    {
       "id": "Postres/bizcocho-de-chocolate",
       "category": "Postres",
       "title": "Bizcocho de chocolate",
@@ -782,6 +816,40 @@
       "pdfPath": "Postres/9.tarta-de-queso.pdf"
     },
     {
+      "id": "Postres/tarta-tres-chocolates",
+      "category": "Postres",
+      "title": "Tarta tres chocolates",
+      "metadata": {
+        "Receta": "29",
+        "Chef": "Patri",
+        "Raciones": "~10-12",
+        "Dificultad": "media",
+        "Tiempo": "~45 min, más refrigeración"
+      },
+      "image": {
+        "path": "Postres/tarta-tres-chocolates-imagen.png",
+        "alt": "Tarta tres chocolates",
+        "logoPath": "Postres/tarta-tres-chocolates-logotipo.png",
+        "optimizedPath": "assets/web/Postres/tarta-tres-chocolates-imagen-a16ecdb33525bce01e7a.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "Para ~10-12 raciones; cantidad de galletas orientativa.\n\n- Galletas María: ~180 g\n- Mantequilla: 60 g\n- Chocolate negro: 150 g\n- Chocolate con leche: 150 g\n- Chocolate blanco: 150 g\n- Nata para montar: 750 ml\n- Leche: 750 ml\n- Cuajada en polvo: 3 sobres\n- Azúcar: 150 g\n- Adorno: al gusto"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Tritura las galletas María y mézclalas con la mantequilla derretida. Si hace falta, añade un poco de leche. Extiende y presiona la mezcla en la base de un molde.\n2. Para cada capa reserva 150 g de chocolate, 250 ml de nata, 250 ml de leche, un sobre de cuajada y 50 g de azúcar.\n3. Para la primera capa, disuelve un sobre de cuajada en un poco de sus 250 ml de leche fría. Calienta el resto de esa leche con 250 ml de nata, 50 g de azúcar y el chocolate negro troceado, removiendo hasta fundirlo.\n4. Añade la cuajada disuelta y cocina removiendo según las instrucciones del sobre. Vierte sobre la base de galletas y deja que la superficie empiece a cuajar.\n5. Repite el mismo proceso con el chocolate con leche y, después, con el blanco, usando para cada uno sus cantidades reservadas. Vierte cada capa suavemente sobre el dorso de una cuchara para no romper la anterior.\n6. Cuando las tres capas estén listas, deja enfriar y refrigera durante al menos 4 horas, hasta que la tarta cuaje. Desmolda y adorna al gusto."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- La cantidad de galletas y las raciones son orientativas. El reparto del azúcar entre capas es una propuesta.\n- Para que las capas se unan, vierte la siguiente cuando la anterior haya empezado a cuajar.\n- Conserva refrigerada. Contiene leche y gluten; revisa los alérgenos del chocolate y de la cuajada."
+        }
+      ],
+      "markdown": "# Tarta tres chocolates\n\n**Receta:** 29 · **Chef:** Patri · **Raciones:** ~10-12 · **Dificultad:** media · **Tiempo:** ~45 min, más refrigeración\n\n![Tarta tres chocolates](tarta-tres-chocolates-imagen.png)\n\n## Ingredientes\n\nPara ~10-12 raciones; cantidad de galletas orientativa.\n\n- Galletas María: ~180 g\n- Mantequilla: 60 g\n- Chocolate negro: 150 g\n- Chocolate con leche: 150 g\n- Chocolate blanco: 150 g\n- Nata para montar: 750 ml\n- Leche: 750 ml\n- Cuajada en polvo: 3 sobres\n- Azúcar: 150 g\n- Adorno: al gusto\n\n## Elaboración\n\n1. Tritura las galletas María y mézclalas con la mantequilla derretida. Si hace falta, añade un poco de leche. Extiende y presiona la mezcla en la base de un molde.\n2. Para cada capa reserva 150 g de chocolate, 250 ml de nata, 250 ml de leche, un sobre de cuajada y 50 g de azúcar.\n3. Para la primera capa, disuelve un sobre de cuajada en un poco de sus 250 ml de leche fría. Calienta el resto de esa leche con 250 ml de nata, 50 g de azúcar y el chocolate negro troceado, removiendo hasta fundirlo.\n4. Añade la cuajada disuelta y cocina removiendo según las instrucciones del sobre. Vierte sobre la base de galletas y deja que la superficie empiece a cuajar.\n5. Repite el mismo proceso con el chocolate con leche y, después, con el blanco, usando para cada uno sus cantidades reservadas. Vierte cada capa suavemente sobre el dorso de una cuchara para no romper la anterior.\n6. Cuando las tres capas estén listas, deja enfriar y refrigera durante al menos 4 horas, hasta que la tarta cuaje. Desmolda y adorna al gusto.\n\n## Consejos\n\n- La cantidad de galletas y las raciones son orientativas. El reparto del azúcar entre capas es una propuesta.\n- Para que las capas se unan, vierte la siguiente cuando la anterior haya empezado a cuajar.\n- Conserva refrigerada. Contiene leche y gluten; revisa los alérgenos del chocolate y de la cuajada.\n",
+      "pdfPath": "Postres/29.tarta-tres-chocolates.pdf"
+    },
+    {
       "id": "Postres/yogur-de-limon",
       "category": "Postres",
       "title": "Yogur de limón",
@@ -915,6 +983,40 @@
       ],
       "markdown": "# Espinacas con garbanzos\n\n**Chef:** Abuelo Juanmi  \n**Raciones:** ~4, según el tamaño del tarro y la bolsa  \n**Dificultad:** Fácil  \n**Tiempo:** ~30 min\n\n![Espinacas con garbanzos](espinacas-con-garbanzos-imagen.png)\n\n## Ingredientes\n\n- 1 tarro de garbanzos cocidos\n- 1 bolsa de espinacas frescas\n- 3 o 4 rebanadas de pan\n- Ajo, al gusto\n- 1 pastilla de Avecrem\n- Agua, un poco\n- Aceite de oliva, al gusto\n- Pimentón dulce, al gusto\n- Sal, al gusto\n\n## Elaboración\n\n1. Lava las espinacas si es necesario, rehógalas en una sartén con un poco de aceite y resérvalas.\n2. Fríe el pan y los ajos juntos en aceite. Pásalos a un recipiente con un poco de agua y la pastilla de Avecrem; tritura con la batidora hasta obtener una salsa.\n3. Escurre los garbanzos cocidos. Mezcla en una sartén las espinacas, los garbanzos y la salsa triturada.\n4. Añade pimentón dulce y sal. Deja cocinar un rato a fuego suave, removiendo, y sirve caliente.\n\n## Consejos\n\n- El número de raciones depende del tamaño del tarro y de la bolsa; los ~30 minutos son orientativos.\n- Prueba antes de añadir sal, ya que la pastilla de caldo y los garbanzos pueden contenerla.\n- Añade un poco de agua si la mezcla queda demasiado espesa.\n",
       "pdfPath": "Verduras/17.espinacas-con-garbanzos.pdf"
+    },
+    {
+      "id": "Verduras/sopa-de-calabaza",
+      "category": "Verduras",
+      "title": "Sopa de Calabaza",
+      "metadata": {
+        "Receta": "28",
+        "Chef": "Patri",
+        "Raciones": "4",
+        "Dificultad": "fácil",
+        "Tiempo": "~40 min"
+      },
+      "image": {
+        "path": "Verduras/sopa-de-calabaza-imagen.png",
+        "alt": "Sopa de Calabaza",
+        "logoPath": "Verduras/sopa-de-calabaza-logotipo.png",
+        "optimizedPath": "assets/web/Verduras/sopa-de-calabaza-imagen-9eb800a66976957a65e5.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | 4 raciones |\n|---|---:|\n| Calabaza limpia | 800 g |\n| Puerro | 1 unidad |\n| Zanahorias | 2 unidades |\n| Ajo | 2 dientes |\n| Aceite de oliva | 2 cucharadas |\n| Agua | Para cubrir |\n| Sal | Al gusto |"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Pela la calabaza y las zanahorias. Limpia el puerro, retirando las raíces y las hojas exteriores, y lávalo bien. Trocea todas las verduras.\n2. Pela y corta los ajos. Calienta el aceite en una cazuela y fríelos a fuego medio, removiendo, hasta que empiecen a dorarse.\n3. Añade la calabaza, el puerro y las zanahorias. Cubre las verduras con agua y añade sal al gusto.\n4. Lleva a ebullición y cocina a fuego suave durante ~20–25 minutos, hasta que las verduras estén tiernas.\n5. Tritura con cuidado hasta obtener una textura uniforme. Ajusta la sal y, si es necesario, añade un poco de agua caliente. Sirve la sopa caliente."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las cantidades y los tiempos son orientativos.\n- Para ajustar la textura, reserva un poco del agua de cocción y añádela después de triturar si hace falta.\n- Deja templar un poco antes de triturar y sigue las instrucciones de tu batidora para líquidos calientes."
+        }
+      ],
+      "markdown": "# Sopa de Calabaza\n\n**Receta:** 28 · **Chef:** Patri · **Raciones:** 4 · **Dificultad:** fácil · **Tiempo:** ~40 min\n\n![Sopa de Calabaza](sopa-de-calabaza-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | 4 raciones |\n|---|---:|\n| Calabaza limpia | 800 g |\n| Puerro | 1 unidad |\n| Zanahorias | 2 unidades |\n| Ajo | 2 dientes |\n| Aceite de oliva | 2 cucharadas |\n| Agua | Para cubrir |\n| Sal | Al gusto |\n\n## Elaboración\n\n1. Pela la calabaza y las zanahorias. Limpia el puerro, retirando las raíces y las hojas exteriores, y lávalo bien. Trocea todas las verduras.\n2. Pela y corta los ajos. Calienta el aceite en una cazuela y fríelos a fuego medio, removiendo, hasta que empiecen a dorarse.\n3. Añade la calabaza, el puerro y las zanahorias. Cubre las verduras con agua y añade sal al gusto.\n4. Lleva a ebullición y cocina a fuego suave durante ~20–25 minutos, hasta que las verduras estén tiernas.\n5. Tritura con cuidado hasta obtener una textura uniforme. Ajusta la sal y, si es necesario, añade un poco de agua caliente. Sirve la sopa caliente.\n\n## Consejos\n\n- Las cantidades y los tiempos son orientativos.\n- Para ajustar la textura, reserva un poco del agua de cocción y añádela después de triturar si hace falta.\n- Deja templar un poco antes de triturar y sigue las instrucciones de tu batidora para líquidos calientes.\n",
+      "pdfPath": "Verduras/28.sopa-de-calabaza.pdf"
     }
   ]
 }
