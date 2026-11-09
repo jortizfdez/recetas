@@ -341,6 +341,40 @@
       "pdfPath": "Carnes/21.pastel-de-carne-y-berenjena-gratinado.pdf"
     },
     {
+      "id": "Carnes/pastela-marroqui",
+      "category": "Carnes",
+      "title": "Pastela marroquí",
+      "metadata": {
+        "Receta": "31",
+        "Chef": "Abuela Loli",
+        "Raciones": "~6",
+        "Dificultad": "media",
+        "Tiempo": "~90 min"
+      },
+      "image": {
+        "path": "Carnes/pastela-marroqui-imagen.png",
+        "alt": "Pastela marroquí",
+        "logoPath": "Carnes/pastela-marroqui-logotipo.png",
+        "optimizedPath": "assets/web/Carnes/pastela-marroqui-imagen-96507e2705377697c141.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | ~6 raciones |\n|---|---:|\n| Pasta filo | 6–8 hojas |\n| Pollo | 600 g |\n| Cebolla | 1 grande |\n| Tomate triturado | 150 g |\n| Pasas de Corinto | 50 g |\n| Ciruelas pasas sin hueso | 80 g |\n| Almendras | 60 g |\n| Especias morunas | 1 cucharadita |\n| Laurel | 1 hoja |\n| Aceite de oliva | Para cocinar y pincelar |\n| Agua | Para cubrir |\n| Sal y pimienta | Al gusto |\n| Canela y azúcar glas | Para espolvorear |"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Pica la cebolla. En una cazuela con aceite, póchala a fuego medio. Añade el pollo y dóralo por todos sus lados.\n2. Cubre con agua y añade el tomate, las pasas, las ciruelas troceadas, la sal, la pimienta, el laurel y las especias morunas. Cocina a fuego suave hasta que el pollo esté hecho y la salsa espese, ~30–40 minutos.\n3. Retira el pollo, comprueba que esté bien cocinado y desmenúzalo; retira huesos y piel si los hubiera. Retira el laurel y mezcla el pollo con la salsa reducida. Deja templar el relleno.\n4. Tuesta ligeramente las almendras en una sartén, déjalas enfriar y pícalas. Precalienta el horno a 180 °C.\n5. Forra un molde con varias hojas de pasta filo, pincelando cada una ligeramente con aceite y dejando parte de las hojas sobresaliendo para poder cerrar.\n6. Reparte el relleno y las almendras. Dobla la masa sobre el relleno y cubre con las hojas restantes, también pinceladas con aceite.\n7. Hornea a 180 °C durante ~20–30 minutos, hasta que la pasta esté dorada y crujiente. Deja templar unos minutos y espolvorea con azúcar glas y canela."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las cantidades, las raciones y los tiempos son orientativos.\n- La incorporación de las almendras y el horneado completan la nota original.\n- Contiene frutos de cáscara y normalmente gluten; consulta el envase de la pasta filo."
+        }
+      ],
+      "markdown": "# Pastela marroquí\n\n**Receta:** 31 · **Chef:** Abuela Loli · **Raciones:** ~6 · **Dificultad:** media · **Tiempo:** ~90 min\n\n![Pastela marroquí](pastela-marroqui-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | ~6 raciones |\n|---|---:|\n| Pasta filo | 6–8 hojas |\n| Pollo | 600 g |\n| Cebolla | 1 grande |\n| Tomate triturado | 150 g |\n| Pasas de Corinto | 50 g |\n| Ciruelas pasas sin hueso | 80 g |\n| Almendras | 60 g |\n| Especias morunas | 1 cucharadita |\n| Laurel | 1 hoja |\n| Aceite de oliva | Para cocinar y pincelar |\n| Agua | Para cubrir |\n| Sal y pimienta | Al gusto |\n| Canela y azúcar glas | Para espolvorear |\n\n## Elaboración\n\n1. Pica la cebolla. En una cazuela con aceite, póchala a fuego medio. Añade el pollo y dóralo por todos sus lados.\n2. Cubre con agua y añade el tomate, las pasas, las ciruelas troceadas, la sal, la pimienta, el laurel y las especias morunas. Cocina a fuego suave hasta que el pollo esté hecho y la salsa espese, ~30–40 minutos.\n3. Retira el pollo, comprueba que esté bien cocinado y desmenúzalo; retira huesos y piel si los hubiera. Retira el laurel y mezcla el pollo con la salsa reducida. Deja templar el relleno.\n4. Tuesta ligeramente las almendras en una sartén, déjalas enfriar y pícalas. Precalienta el horno a 180 °C.\n5. Forra un molde con varias hojas de pasta filo, pincelando cada una ligeramente con aceite y dejando parte de las hojas sobresaliendo para poder cerrar.\n6. Reparte el relleno y las almendras. Dobla la masa sobre el relleno y cubre con las hojas restantes, también pinceladas con aceite.\n7. Hornea a 180 °C durante ~20–30 minutos, hasta que la pasta esté dorada y crujiente. Deja templar unos minutos y espolvorea con azúcar glas y canela.\n\n## Consejos\n\n- Las cantidades, las raciones y los tiempos son orientativos.\n- La incorporación de las almendras y el horneado completan la nota original.\n- Contiene frutos de cáscara y normalmente gluten; consulta el envase de la pasta filo.\n",
+      "pdfPath": "Carnes/31.pastela-marroqui.pdf"
+    },
+    {
       "id": "Legumbres/fabada",
       "category": "Legumbres",
       "title": "Fabada",
@@ -882,6 +916,74 @@
       ],
       "markdown": "# Yogur de limón\n\n**Receta:** 25 · **Chef:** Patri · **Raciones:** ~4-6 · **Dificultad:** media · **Tiempo:** ~10 min, más refrigeración\n\n![Yogur de limón](yogur-de-limon-imagen.png)\n\n## Ingredientes\n\nLas raciones dependen del tamaño de los tarritos.\n\n- Yogures griegos sin azúcar: 2\n- Leche condensada: 1 lata pequeña\n- Nata líquida para montar: 200 ml\n- Limón: 1, su zumo\n- Virutas de chocolate: al gusto\n\n## Elaboración\n\n1. Exprime el limón y retira las semillas del zumo.\n2. Mezcla en un bol los yogures, la leche condensada, la nata líquida sin montar y el zumo de limón hasta obtener una crema homogénea.\n3. Reparte la mezcla en tarritos y guárdalos en la nevera hasta que esté fría.\n4. Decora con virutas de chocolate antes de servir.\n\n## Consejos\n\n- Las raciones y el tiempo de preparación son orientativos.\n- Conserva los tarritos tapados y refrigerados.\n- Contiene leche; comprueba los alérgenos de las virutas de chocolate.\n",
       "pdfPath": "Postres/25.yogur-de-limon.pdf"
+    },
+    {
+      "id": "Sopas/sopa-de-picadillo",
+      "category": "Sopas",
+      "title": "Sopa de picadillo",
+      "metadata": {
+        "Chef": "Abuela Loli",
+        "Categoría": "Sopas",
+        "Raciones": "~4",
+        "Dificultad": "Fácil",
+        "Tiempo": "~80-90 min."
+      },
+      "image": {
+        "path": "Sopas/sopa-de-picadillo-imagen.png",
+        "alt": "Sopa de picadillo",
+        "logoPath": "Sopas/sopa-de-picadillo-logotipo.png",
+        "optimizedPath": "assets/web/Sopas/sopa-de-picadillo-imagen-bd1265730c795ab849e2.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "| Ingrediente | Cantidad |\n|---|---:|\n| Muslos de pollo | ~2 uds. |\n| Hueso añejo | ~1 ud. |\n| Puerro | ~1 ud. |\n| Apio | ~1 rama |\n| Patata | ~1 ud. |\n| Zanahoria | ~1 ud. |\n| Agua | ~2 l |\n| Fideos finos | ~100 g |\n| Huevos | ~2 uds. |\n| Jamón en taquitos | ~75 g |\n| Sal | al gusto |"
+        },
+        {
+          "heading": "Preparación",
+          "markdown": "1. Limpia el puerro y el apio. Pela la patata y la zanahoria y córtalas en trozos grandes.\n2. Pon en una olla normal el pollo, el hueso añejo, las verduras y el agua, con un poco de sal. Lleva a ebullición y retira la espuma que se forme.\n3. Cocina a fuego suave ~1 hora, hasta que el pollo esté bien cocido y las verduras tiernas. Mientras tanto, cuece los huevos ~10 minutos desde que hierva el agua, enfríalos y pélalos.\n4. Retira el pollo y las verduras y cuela el caldo. Desecha el hueso añejo. Deshuesa y desmenuza el pollo; pica los huevos y el jamón. Si quieres, pica también parte de las verduras cocidas.\n5. Vuelve a llevar el caldo a ebullición y cuece los fideos el tiempo indicado en el envase. Añade el pollo y caliéntalo bien. Prueba y rectifica de sal.\n6. Sirve la sopa con el huevo y el jamón picados y, si lo deseas, las verduras reservadas."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las cantidades y los tiempos son orientativos. El hueso añejo y el jamón aportan sal: pruébala antes de añadir más.\n- Los fideos, el huevo y el jamón completan la receta para servirla como sopa de picadillo."
+        }
+      ],
+      "markdown": "# Sopa de picadillo\n\n**Chef:** Abuela Loli  \n**Categoría:** Sopas  \n**Raciones:** ~4  \n**Dificultad:** Fácil  \n**Tiempo:** ~80-90 min.\n\n![Sopa de picadillo](sopa-de-picadillo-imagen.png)\n\n## Ingredientes\n\n| Ingrediente | Cantidad |\n|---|---:|\n| Muslos de pollo | ~2 uds. |\n| Hueso añejo | ~1 ud. |\n| Puerro | ~1 ud. |\n| Apio | ~1 rama |\n| Patata | ~1 ud. |\n| Zanahoria | ~1 ud. |\n| Agua | ~2 l |\n| Fideos finos | ~100 g |\n| Huevos | ~2 uds. |\n| Jamón en taquitos | ~75 g |\n| Sal | al gusto |\n\n## Preparación\n\n1. Limpia el puerro y el apio. Pela la patata y la zanahoria y córtalas en trozos grandes.\n2. Pon en una olla normal el pollo, el hueso añejo, las verduras y el agua, con un poco de sal. Lleva a ebullición y retira la espuma que se forme.\n3. Cocina a fuego suave ~1 hora, hasta que el pollo esté bien cocido y las verduras tiernas. Mientras tanto, cuece los huevos ~10 minutos desde que hierva el agua, enfríalos y pélalos.\n4. Retira el pollo y las verduras y cuela el caldo. Desecha el hueso añejo. Deshuesa y desmenuza el pollo; pica los huevos y el jamón. Si quieres, pica también parte de las verduras cocidas.\n5. Vuelve a llevar el caldo a ebullición y cuece los fideos el tiempo indicado en el envase. Añade el pollo y caliéntalo bien. Prueba y rectifica de sal.\n6. Sirve la sopa con el huevo y el jamón picados y, si lo deseas, las verduras reservadas.\n\n## Consejos\n\n- Las cantidades y los tiempos son orientativos. El hueso añejo y el jamón aportan sal: pruébala antes de añadir más.\n- Los fideos, el huevo y el jamón completan la receta para servirla como sopa de picadillo.\n",
+      "pdfPath": "Sopas/33.sopa-de-picadillo.pdf"
+    },
+    {
+      "id": "Verduras/calabacines-rellenos",
+      "category": "Verduras",
+      "title": "Calabacines rellenos",
+      "metadata": {
+        "Receta": "32",
+        "Chef": "Abuela Loli",
+        "Raciones": "4",
+        "Dificultad": "media",
+        "Tiempo": "~60 min"
+      },
+      "image": {
+        "path": "Verduras/calabacines-rellenos-imagen.png",
+        "alt": "Calabacines rellenos",
+        "logoPath": "Verduras/calabacines-rellenos-logotipo.png",
+        "optimizedPath": "assets/web/Verduras/calabacines-rellenos-imagen-5f54796831efcc92e6de.webp"
+      },
+      "sections": [
+        {
+          "heading": "Ingredientes",
+          "markdown": "Para 4 personas; cantidades y tiempos orientativos, salvo el huevo.\n\n- Calabacines medianos: ~4\n- Huevo: 1\n- Cebolla: ~1\n- Puerro (opcional): ~1\n- Atún escurrido o jamón cocido: ~160 g o ~150 g\n- Pan rallado: ~3 cucharadas\n- Queso rallado: ~80 g\n- Aceite de oliva: ~2 cucharadas\n- Sal: al gusto"
+        },
+        {
+          "heading": "Elaboración",
+          "markdown": "1. Lava los calabacines y cuécelos enteros en agua hasta que estén tiernos pero firmes, durante ~15-20 minutos. Escúrrelos y deja que se templen.\n2. Córtalos por la mitad a lo largo y colócalos con la parte cortada hacia arriba en una bandeja. Retira la pulpa con cuidado de conservar la piel y escúrrela bien.\n3. Pica la cebolla y, si lo usas, el puerro. Sofríelos en una sartén con aceite hasta que estén tiernos. Precalienta el horno a 180 °C.\n4. Bate el huevo en un bol. Añade la pulpa escurrida, la cebolla, el puerro si lo usas y el atún escurrido o el jamón cocido picado. Incorpora el pan rallado y mezcla.\n5. Rellena las mitades de calabacín y espolvorea el queso rallado. Hornea a 180 °C hasta que el relleno esté bien caliente y cuajado y el queso dorado, durante ~15-20 minutos."
+        },
+        {
+          "heading": "Consejos",
+          "markdown": "- Las cantidades y los tiempos son orientativos; ajusta la cocción al tamaño de los calabacines.\n- Elige atún o jamón cocido; el puerro es opcional.\n- Contiene huevo, leche y gluten; la versión con atún contiene pescado."
+        }
+      ],
+      "markdown": "# Calabacines rellenos\n\n**Receta:** 32 · **Chef:** Abuela Loli · **Raciones:** 4 · **Dificultad:** media · **Tiempo:** ~60 min\n\n![Calabacines rellenos](calabacines-rellenos-imagen.png)\n\n## Ingredientes\n\nPara 4 personas; cantidades y tiempos orientativos, salvo el huevo.\n\n- Calabacines medianos: ~4\n- Huevo: 1\n- Cebolla: ~1\n- Puerro (opcional): ~1\n- Atún escurrido o jamón cocido: ~160 g o ~150 g\n- Pan rallado: ~3 cucharadas\n- Queso rallado: ~80 g\n- Aceite de oliva: ~2 cucharadas\n- Sal: al gusto\n\n## Elaboración\n\n1. Lava los calabacines y cuécelos enteros en agua hasta que estén tiernos pero firmes, durante ~15-20 minutos. Escúrrelos y deja que se templen.\n2. Córtalos por la mitad a lo largo y colócalos con la parte cortada hacia arriba en una bandeja. Retira la pulpa con cuidado de conservar la piel y escúrrela bien.\n3. Pica la cebolla y, si lo usas, el puerro. Sofríelos en una sartén con aceite hasta que estén tiernos. Precalienta el horno a 180 °C.\n4. Bate el huevo en un bol. Añade la pulpa escurrida, la cebolla, el puerro si lo usas y el atún escurrido o el jamón cocido picado. Incorpora el pan rallado y mezcla.\n5. Rellena las mitades de calabacín y espolvorea el queso rallado. Hornea a 180 °C hasta que el relleno esté bien caliente y cuajado y el queso dorado, durante ~15-20 minutos.\n\n## Consejos\n\n- Las cantidades y los tiempos son orientativos; ajusta la cocción al tamaño de los calabacines.\n- Elige atún o jamón cocido; el puerro es opcional.\n- Contiene huevo, leche y gluten; la versión con atún contiene pescado.\n",
+      "pdfPath": "Verduras/32.calabacines-rellenos.pdf"
     },
     {
       "id": "Verduras/coliflor-al-horno",
